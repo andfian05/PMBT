@@ -25,7 +25,7 @@
               <div class="icon">
                 <i class="fa-solid fa-users fa-1x"></i>
               </div>
-              <a href="#" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{ route('mahasantri.index') }}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-6">

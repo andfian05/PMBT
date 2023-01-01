@@ -56,7 +56,7 @@
                    
                     <td class="text-center">
                       <a class="btn btn-primary btn-sm-2" href="{{ url('/viewbio') }}">View</a>
-                      {{-- <!-- <a class="btn btn-primary btn-sm-2" href="{{ route('mahasantri.show', $row->id) }}">View</a> --> --}}
+                      {{-- <a class="btn btn-primary btn-sm-2" href="{{ route('mahasantri.show', $row->id) }}">View</a> --}}
                       <a class="btn btn-danger btn-sm-2" href="{{ url('/delbio') }}">Delete</a>
                       <a class="btn btn-success btn-sm-2" href="{{ url('/editbio') }}">Update</a>
                       
