@@ -14,6 +14,6 @@ class Pendidikan extends Model
     protected $fillable = ['id','n_sekolah','jurusan','thn_lulus','citaCita','prestasi','penyakit','perokok'];
     public function mahasantri()
     {
-        return $this->hasOne(Mahasantri::class);
+        return $this->hasOne(Mahasantri::class, 'pendidikan_id');
     }
 }
