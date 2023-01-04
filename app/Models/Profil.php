@@ -15,7 +15,7 @@ class Profil extends Model
     protected $fillable = ['id','pengetahuanprofil'];
     public function mahasantri()
     {
-        return $this->hasOne(Mahasantri::class);
+        return $this->hasOne(Mahasantri::class, 'profil_id');
     }
     
 }

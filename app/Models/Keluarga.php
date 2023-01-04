@@ -15,7 +15,7 @@ class Keluarga extends Model
     protected $fillable = ['id','namaAyah','namaIbu','pkjAyah','pkjIbu','pdkAyah','pdkIbu','jml_saudara','hpKeluarga'];
     public function mahasantri()
     {
-        return $this->hasOne(Mahasantri::class);
+        return $this->hasOne(Mahasantri::class, 'keluarga_id');
     }
     
 }

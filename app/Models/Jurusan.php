@@ -14,6 +14,6 @@ class Jurusan extends Model
     protected $fillable = ['id','namaJurusan'];
     public function mahasantri()
     {
-        return $this->hasOne(Mahasantri::class);
+        return $this->hasOne(Mahasantri::class, 'jurusan_id');
     }
 }

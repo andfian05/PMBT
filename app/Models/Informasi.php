@@ -15,7 +15,7 @@ class Informasi extends Model
     protected $fillable = ['id','mediaInformasi'];
     public function mahasantri()
     {
-        return $this->hasOne(Mahasantri::class);
+        return $this->hasOne(Mahasantri::class, 'informasi_id');
     }
     
 }

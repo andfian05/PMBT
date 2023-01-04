@@ -15,7 +15,7 @@ class Berkas extends Model
     protected $fillable = ['id','pengeriman','scanBerkas'];
     public function mahasantri()
     {
-        return $this->hasOne(Mahasantri::class);
+        return $this->hasOne(Mahasantri::class, 'berkas_id');
     }
     
 }
