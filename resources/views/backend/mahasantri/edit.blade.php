@@ -26,6 +26,23 @@
         <form action="{{ route('mahasantri.update', $mahasantri->id) }}" method="POST" id="form1" name="form1" enctype="multipart/form-data">
           @csrf
           @method('PUT')
+          {{-- Informasi Tentang Pesantren PeTIK Jombang --}}
+          <div class="container mt-2 col-md-6">
+            <div class="card">
+              <div class="bg-info">
+                <h6 class="text-center mt-2 ">Informasi Tentang Pesantren PeTIK Jombang</h6>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12">
+              <label for="">Tuliskan apa yang Anda pahami tentang Pesantren PeTIK Jombang :</label>
+              <textarea name="ket_profile"  class="form-control" cols="6" rows="3">
+                {{ old('ket_profile') ? old('ket_profile') : $profilePetik->ket_profile }}
+              </textarea>
+            </div>                   
+          </div>
+          <br>
           {{-- Biodata Diri --}}
           <div class="container mt-2 col-md-6">
             <div class="card">
@@ -370,6 +387,12 @@
               </select>
             </div>
           </div>
+          <div class="form-group">
+            <div class="col-12">
+              <label class="form-label text-center">Berkas :</label>
+              <a href="{{ url('/download/'.$mahasantri->id) }}">{{ $mahasantri->berkas }}</a>
+            </div>
+          </div>
           <!-- Logic Script Menampilkan pesan Saat Salah Satu Option dipilih  -->
           <script>
             function tampilkan() {
@@ -377,48 +400,60 @@
               var p_kontainer = document.getElementById("container");
 
               if (pesan == "online") {
-                p_kontainer.innerHTML = `
-                  <div class="form-group">
-                    <label class="col-12 mt-3">Silahkan Upload Semua Berkas Persyaratan Yang Telah Ditentukan Lalu Jadikan Satu File .PDF atau .Word :</label>
-                    <div class="col-12">
-                      <ol>
-                        <li>Surat Keterangan Tidak Mampu</li>
-                        <li>Surat Keterangan Sehat</li>
-                        <li>Kartu Tanda Penduduk Atau Kartu Pelajar</li>
-                        <li>Kartu Keluarga</li>
-                        <li>Salinan Ijazah/Surat Keterangan Siswa Aktif Bersekolah (SMA/SMK/Aliyah)</li>
-                      </ol>
+                  p_kontainer.innerHTML = `
+                    <div class="form-group">
+                      <label class="col-12 mt-3">Silahkan Upload Semua Berkas Persyaratan Yang Telah Ditentukan Lalu Jadikan Satu File .PDF atau .Word :</label>
+                      <div class="col-12">
+                        <ol>
+                          <li>Surat Keterangan Tidak Mampu</li>
+                          <li>Surat Keterangan Sehat</li>
+                          <li>Kartu Tanda Penduduk Atau Kartu Pelajar</li>
+                          <li>Kartu Keluarga</li>
+                          <li>Salinan Ijazah/Surat Keterangan Siswa Aktif Bersekolah (SMA/SMK/Aliyah)</li>
+                        </ol>
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-12">
-                      <label class="form-label text-center">Upload Berkas :</label>
-                      <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                    <div class="form-group">
+                      <div class="col-12">
+                        <label class="form-label text-center">Upload Berkas :</label>
+                        <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                      </div>
                     </div>
-                  </div>
-                  `;
-              } else if (pesan == "offline") {
-                p_kontainer.innerHTML = `
-                  <div class="form-group">
-                    <div>
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63287.4495946235!2d112.1531045436859!3d-7.524085847449887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e783fab1dc80271%3A0x8c4c1651240d8951!2sPesantren%20PeTIK%20II%20Jombang%20YBM%20PLN!5e0!3m2!1sid!2sid!4v1672736092825!5m2!1sid!2sid" width="100%" height="200%" style="border:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    `;
+                } else if (pesan == "offline") {
+                  p_kontainer.innerHTML = `
+                    <div class="form-group">
+                      <div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63287.4495946235!2d112.1531045436859!3d-7.524085847449887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e783fab1dc80271%3A0x8c4c1651240d8951!2sPesantren%20PeTIK%20II%20Jombang%20YBM%20PLN!5e0!3m2!1sid!2sid!4v1672736092825!5m2!1sid!2sid" width="100%" height="200%" style="border:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                      <label class="col-12 mt-3 text-center">Alamat Kami : <b>Pesantren PeTIK Jombang - YBM PLN
+                        Jl. KH. Bisri Syansuri RT.01/RW.05, Plosogeneng, Kec. Jombang,Jombang, Jawa Timur 61416.</b> 
+                      </label>
+                      <div class="form-group">
+                      <div class="col-12">
+                        <label class="form-label text-center">Upload Bukti Pengiriman :</label>
+                        <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                      </div>
                     </div>
-                    <label class="col-12 mt-3 text-center">Alamat Kami : <b>Pesantren PeTIK Jombang - YBM PLN
-                      Jl. KH. Bisri Syansuri RT.01/RW.05, Plosogeneng, Kec. Jombang,Jombang, Jawa Timur 61416.</b> 
-                    </label>
-                  </div>
-                  `;
-              } else if (pesan == "email") {
-                p_kontainer.innerHTML = `
-                  <div class="form-group">
-                    <label class="col-12 mt-3 text-center">Alamat Email : 
-                      <a href="https://drive.google.com/file/d/1GJ9UoJ8dFPtS3o0TeStgC8t7JWRLjChl/view">
-                        petikjombang@gmail.com
-                      </a>   
-                    </label>
-                  </div>
-                  `;
-              }
+                    </div>
+                    `;
+                } else if (pesan == "email") {
+                  p_kontainer.innerHTML = `
+                    <div class="form-group">
+                      <label class="col-12 mt-3 text-center">Alamat Email : 
+                        <a href="https://drive.google.com/file/d/1GJ9UoJ8dFPtS3o0TeStgC8t7JWRLjChl/view">
+                          petikjombang@gmail.com
+                        </a>   
+                      </label>
+                      <div class="form-group">
+                        <div class="col-12">
+                          <label class="form-label text-center">Upload Bukti Pengiriman :</label>
+                          <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                        </div>
+                      </div>
+                    </div>
+                    `;
+                }
             }
           </script>
 

@@ -55,6 +55,7 @@ class MahasantriRequest extends FormRequest
             'media_id' => 'required', 
             'metode_berkas' => 'required', 
             'berkas' => 'nullable',
+            'ket_profile' => 'required',
         ];
     }
 }

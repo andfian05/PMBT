@@ -23,6 +23,24 @@
     <div class="container">
       <div class="card card-info">
         <div class="card-body">
+            {{-- Informasi Tentang Pesantren PeTIK Jombang --}}
+            <div class="container mt-2 col-md-6">
+              <div class="card">
+                <div class="bg-info">
+                  <h6 class="text-center mt-2 ">Informasi Tentang Pesantren PeTIK Jombang</h6>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12">
+                <label for="">Tuliskan apa yang Anda pahami tentang Pesantren PeTIK Jombang :</label>
+                <textarea name="ket_profile"  class="form-control" id="" cols="6" rows="3" disabled>
+                  {{ $profilePetik->ket_profile }}
+                </textarea>
+              </div>                   
+            </div>
+            <br>
+
             {{-- Biodata Diri --}}
             <div class="container mt-2 col-md-6">
               <div class="card">
@@ -328,7 +346,7 @@
             <div class="form-group">
               <div class="col-12">
                 <label class="form-label text-center">Berkas :</label>
-                <a href="">{{ $mahasantri->berkas }}</a>
+                <a href="{{ url('/download/'.$mahasantri->id) }}">{{ $mahasantri->berkas }}</a>
               </div>
             </div>
         </div>

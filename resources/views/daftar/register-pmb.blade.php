@@ -28,34 +28,34 @@
     </nav>
     <br><br><br><br><br><br>
 
-    <div class="container"> 
-    <div class="card card-info">
-              <div class="card-header">
-                <h3 class="card-title">Informasi Tentang Pesantren PeTIK Jombang</h3>
-              </div>
-              <div class="card-body">
-              
-                <div class="form-group">
-                <iframe width="100%" height="500" src="https://www.youtube.com/embed/BgNR8w2ZZ1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    {{-- <div class="container"> 
+      <div class="card card-info">
+                <div class="card-header">
+                  <h3 class="card-title">Informasi Tentang Pesantren PeTIK Jombang</h3>
                 </div>
-              </div>
-              <div class="card-body">
-                <div class="form-group">
+                <div class="card-body">
                 
-                        <div class="form-group">
-                            <label for="keterangan">Apakah anda sudah mengetahui gambaran mengenai Pesantren PeTIK Jombang, silahkan mengisi hal apa saja yang Anda pahami?</label> 
-                            <div class="form-group -ml-3col-12">
-                            <textarea class="form-control" cols="4" rows="4" type="text"></textarea>
-                            </div>
-                        </div> 
-                       
-                   
+                  <div class="form-group">
+                  <iframe width="100%" height="500" src="https://www.youtube.com/embed/BgNR8w2ZZ1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                  
+                          <div class="form-group">
+                              <label for="keterangan">Apakah anda sudah mengetahui gambaran mengenai Pesantren PeTIK Jombang, silahkan mengisi hal apa saja yang Anda pahami?</label> 
+                              <div class="form-group -ml-3col-12">
+                              <textarea class="form-control" cols="4" rows="4" type="text"></textarea>
+                              </div>
+                          </div> 
+                        
                     
+                      
+                  </div>
                 </div>
               </div>
-            </div>
-    </div>
-    <br>
+      </div>
+    <br> --}}
 
     <div class="container">
       <div class="card card-info">
@@ -65,6 +65,7 @@
         <div class="card-body">
           <form action="{{ route('register.store') }}" method="POST" id="form1" name="form1" enctype="multipart/form-data">
             @csrf
+            {{-- <input type="hidden" name="profilepetik_id" value="{{ $profilePetik->id }}"> --}}
             {{-- Biodata Diri --}}
             <div class="container mt-2 col-md-6">
               <div class="card">
@@ -405,6 +406,12 @@
                       <label class="col-12 mt-3 text-center">Alamat Kami : <b>Pesantren PeTIK Jombang - YBM PLN
                         Jl. KH. Bisri Syansuri RT.01/RW.05, Plosogeneng, Kec. Jombang,Jombang, Jawa Timur 61416.</b> 
                       </label>
+                      <div class="form-group">
+                      <div class="col-12">
+                        <label class="form-label text-center">Upload Bukti Pengiriman :</label>
+                        <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                      </div>
+                    </div>
                     </div>
                     `;
                 } else if (pesan == "email") {
@@ -415,6 +422,12 @@
                           petikjombang@gmail.com
                         </a>   
                       </label>
+                      <div class="form-group">
+                        <div class="col-12">
+                          <label class="form-label text-center">Upload Bukti Pengiriman :</label>
+                          <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                        </div>
+                      </div>
                     </div>
                     `;
                 }

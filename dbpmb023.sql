@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2023 at 08:29 AM
+-- Generation Time: Jan 13, 2023 at 05:43 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dbpmbt`
+-- Database: `dbpmb023`
 --
 
 -- --------------------------------------------------------
@@ -91353,6 +91353,7 @@ INSERT INTO `kecamatan` (`id_kec`, `kab_id`, `nama`) VALUES
 
 CREATE TABLE `mahasantri` (
   `id` int(11) NOT NULL,
+  `profilepetik_id` int(11) DEFAULT NULL,
   `nama` varchar(255) NOT NULL,
   `anak_ke` int(11) NOT NULL,
   `tmp_lahir` varchar(100) NOT NULL,
@@ -91392,11 +91393,8 @@ CREATE TABLE `mahasantri` (
 -- Dumping data for table `mahasantri`
 --
 
-INSERT INTO `mahasantri` (`id`, `nama`, `anak_ke`, `tmp_lahir`, `tgl_lahir`, `no_hp`, `email`, `alamat`, `prov_id`, `kab_id`, `kec_id`, `desa_id`, `nama_ayah`, `pkj_ayah`, `pdk_ayah`, `nama_ibu`, `pkj_ibu`, `pdk_ibu`, `jml_sdr`, `nohp_klg`, `skl_asal`, `jurusan_skl`, `thn_lulus`, `cita_cita`, `prestasi`, `penyakit`, `perokok`, `jurusan_id`, `alasan`, `media_id`, `metode_berkas`, `berkas`, `created_at`, `updated_at`) VALUES
-(1, 'Kaylo Ardian Arkanda', 2, 'London', '2023-01-02', '081171923714', 'secor.ristik21@gmail.com', 'Metland Cileungsi', '32', '3201', '320107', '3201072010', 'Steven', 'Manager', 'S2', 'Retna', 'Ibu rumah tangga', 'S1', 3, '083691673672', 'SMA Baitul Qur\'an', 'IPA', 2021, 'Programmer', '-', '-', 'Tidak', 1, 'Programmer', 8, 'online', 'C:\\xampp\\tmp\\php6538.tmp', '2023-01-10 16:44:45', '2023-01-10 23:34:57'),
-(2, 'Fatih Abdurrahim Alexander', 2, 'Bekasi', '2002-05-24', '081120952719', 'fatihabdu21@gmail.com', 'Jl. Kasturi No. 5', '32', '3216', '321608', '3216082003', 'Arvan Alexander', 'Direktur', 'S2', 'Cristin Alexander', 'Manager', 'S2', 3, '082638268573', 'SMA Alexander', 'IPA', 2018, 'Consultant Jaringan', '-', '-', 'Tidak', 1, 'Bekerja, ingin cari pengalaman', 4, 'online', 'C:\\xampp\\tmp\\phpE069.tmp', '2023-01-10 19:25:50', '2023-01-10 19:25:50'),
-(3, 'Hamzah Abraham', 4, 'Bekasi', '2003-04-01', '085171512059', 'hamz1402@gmail.com', 'Jl. Kasturi Raya No. 10', '32', '3201', '320107', '3201072010', 'Arvandra Abraham', 'Manager', 'S2', 'Keyla Abraham', 'Manager', 'S1', 3, '083527936490', 'SMA Abraham Boarding School', 'IPA', 2019, 'Frontend Developer', '-', 'Magh', 'Tidak', 1, 'Kuliah, memperdalam ilmu', 6, 'offline', NULL, '2023-01-10 19:46:18', '2023-01-10 19:46:18'),
-(4, 'Hamzah', 2, 'London', '2022-11-29', '081120952719', 'admin@example.com', 'xxxxx', '16', '1605', '160518', '1605182005', 'Arvan Alexander', 'Manager', 'S2', 'Cristin Alexander', 'Ibu rumah tangga', 'S1', 3, '082638268573', 'SMA Abraham Boarding School', 'IPA', 2018, 'xxxx', 'xxxxx', 'xxxxx', 'Tidak', 1, 'xxxxx', 6, 'offline', NULL, '2023-01-10 19:50:24', '2023-01-10 19:50:24');
+INSERT INTO `mahasantri` (`id`, `profilepetik_id`, `nama`, `anak_ke`, `tmp_lahir`, `tgl_lahir`, `no_hp`, `email`, `alamat`, `prov_id`, `kab_id`, `kec_id`, `desa_id`, `nama_ayah`, `pkj_ayah`, `pdk_ayah`, `nama_ibu`, `pkj_ibu`, `pdk_ibu`, `jml_sdr`, `nohp_klg`, `skl_asal`, `jurusan_skl`, `thn_lulus`, `cita_cita`, `prestasi`, `penyakit`, `perokok`, `jurusan_id`, `alasan`, `media_id`, `metode_berkas`, `berkas`, `created_at`, `updated_at`) VALUES
+(1, NULL, 'Kaylo Ardian Arkanda', 2, 'London', '2023-01-03', '081120952719', 'admin@example.com', 'xxxxxxxxxxxx', '35', '3512', '351210', '3512102004', 'Steven Arkanda', 'Direktur', 'S2', 'Retna Arkanda', 'Manager', 'S1', 3, '082638268573', 'SMA Abraham Boarding School', 'IPA', 2019, 'xxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxx', 'xxxxxxxxxxxx', 'Tidak', 1, 'xxxxxxxxxxx', 4, 'offline', 'Screenshot (188).png.png', '2023-01-13 08:34:02', '2023-01-13 08:34:02');
 
 -- --------------------------------------------------------
 
@@ -91422,6 +91420,26 @@ INSERT INTO `mediainformasi` (`id_media`, `media_informasi`) VALUES
 (6, 'Sekolah'),
 (7, 'Kegiatan (Event)'),
 (8, 'Teman / Sahabat');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profilepetik`
+--
+
+CREATE TABLE `profilepetik` (
+  `id` int(11) NOT NULL,
+  `ket_profile` longtext NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `profilepetik`
+--
+
+INSERT INTO `profilepetik` (`id`, `ket_profile`, `created_at`, `updated_at`) VALUES
+(1, 'test by kak fian hihi ~', '2023-01-13 08:30:47', '2023-01-13 08:30:47');
 
 -- --------------------------------------------------------
 
@@ -91515,6 +91533,12 @@ ALTER TABLE `mediainformasi`
   ADD PRIMARY KEY (`id_media`);
 
 --
+-- Indexes for table `profilepetik`
+--
+ALTER TABLE `profilepetik`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `provinsi`
 --
 ALTER TABLE `provinsi`
@@ -91534,13 +91558,19 @@ ALTER TABLE `jurusan`
 -- AUTO_INCREMENT for table `mahasantri`
 --
 ALTER TABLE `mahasantri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `mediainformasi`
 --
 ALTER TABLE `mediainformasi`
   MODIFY `id_media` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `profilepetik`
+--
+ALTER TABLE `profilepetik`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

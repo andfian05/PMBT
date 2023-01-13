@@ -13,6 +13,7 @@ use App\Models\Kecamatan;
 use App\Models\Desa;
 use App\Models\Jurusan;
 use App\Models\MediaInformasi;
+use App\Models\ProfilePetik;
 
 use DB;
 
@@ -97,6 +98,11 @@ class MahasantriController extends Controller
             'berkas' => $fileName,
         ]);
 
+        // menambahkan data profile petik
+        ProfilePetik::create([
+            'ket_profile' => $data['ket_profile']
+        ]);
+
         return redirect()->route('mahasantri.index')->with('success', 'Mahasantri added successfully');
     }
 
@@ -109,9 +115,11 @@ class MahasantriController extends Controller
     public function show($id)
     {
         $mahasantri = Mahasantri::with(['provinsi', 'kabupaten', 'kecamatan', 'desa', 'jurusan', 'mediaInformasi'])->findOrFail($id);
+        $profilePetik = ProfilePetik::findOrFail($id);
 
         return view('backend.mahasantri.detail')->with([
-            'mahasantri' => $mahasantri
+            'mahasantri' => $mahasantri,
+            'profilePetik' => $profilePetik
         ]);
     }
 
@@ -137,6 +145,7 @@ class MahasantriController extends Controller
     public function edit($id)
     {
         $mahasantri = Mahasantri::with(['provinsi', 'kabupaten', 'kecamatan', 'desa', 'jurusan', 'mediaInformasi'])->findOrFail($id);
+        $profilePetik = ProfilePetik::findOrFail($id);
         $provinsis = Provinsi::all();
         $kabupatens = Kabupaten::all();
         $kecamatans = Kecamatan::all();
@@ -146,6 +155,7 @@ class MahasantriController extends Controller
 
         return view('backend.mahasantri.edit')->with([
             'mahasantri' => $mahasantri,
+            'profilePetik' => $profilePetik,
             'provinsis' => $provinsis,
             'kabupatens' => $kabupatens,
             'kecamatans' => $kecamatans,
@@ -167,6 +177,7 @@ class MahasantriController extends Controller
     {
         $data = $request->all();
         $mahasantri = Mahasantri::findOrFail($id);
+        $profilePetik = ProfilePetik::findOrFail($id);
 
         if($request->berkas == ""){
             $fileName = $mahasantri->berkas;
@@ -215,6 +226,12 @@ class MahasantriController extends Controller
             'berkas' => $fileName,
         ]);
 
+        // mengubah data profile petik
+        ProfilePetik::where('id', $profilePetik->id)
+        ->update([
+            'ket_profile' => $data['ket_profile']
+        ]);
+
         return redirect()->route('mahasantri.index')->with('success', 'Mahasantri updated successfully');
     }
 
@@ -229,6 +246,10 @@ class MahasantriController extends Controller
         $mahasantri = Mahasantri::findOrFail($id);
         if(!empty($mahasantri->berkas)) unlink(storage_path('app')."/upload/".$mahasantri->berkas);
         $mahasantri->delete();
+
+        // menghapus data profile petik
+        $profilePetik = ProfilePetik::findOrFail($id);
+        $profilePetik->delete();
 
         return redirect()->route('mahasantri.index')->with('success', 'Mahasantri deleted successfully');
     }

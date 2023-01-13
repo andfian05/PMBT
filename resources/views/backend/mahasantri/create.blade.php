@@ -25,6 +25,21 @@
         <div class="card-body">
           <form action="{{ route('mahasantri.store') }}" method="POST" id="form1" name="form1" enctype="multipart/form-data">
             @csrf
+            {{-- Informasi Tentang Pesantren PeTIK Jombang --}}
+            <div class="container mt-2 col-md-6">
+              <div class="card">
+                <div class="bg-info">
+                  <h6 class="text-center mt-2 ">Informasi Tentang Pesantren PeTIK Jombang</h6>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12">
+                <label for="">Tuliskan apa yang Anda pahami tentang Pesantren PeTIK Jombang :</label>
+                <textarea name="ket_profile"  class="form-control" id="" cols="6" rows="3" required></textarea>
+              </div>                   
+            </div>
+            <br>
             {{-- Biodata Diri --}}
             <div class="container mt-2 col-md-6">
               <div class="card">
@@ -352,7 +367,7 @@
                     <div class="form-group">
                       <div class="col-12">
                         <label class="form-label text-center">Upload Berkas :</label>
-                        <input name="berkas" type="file" class="form-control" multiple>
+                        <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
                       </div>
                     </div>
                     `;
@@ -365,6 +380,12 @@
                       <label class="col-12 mt-3 text-center">Alamat Kami : <b>Pesantren PeTIK Jombang - YBM PLN
                         Jl. KH. Bisri Syansuri RT.01/RW.05, Plosogeneng, Kec. Jombang,Jombang, Jawa Timur 61416.</b> 
                       </label>
+                      <div class="form-group">
+                      <div class="col-12">
+                        <label class="form-label text-center">Upload Bukti Pengiriman :</label>
+                        <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                      </div>
+                    </div>
                     </div>
                     `;
                 } else if (pesan == "email") {
@@ -375,6 +396,12 @@
                           petikjombang@gmail.com
                         </a>   
                       </label>
+                      <div class="form-group">
+                        <div class="col-12">
+                          <label class="form-label text-center">Upload Bukti Pengiriman :</label>
+                          <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                        </div>
+                      </div>
                     </div>
                     `;
                 }

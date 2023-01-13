@@ -46,10 +46,7 @@
 <script src="{{asset('assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}} "></script>
 <!-- AdminLTE App -->
 <script src="{{asset('assets/dist/js/adminlte.js')}} "></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{asset('assets/dist/js/demo.js')}} "></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{asset('assets/dist/js/pages/dashboard.js')}} "></script>
+
 
 
 <!-- jQuery -->
@@ -90,7 +87,7 @@
 <!-- AdminLTE App -->
 <script src="{{asset('asset/dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{asset('asset/dist/js/demo.js')}}"></script>
+{{-- <script src="{{asset('asset/dist/js/demo.js')}}"></script> --}}
 <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script>
   $(function () {

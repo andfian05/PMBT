@@ -13,6 +13,7 @@ use App\Models\Kecamatan;
 use App\Models\Desa;
 use App\Models\Jurusan;
 use App\Models\MediaInformasi;
+use App\Models\ProfilePetik;
 
 class RegisterController extends Controller
 {
@@ -26,11 +27,13 @@ class RegisterController extends Controller
         $provinsis = Provinsi::all();
         $jurusans = Jurusan::all();
         $mediaInformasis = MediaInformasi::all();
+        $profilePetik = ProfilePetik::all();
 
         return view('daftar.register-pmb')->with([
             'provinsis' => $provinsis,
             'jurusans' => $jurusans,
             'mediaInformasis' => $mediaInformasis,
+            'profilePetik' => $profilePetik,
         ]);
     }
 
@@ -48,7 +51,7 @@ class RegisterController extends Controller
         $data['berkas']->move(storage_path('app/upload'), $fileName);
 
         Mahasantri::create([
-           
+            // 'profilepetik_id' => $data['profilepetik_id'], 
             'nama' => $data['nama'], 
             'anak_ke' => $data['anak_ke'], 
             'tmp_lahir' => $data['tmp_lahir'], 
@@ -83,6 +86,38 @@ class RegisterController extends Controller
         ]);
         
         return redirect()->route('donepmb');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function profilePetik()
+    {
+        return view('daftar.first-pmb');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeProfile(Request $request)
+    {
+        $data = $request->all();
+
+        $request->validate([
+            'ket_profile' => 'required'
+        ]);
+
+        ProfilePetik::create([
+            'ket_profile' => $data['ket_profile']
+        ]);
+
+        return redirect()->route('registerpmb');
+        
     }
 
     /**

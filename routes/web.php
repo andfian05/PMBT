@@ -21,8 +21,10 @@ Route::get('/', function () {
 });
 
 /** Buat Form Satu Page */
-Route::get('/pmbpetikjombang', [RegisterController::class, 'register']);
-Route::post('/pmbpetikjombang', [RegisterController::class, 'store'])->name('register.store');
+Route::get('/pmbpetikjombang', [RegisterController::class, 'profilePetik']);
+Route::post('/pmbpetikjombang', [RegisterController::class, 'storeProfile'])->name('profile.store');
+Route::get('/register-pmb', [RegisterController::class, 'register'])->name('registerpmb');
+Route::post('/register-pmb', [RegisterController::class, 'store'])->name('register.store');
 Route::get('/done-pmb', function () {
     return view('daftar.done-pmb');
 })->name('donepmb');
