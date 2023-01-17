@@ -26,14 +26,21 @@
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('manage-user.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-user-group"></i>
+              <p>
+                Manage Users
               </p>
             </a>
           </li>
          
         
           <li class="nav-header">Master Data</li>
-          <!-- <li class="nav-item">
+          {{-- <!-- <li class="nav-item">
             <a href="{{ url('/admin2') }}" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
@@ -41,7 +48,7 @@
                 
               </p>
             </a>
-          </li> -->
+          </li> --> --}}
           
           <li class="nav-item">
             <a href="" class="nav-link">

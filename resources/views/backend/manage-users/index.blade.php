@@ -9,7 +9,7 @@
       <div class="container">
         <div class="card">
           <div class="card-body">
-            <h4 class="text-center">Data Calon Mahasantri</h4>
+            <h4 class="text-center">Data User</h4>
           </div>
         </div>
       </div>
@@ -17,7 +17,7 @@
       <div class="container">
         <div class="card">
           <div class="card-header">
-            <a class="btn btn-primary px-3 mb-2 mb-lg-0" title="Tambah Biodata Mahasantri" href="{{ route('mahasantri.create') }}">
+            <a class="btn btn-primary px-3 mb-2 mb-lg-0" title="Tambah User" href="{{ route('manage-user.create') }}">
               <i class="fa-solid fa-circle-plus"></i>&nbsp;Add Data
             </a>
           </div>
@@ -28,27 +28,27 @@
                   <tr>
                     <th scope="col">No</th>
                     <th scope="col">Nama Lengkap</th>
-                    <th scope="col">Tempat Lahir</th>
-                    <th scope="col">Tanggal Lahir</th>
-                    <th scope="col">No.Hp</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
                     <th scope="col">Action</th> 
                   </tr>
                 </thead>
-                <tbody class="table-group-divider">
+                <tbody>
                   @php $no = 1; @endphp
-                  @foreach($mahasantris as $mahasantri)
+                  @foreach($users as $user)
                     <tr>
                       <td scope="row" data-title="No" class="text-center">{{ $no++ }}</td>
-                      <td data-title="Nama Lengkap">{{ $mahasantri->nama }}</td>
-                      <td data-title="Tempat Lahir">{{ $mahasantri->tmp_lahir }}</td>
-                      <td data-title="Tanggal Lahir">{{ date('d F Y', strtotime($mahasantri->tgl_lahir)) }}</td>
-                      <td data-title="No. Handphone">{{ $mahasantri->no_hp }}</td>
+                      <td data-title="Nama Lengkap">{{ $user->nama }}</td>
+                      <td data-title="Username">{{ $user->username }}</td>
+                      <td data-title="Email">{{ $user->email }}</td>
+                      <td data-title="Role">{{ $user->role }}</td>
                       <th class="d-flex justify-content-center">
                         <a class="btn btn-primary btn-sm me-2"
-                            href="{{ route('mahasantri.show', $mahasantri->id) }}"><i class="fa-sharp fa-solid fa-magnifying-glass"></i>  Detail</a>
+                            href="{{ route('manage-user.show', $user->id) }}"><i class="fa-sharp fa-solid fa-magnifying-glass"></i>  Detail</a>
                         <a class="btn btn-success btn-sm me-2"
-                            href="{{ route('mahasantri.edit', $mahasantri->id) }}"><i class="fa-solid fa-pencil"></i> Update</a>
-                        <form method="POST" action="{{ route('mahasantri.destroy', $mahasantri->id) }}"
+                            href="{{ route('manage-user.edit', $user->id) }}"><i class="fa-solid fa-pencil"></i> Update</a>
+                        <form method="POST" action="{{ route('manage-user.destroy', $user->id) }}"
                             style="display: inline-block;">
                             @csrf
                             @method('DELETE')

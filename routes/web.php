@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasantriController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -118,3 +119,5 @@ Route::get('/admin5a',function(){
 /** Route Data Tampil Admin */
 Route::resource('mahasantri', MahasantriController::class);
 Route::get('download/{id}', [MahasantriController::class, 'download'])->name('download');
+
+Route::resource('manage-user', UserController::class);

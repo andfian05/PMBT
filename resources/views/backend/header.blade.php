@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Administrator</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -34,6 +36,37 @@
   <link rel="stylesheet" href="{{asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('assets/dist/css/adminlte.min.css')}}">
+
+  <style>
+    @media only screen and (max-width:800px) {
+      #no-more-tables tbody,
+      #no-more-tables tr,
+      #no-more-tables td {
+          display: block;
+      }
+      #no-more-tables thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+      #no-more-tables td {
+          position: relative;
+          padding-left: 50%;
+          border: none;
+          border-bottom: 1px solid #eee;
+      }
+      #no-more-tables td:before {
+          content: attr(data-title);
+          position: absolute;
+          left: 6px;
+          font-weight: bold;
+      }
+      #no-more-tables tr {
+          border-bottom: 1px solid #ccc;
+      }
+    }
+  </style>
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
