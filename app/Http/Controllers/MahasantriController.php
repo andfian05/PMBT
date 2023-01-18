@@ -28,7 +28,7 @@ class MahasantriController extends Controller
     {
         $mahasantris = Mahasantri::all();
 
-        return view('backend.mahasantri.index')->with([
+        return view('backend.admin.mahasantri.index')->with([
             'mahasantris' => $mahasantris
         ]);
     }
@@ -44,7 +44,7 @@ class MahasantriController extends Controller
         $jurusans = Jurusan::all();
         $mediaInformasis = MediaInformasi::all();
 
-        return view('backend.mahasantri.create')->with([
+        return view('backend.admin.mahasantri.create')->with([
             'provinsis' => $provinsis,
             'jurusans' => $jurusans,
             'mediaInformasis' => $mediaInformasis,
@@ -117,7 +117,7 @@ class MahasantriController extends Controller
         $mahasantri = Mahasantri::with(['provinsi', 'kabupaten', 'kecamatan', 'desa', 'jurusan', 'mediaInformasi'])->findOrFail($id);
         $profilePetik = ProfilePetik::findOrFail($id);
 
-        return view('backend.mahasantri.detail')->with([
+        return view('backend.admin.mahasantri.detail')->with([
             'mahasantri' => $mahasantri,
             'profilePetik' => $profilePetik
         ]);
@@ -153,7 +153,7 @@ class MahasantriController extends Controller
         $jurusans = Jurusan::all();
         $mediaInformasis = MediaInformasi::all();
 
-        return view('backend.mahasantri.edit')->with([
+        return view('backend.admin.mahasantri.edit')->with([
             'mahasantri' => $mahasantri,
             'profilePetik' => $profilePetik,
             'provinsis' => $provinsis,

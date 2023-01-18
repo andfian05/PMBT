@@ -20,7 +20,7 @@ class UserController extends Controller
     {
         $users = User::all();
 
-        return view('backend.manage-users.index')->with([
+        return view('backend.admin.manage-users.index')->with([
             'users' => $users
         ]);
     }
@@ -34,7 +34,7 @@ class UserController extends Controller
     {
         $roles = ['Administrator', 'Panitia A', 'Panitia B', 'Panitia C'];
         
-        return view('backend.manage-users.create')->with([
+        return view('backend.admin.manage-users.create')->with([
             'roles' => $roles
         ]);
     }
@@ -74,7 +74,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        return view('backend.manage-users.detail')->with([
+        return view('backend.admin.manage-users.detail')->with([
             'user' => $user
         ]);
     }
@@ -90,7 +90,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $roles = ['Administrator', 'Panitia A', 'Panitia B', 'Panitia C'];
 
-        return view('backend.manage-users.edit')->with([
+        return view('backend.admin.manage-users.edit')->with([
             'user' => $user,
             'roles' => $roles
         ]);
