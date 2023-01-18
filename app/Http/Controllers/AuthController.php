@@ -26,19 +26,34 @@ class AuthController extends Controller
   
             if ($account->role == 'Administrator') {
                 Auth::guard('administrator')->LoginUsingId($account->id);
-                return redirect('administrator');
+                return redirect('admin');
             } elseif ($account->role == 'Panitia A') {
                 Auth::guard('panitia-a')->LoginUsingId($account->id);
-                return redirect('dashboard/panitia-a');
+                return redirect('panitia-a');
             } elseif ($account->role == 'Panitia B') {
                 Auth::guard('panitia-b')->LoginUsingId($account->id);
-                return redirect('dashboard/panitia-b');
+                return redirect('panitia-b');
             } elseif ($account->role == 'Panitia C') {
                 Auth::guard('panitia-c')->LoginUsingId($account->id);
-                return redirect('dashboard/panitia-c');
+                return redirect('panitia-c');
             }
         }
 
         return redirect('/login')->with('status', 'Username atau Password Anda Salah');
+    }
+
+    public function logout()
+    {
+        if (Auth::guard('administrator')->check()) {
+            Auth::guard('administrator')->logout();
+        } elseif (Auth::guard('panitia-a')->check()) {
+            Auth::guard('panitia-a')->logout();
+        } elseif (Auth::guard('panitia-b')->check()) {
+            Auth::guard('panitia-b')->logout();
+        } elseif (Auth::guard('panitia-c')->check()) {
+            Auth::guard('panitia-c')->logout();
+        }
+
+        return view('master');
     }
 }

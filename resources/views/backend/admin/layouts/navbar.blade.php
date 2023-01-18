@@ -39,9 +39,14 @@
 
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button" 
+          onclick="event.preventDefault(); document.getElementById('logout').submit()">
+          <i class="fas fa-sign-out"></i>
+          {{ __('Logout') }}
         </a>
+        <form id="logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+          @csrf
+        </form>
       </li>
       
     </ul>

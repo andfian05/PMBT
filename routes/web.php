@@ -38,11 +38,6 @@ Route::post('/getDesa', [RegisterController::class, 'getDesa'])->name('getDesa')
 
 
 /** Routes Administrator */
-Route::get('/admin',function(){
-    return view('backend.home');
-});
-
-
 /** Task Data Global Seleksi */
 Route::get('/mahasantri',function(){
     return view('backend.mahasantri.index');
@@ -117,17 +112,51 @@ Route::get('/admin5a',function(){
 });
 
 
-/** Route Data Tampil Admin */
-Route::resource('mahasantri', MahasantriController::class);
-Route::get('download/{id}', [MahasantriController::class, 'download'])->name('download');
+/** ADMIN */
+Route::middleware('auth:administrator')->prefix('admin')->group(function () {
+    /** Dashboard */
+    Route::get('/',function(){
+        return view('backend.admin.home');
+    });
 
-Route::resource('manage-user', UserController::class);
+    /** Mahasantri */
+    Route::resource('mahasantri', MahasantriController::class);
+    Route::get('download/{id}', [MahasantriController::class, 'download'])->name('download');
+    
+    /** Manage Users */
+    Route::resource('manage-user', UserController::class);
+});
+
+/** PANITIA A (Test Survei) */
+Route::middleware('auth:panitia-a')->prefix('panitia-a')->group(function () {
+    /** Dashboard */
+    Route::get('/',function(){
+        return view('backend.panitia-a.home');
+    });
+});
+
+/** PANITIA B (Test Al-Qur'an) */
+Route::middleware('auth:panitia-b')->prefix('panitia-b')->group(function () {
+    /** Dashboard */
+    Route::get('/',function(){
+        return view('backend.panitia-b.home');
+    });
+});
+
+/** PANITIA C (Test Tanya Jawab) */
+Route::middleware('auth:panitia-c')->prefix('panitia-c')->group(function () {
+    /** Dashboard */
+    Route::get('/',function(){
+        return view('backend.panitia-c.home');
+    });
+});
 
 
 
 /** Auth */
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'login'])->name('postlogin');
+Route::post('/', [AuthController::class, 'logout'])->name('logout');
 
 // Auth::routes();
 

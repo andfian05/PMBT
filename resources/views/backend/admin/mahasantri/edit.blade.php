@@ -1,4 +1,4 @@
-@extends('backend.index')
+@extends('backend.admin.index')
 @section('content')
 <div class="content-wrapper">
   <br><br>
