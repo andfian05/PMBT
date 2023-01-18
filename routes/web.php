@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasantriController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -121,3 +122,13 @@ Route::resource('mahasantri', MahasantriController::class);
 Route::get('download/{id}', [MahasantriController::class, 'download'])->name('download');
 
 Route::resource('manage-user', UserController::class);
+
+
+
+/** Auth */
+Route::get('/login', [AuthController::class, 'index'])->name('login');
+Route::post('/postlogin', [AuthController::class, 'login'])->name('postlogin');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

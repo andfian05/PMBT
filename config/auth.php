@@ -40,6 +40,52 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+            'hash' => false,
+        ],
+        
+        'administrator' => [
+            'driver' => 'session',
+            'provider' => 'administrator',
+        ],
+        
+        'apiadministrator' => [
+            'driver' => 'token',
+            'provider' => 'administrator',
+        ],
+        
+        'panitia-a' => [
+            'driver' => 'session',
+            'provider' => 'panitia-a',
+        ],
+        
+        'apipanitia-a' => [
+            'driver' => 'token',
+            'provider' => 'panitia-a',
+        ],
+        
+        'panitia-b' => [
+            'driver' => 'session',
+            'provider' => 'panitia-b',
+        ],
+        
+        'apipanitia-b' => [
+            'driver' => 'token',
+            'provider' => 'panitia-b',
+        ],
+
+        'panitia-c' => [
+            'driver' => 'session',
+            'provider' => 'panitia-c',
+        ],
+        
+        'apipanitia-c' => [
+            'driver' => 'token',
+            'provider' => 'panitia-c',
+        ],
     ],
 
     /*
@@ -64,6 +110,27 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
+
+        'administrator' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
+        ],
+
+        'panitia-a' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
+        ],
+
+        'panitia-b' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
+        ],
+        
+        'panitia-c' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
+        ],
+
 
         // 'users' => [
         //     'driver' => 'database',
