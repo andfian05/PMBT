@@ -18,11 +18,18 @@
 
                 </ul>
 
-                <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 rounded-pill" href="https://drive.google.com/file/d/1GJ9UoJ8dFPtS3o0TeStgC8t7JWRLjChl/view" target="_blank"> <i
-                        class="fa-solid fa-cloud-arrow-down"></i>&nbsp; Download Brosur</a>&nbsp;&nbsp;
-                <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 rounded-pill"
-                    href="{{ url('/') }}"> <i class="fa-solid fa-bookmark"></i>&nbsp; Panduan Informasi</a>
-
+                <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 
+                    rounded-pill" href="https://drive.google.com/file/d/1GJ9UoJ8dFPtS3o0TeStgC8t7JWRLjChl/view" target="_blank"> 
+                    <i class="fa-solid fa-cloud-arrow-down"></i>&nbsp; 
+                    Download Brosur
+                </a>&nbsp;&nbsp;
+                <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 
+                    rounded-pill"
+                    href="{{ url('/') }}"> 
+                    <i class="fa-solid fa-bookmark"></i>&nbsp; 
+                    Panduan Informasi
+                </a>
+                
             </div>
         </div>
     </nav>

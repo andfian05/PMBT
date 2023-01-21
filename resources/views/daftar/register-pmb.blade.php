@@ -28,35 +28,6 @@
     </nav>
     <br><br><br><br><br><br>
 
-    {{-- <div class="container"> 
-      <div class="card card-info">
-                <div class="card-header">
-                  <h3 class="card-title">Informasi Tentang Pesantren PeTIK Jombang</h3>
-                </div>
-                <div class="card-body">
-                
-                  <div class="form-group">
-                  <iframe width="100%" height="500" src="https://www.youtube.com/embed/BgNR8w2ZZ1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="form-group">
-                  
-                          <div class="form-group">
-                              <label for="keterangan">Apakah anda sudah mengetahui gambaran mengenai Pesantren PeTIK Jombang, silahkan mengisi hal apa saja yang Anda pahami?</label> 
-                              <div class="form-group -ml-3col-12">
-                              <textarea class="form-control" cols="4" rows="4" type="text"></textarea>
-                              </div>
-                          </div> 
-                        
-                    
-                      
-                  </div>
-                </div>
-              </div>
-      </div>
-    <br> --}}
-
     <div class="container">
       <div class="card card-info">
         <div class="card-header">
@@ -65,7 +36,21 @@
         <div class="card-body">
           <form action="{{ route('register.store') }}" method="POST" id="form1" name="form1" enctype="multipart/form-data">
             @csrf
-            {{-- <input type="hidden" name="profilepetik_id" value="{{ $profilePetik->id }}"> --}}
+            {{-- Informasi Tentang Pesantren PeTIK Jombang --}}
+            <div class="container mt-2 col-md-6">
+              <div class="card">
+                <div class="bg-info">
+                  <h6 class="text-center mt-2 ">Informasi Tentang Pesantren PeTIK Jombang</h6>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12">
+                <label for="">Tuliskan apa yang Anda pahami tentang Pesantren PeTIK Jombang :</label>
+                <textarea name="ket_profile"  class="form-control" id="" cols="6" rows="3" required></textarea>
+              </div>                   
+            </div>
+            <br>
             {{-- Biodata Diri --}}
             <div class="container mt-2 col-md-6">
               <div class="card">

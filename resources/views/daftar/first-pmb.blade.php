@@ -43,7 +43,7 @@
         </div>
         <div class="card-body">
           <div class="form-group">
-            <form action="{{ route('profile.store') }}" method="POST" id="form1" name="form1">
+            <form action="#" method="GET" id="form1" name="form1">
               @csrf
               <div class="form-group">
                 <label for="keterangan">Apakah anda sudah mengetahui gambaran mengenai Pesantren PeTIK Jombang, dan yakin untuk 
@@ -67,18 +67,17 @@
                     p_kontainer.innerHTML = `
                     <div class="form-group">
                       <div class="col-md-12">
-                        <label for="">Tuliskan apa yang Anda pahami tentang Pesantren PeTIK Jombang :</label>
-                        <textarea name="ket_profile"  class="form-control" id="" cols="12" rows="6" required="required"></textarea>
+                        <label for="">Persiapkan catatan mengenai PeTIK Jombang.</label>
                       </div>                   
                     </div>
                     <div class="form-group">
                       <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Memulai Mengisi</button>
+                        <a href="{{ route('registerpmb') }}" class="btn btn-primary">Memulai Mengisi</a>
                       </div>
                     </div>`;
                   } else if (pesan == "bm") {
                     p_kontainer.innerHTML =
-                      `<p align="center" class="text-danger"><b>Mohon maaf, Anda tidak bisa melanjutkan Pendaftaran.<br/>Anda harus memiliki gambaran mengenai Pesantren PeTIK Jombang sebelum melakukan pendaftaran</b></p>`;
+                      `<p align="center" class="text-danger"><b>Silakan pahami video tersebut.</b></p>`;
                   }
                 }
               </script>

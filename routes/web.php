@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 /** Buat Form Satu Page */
 Route::get('/pmbpetikjombang', [RegisterController::class, 'profilePetik']);
-Route::post('/pmbpetikjombang', [RegisterController::class, 'storeProfile'])->name('profile.store');
+// Form PMB to Calon Mahasantri
 Route::get('/register-pmb', [RegisterController::class, 'register'])->name('registerpmb');
 Route::post('/register-pmb', [RegisterController::class, 'store'])->name('register.store');
 Route::get('/done-pmb', function () {
