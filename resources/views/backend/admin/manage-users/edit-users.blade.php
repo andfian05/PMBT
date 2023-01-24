@@ -52,13 +52,13 @@
               <div class="col-md-6">
                 <div class="form mb-3 mb-md-0">
                   <label>Password </label>
-                  <input class="form-control" name="password" type="password" />
+                  <input class="form-control" name="password" type="password" value="" />
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form">
                   <label>Confirm Password</label>
-                  <input class="form-control" name="password_confirmation" type="password" />
+                  <input class="form-control" name="password_confirmation" type="password" value="" />
                 </div>
               </div>
             </div>

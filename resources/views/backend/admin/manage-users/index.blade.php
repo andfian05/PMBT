@@ -1,8 +1,12 @@
 @extends('backend.admin.index')
 @section('content')
-<!-- @if (session('success'))
-  <p class="alert alert-success">{{ session('success') }}</p>
-@endif -->
+    <div class="col-8">
+      @if (session('success'))
+          <div class="alert alert-success">
+              {{ session('success') }}
+          </div>
+      @endif
+    </div>
 
     <div class="content-wrapper">
       <br><br>

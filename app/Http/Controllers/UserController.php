@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests\UserRequest;
+
 
 use App\Models\User;
 
@@ -34,7 +36,7 @@ class UserController extends Controller
     {
         $roles = ['Administrator', 'Panitia A', 'Panitia B', 'Panitia C'];
         
-        return view('backend.admin.manage-users.create')->with([
+        return view('backend.admin.manage-users.create-users')->with([
             'roles' => $roles
         ]);
     }
@@ -90,7 +92,7 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         $roles = ['Administrator', 'Panitia A', 'Panitia B', 'Panitia C'];
 
-        return view('backend.admin.manage-users.edit')->with([
+        return view('backend.admin.manage-users.edit-users')->with([
             'user' => $user,
             'roles' => $roles
         ]);
