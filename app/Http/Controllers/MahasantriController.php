@@ -256,7 +256,7 @@ class MahasantriController extends Controller
     }
 
     /**
-     * Display a export list mahasantri to PDF of the resource Mahasantri.
+     * Export list mahasantri to PDF of the resource Mahasantri.
      */
     public function exportPDF()
     {
