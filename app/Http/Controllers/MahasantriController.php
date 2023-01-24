@@ -14,9 +14,11 @@ use App\Models\Desa;
 use App\Models\Jurusan;
 use App\Models\MediaInformasi;
 use App\Models\ProfilePetik;
+use App\Exports\MahasantriExport;
 
 use DB;
 use PDF;
+use Excel;
 
 class MahasantriController extends Controller
 {
@@ -267,5 +269,13 @@ class MahasantriController extends Controller
 
         $pdf = PDF::loadView('backend.admin.mahasantri.pdf', $data);
         return $pdf->download('Data-Calon-Mahasantri-PeTIK-Jombang.pdf');
+    }
+
+    /**
+     * Export list mahasantri to Excel of the resource Mahasantri.
+     */
+    public function exportExcel()
+    {
+        return Excel::download(new MahasantriExport, 'Data-Calon-Mahasantri-PeTIK-Jombang.xlsx');
     }
 }

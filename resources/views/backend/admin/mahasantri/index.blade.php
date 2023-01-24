@@ -23,6 +23,9 @@
             <a class="btn btn-danger px-3 mb-2 mb-lg-0" title="Export Data Mahasantri" href="{{ route('mahasantri.pdf') }}">
               <i class="fa-solid fa-file-pdf"></i>
             </a>
+            <a class="btn btn-success px-3 mb-2 mb-lg-0" title="Export Data Mahasantri" href="{{ route('mahasantri.excel') }}">
+              <i class="fa-solid fa-file-excel"></i>
+            </a>
           </div>
           <div class="card-body">
             <div class="table-responsive" id="no-more-tables">
