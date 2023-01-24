@@ -5,6 +5,7 @@ use App\Http\Controllers\MahasantriController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -115,9 +116,7 @@ Route::get('/admin5a',function(){
 /** ADMIN */
 Route::middleware('auth:administrator')->prefix('admin')->group(function () {
     /** Dashboard */
-    Route::get('/',function(){
-        return view('backend.admin.home');
-    });
+    Route::get('/', [HomeController::class, 'dashboardAdmin']);
 
     /** Mahasantri */
     Route::resource('mahasantri', MahasantriController::class);
