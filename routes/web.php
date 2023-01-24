@@ -122,6 +122,7 @@ Route::middleware('auth:administrator')->prefix('admin')->group(function () {
     /** Mahasantri */
     Route::resource('mahasantri', MahasantriController::class);
     Route::get('download/{id}', [MahasantriController::class, 'download'])->name('download');
+    Route::get('mahasantri-exportPDF', [MahasantriController::class, 'exportPDF'])->name('mahasantri.pdf');
     
     /** Manage Users */
     Route::resource('manage-user', UserController::class);

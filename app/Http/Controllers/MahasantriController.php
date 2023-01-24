@@ -16,6 +16,7 @@ use App\Models\MediaInformasi;
 use App\Models\ProfilePetik;
 
 use DB;
+use PDF;
 
 class MahasantriController extends Controller
 {
@@ -252,5 +253,19 @@ class MahasantriController extends Controller
         $profilePetik->delete();
 
         return redirect()->route('mahasantri.index')->with('success', 'Mahasantri deleted successfully');
+    }
+
+    /**
+     * Display a export list mahasantri to PDF of the resource Mahasantri.
+     */
+    public function exportPDF()
+    {
+        $mahasantris = Mahasantri::with(['jurusan'])->get();
+        $data = [
+            'mahasantris' => $mahasantris
+        ];
+
+        $pdf = PDF::loadView('backend.admin.mahasantri.pdf', $data);
+        return $pdf->download('Data-Calon-Mahasantri-PeTIK-Jombang.pdf');
     }
 }
