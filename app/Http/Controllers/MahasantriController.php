@@ -64,7 +64,7 @@ class MahasantriController extends Controller
     {
         $data = $request->all();
 
-        $fileName = $data['berkas']->getClientOriginalName() . '.' . $data['berkas']->extension();
+        $fileName = $data['berkas']->getClientOriginalName() . '-' . time(). '.' . $data['berkas']->extension();
         $data['berkas']->move(storage_path('app/upload'), $fileName);
 
         Mahasantri::create([
@@ -135,8 +135,9 @@ class MahasantriController extends Controller
     public function download($id)
     {
         $data = DB::table('mahasantri')->where('id', $id)->first();
-        $filepath = storage_path("app/upload/{$data->berkas}");
-        return \Response::download($filepath);
+        // $filepath = storage_path("app/upload/{$data->berkas}");
+        // return \Response::download($filepath);
+        return response()->download(storage_path('/app/upload/'. $data->berkas));
     }
 
     /**

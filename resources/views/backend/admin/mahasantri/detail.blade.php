@@ -346,7 +346,8 @@
             <div class="form-group">
               <div class="col-12">
                 <label class="form-label text-center">Berkas :</label>
-                <a href="{{ url('/download/'.$mahasantri->id) }}">{{ $mahasantri->berkas }}</a>
+                {{-- <a href="{{ url('/download/'.$mahasantri->id) }}">{{ $mahasantri->berkas }}</a> --}}
+                <a href="{!! route('download', $mahasantri->id) !!}">{{ $mahasantri->berkas }}</a>
               </div>
             </div>
         </div>
