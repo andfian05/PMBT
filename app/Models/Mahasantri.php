@@ -11,7 +11,7 @@ class Mahasantri extends Model
 
     protected $table = 'mahasantri';
     protected $fillable = [
-        'profilepetik_id', 'nama', 'anak_ke', 'tmp_lahir', 'tgl_lahir', 'no_hp', 'email', 'alamat', 'prov_id', 'kab_id', 'kec_id', 'desa_id', 'nama_ayah', 'pkj_ayah', 'pdk_ayah', 'nama_ibu', 'pkj_ibu', 'pdk_ibu', 'jml_sdr', 'nohp_klg', 'skl_asal', 'jurusan_skl', 'thn_lulus', 'cita_cita', 'prestasi', 'penyakit', 'perokok', 'jurusan_id', 'alasan', 'media_id', 'metode_berkas', 'berkas'
+        'nama', 'anak_ke', 'tmp_lahir', 'tgl_lahir', 'no_hp', 'email', 'alamat', 'prov_id', 'kab_id', 'kec_id', 'desa_id', 'nama_ayah', 'pkj_ayah', 'pdk_ayah', 'nama_ibu', 'pkj_ibu', 'pdk_ibu', 'jml_sdr', 'nohp_klg', 'skl_asal', 'jurusan_skl', 'thn_lulus', 'cita_cita', 'prestasi', 'penyakit', 'perokok', 'jurusan_id', 'alasan', 'media_id', 'metode_berkas', 'berkas'
     ];
 
     public function provinsi() 
@@ -43,11 +43,5 @@ class Mahasantri extends Model
     {
         return $this->belongsTo(MediaInformasi::class, 'media_id', 'id_media');
     }
-    
-    public function profilePetik() 
-    {
-        return $this->belongsTo(ProfilePetik::class, 'profilepetik_id', 'id');
-    }
-
 
 }

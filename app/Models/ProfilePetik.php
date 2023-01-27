@@ -13,9 +13,4 @@ class ProfilePetik extends Model
     protected $fillable = [
         'id', 'ket_profile'
     ];
-
-    public function maasantri()
-    {
-        return $this->hasOne(Mahasantri::class, 'profilepetik_id');
-    }
 }
