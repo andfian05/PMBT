@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2023 at 06:07 PM
+-- Generation Time: Jan 27, 2023 at 07:33 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -83557,6 +83557,7 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+-- Error reading data for table dbpmb023.failed_jobs: #1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &#039;FROM `dbpmb023`.`failed_jobs`&#039; at line 1
 
 -- --------------------------------------------------------
 
@@ -91369,7 +91370,6 @@ INSERT INTO `kecamatan` (`id_kec`, `kab_id`, `nama`) VALUES
 
 CREATE TABLE `mahasantri` (
   `id` int(11) NOT NULL,
-  `profilepetik_id` int(11) DEFAULT NULL,
   `nama` varchar(255) NOT NULL,
   `anak_ke` int(11) NOT NULL,
   `tmp_lahir` varchar(100) NOT NULL,
@@ -91409,8 +91409,13 @@ CREATE TABLE `mahasantri` (
 -- Dumping data for table `mahasantri`
 --
 
-INSERT INTO `mahasantri` (`id`, `profilepetik_id`, `nama`, `anak_ke`, `tmp_lahir`, `tgl_lahir`, `no_hp`, `email`, `alamat`, `prov_id`, `kab_id`, `kec_id`, `desa_id`, `nama_ayah`, `pkj_ayah`, `pdk_ayah`, `nama_ibu`, `pkj_ibu`, `pdk_ibu`, `jml_sdr`, `nohp_klg`, `skl_asal`, `jurusan_skl`, `thn_lulus`, `cita_cita`, `prestasi`, `penyakit`, `perokok`, `jurusan_id`, `alasan`, `media_id`, `metode_berkas`, `berkas`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'Kaylo Ardian Arkanda', 2, 'London', '2023-01-03', '081120952719', 'admin@example.com', 'xxxxxxxxxxxx', '35', '3512', '351210', '3512102004', 'Steven Arkanda', 'Direktur', 'S2', 'Retna Arkanda', 'Manager', 'S1', 3, '082638268573', 'SMA Abraham Boarding School', 'IPA', 2019, 'xxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxx', 'xxxxxxxxxxxx', 'Tidak', 1, 'xxxxxxxxxxx', 4, 'offline', 'Screenshot (188).png.png', '2023-01-13 08:34:02', '2023-01-13 08:34:02');
+INSERT INTO `mahasantri` (`id`, `nama`, `anak_ke`, `tmp_lahir`, `tgl_lahir`, `no_hp`, `email`, `alamat`, `prov_id`, `kab_id`, `kec_id`, `desa_id`, `nama_ayah`, `pkj_ayah`, `pdk_ayah`, `nama_ibu`, `pkj_ibu`, `pdk_ibu`, `jml_sdr`, `nohp_klg`, `skl_asal`, `jurusan_skl`, `thn_lulus`, `cita_cita`, `prestasi`, `penyakit`, `perokok`, `jurusan_id`, `alasan`, `media_id`, `metode_berkas`, `berkas`, `created_at`, `updated_at`) VALUES
+(1, 'Kaylo Ardian Arkanda', 2, 'London', '2023-01-03', '081120952719', 'admin@example.com', 'xxxxxxxxxxxx', '35', '3512', '351210', '3512102004', 'Steven Arkanda', 'Direktur', 'S2', 'Retna Arkanda', 'Manager', 'S1', 3, '082638268573', 'SMA Abraham Boarding School', 'IPA', 2019, 'xxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxx', 'xxxxxxxxxxxx', 'Tidak', 1, 'xxxxxxxxxxx', 4, 'offline', 'Screenshot (188).png.png', '2023-01-13 08:34:02', '2023-01-13 08:34:02'),
+(3, 'xx', 2, 'x', '2023-01-10', '084639874958', 'admin@gmail.com', 'x', '33', '3333', '333333', '333333333', 'x', 'x', 'x', 'x', 'x', 'x', 3, '08687856567', 'x', 'x', 2030, 'x', 'x', 'x', 'Tidak', 1, 'x', 3, 'online', 'xxx', '2023-01-20 10:41:45', '2023-01-20 10:41:45'),
+(4, 'Hamzah Abraham', 2, 'Bekasi', '2023-01-11', '081171923714', 'admin@example.com', 'l', '31', '3173', '317306', '3173061001', 'Arvandra Abraham', 'Manager', 'S2', 'Keyla Abraham', 'Ibu rumah tangga', 'S1', 3, '083691673672', 'SMA Abraham Boarding School', 'IPA', 2021, 'x', 'x', 'x', 'Tidak', 1, 'x', 4, 'offline', 'New Journal Document.jnt.bin', '2023-01-20 03:49:10', '2023-01-20 03:49:10'),
+(5, 'xx', 2, 'xx', '2023-01-23', '084639874958', 'admin@gmail.com', 'x', '31', '3173', '317306', '3173061001', 'xx', 'xx', 'xx', 'xx', 'xx', 'xx', 3, '08687856567', 'x', 'x', 2023, 'x', 'x', '-', 'Tidak', 2, 'xx', 5, 'offline', NULL, '2023-01-20 15:43:42', '2023-01-20 15:43:42'),
+(6, 'Fian Raihandra', 3, 'Jakarta', '2006-01-18', '084639874958', 'andra.ian23@gmail.com', 'Jakarta', '31', '3173', '317306', '3173061001', 'Kevan', 'Dokter', 'S3', 'Retna', 'S1', 'Ibu rumah tangga', 3, '08687856567', 'x', 'x', 2023, 'x', 'x', 'x', 'Tidak', 1, 'x', 4, 'offline', NULL, '2023-01-20 22:33:41', '2023-01-20 22:33:41'),
+(7, 'Ardan', 3, 'Jakarta', '2023-01-11', '085171512059', 'admin@example.com', 'Gambir', '31', '3171', '317101', '3171011001', 'Steven', 'Dokter', 'S3', 'Retna', 'Ibu rumah tangga', 'S1', 4, '082638268573', 'SMA Abraham Boarding School', 'IPA', 2023, 'Programmer', 'Banyak', '-', 'Tidak', 1, 'Bekerja, menyenangkan', 3, 'offline', 'HAT.png.png', '2023-01-20 16:20:38', '2023-01-20 16:20:38');
 
 -- --------------------------------------------------------
 
@@ -91508,7 +91513,12 @@ CREATE TABLE `profilepetik` (
 --
 
 INSERT INTO `profilepetik` (`id`, `ket_profile`, `created_at`, `updated_at`) VALUES
-(1, 'test by kak fian hihi ~', '2023-01-13 08:30:47', '2023-01-13 08:30:47');
+(1, 'test by kak fian hihi ~', '2023-01-13 08:30:47', '2023-01-13 08:30:47'),
+(3, 'Sebuah pesantren berbasis teknologi hihi ~', '2023-01-20 02:28:32', '2023-01-20 02:28:32'),
+(4, 'l', '2023-01-20 03:49:10', '2023-01-20 03:49:10'),
+(5, 'Sebuah pesantren teknologi', '2023-01-20 05:06:09', '2023-01-20 05:06:09'),
+(6, 'Disuruh kak Fian test', '2023-01-20 09:11:53', '2023-01-20 09:11:53'),
+(7, 'Pesantren', '2023-01-20 16:20:38', '2023-01-20 16:20:38');
 
 -- --------------------------------------------------------
 
@@ -91589,7 +91599,9 @@ INSERT INTO `users` (`id`, `nama`, `username`, `email`, `email_verified_at`, `pa
 (1, 'Ahmad Faruq', 'mad_faruq15', 'faruq_mad15@gmail.com', NULL, '$2y$10$bufnOjd7h.UEOYs22rahS.x6hjWXsaN36KyIaUA/2kFpzU8P0p6em', NULL, 'Administrator', NULL, '2023-01-18 09:45:34', '2023-01-18 09:45:34'),
 (2, 'Muhammad Fiandra', 'andra11', 'andra17@gmail.com', NULL, '$2y$10$EgVLhxwZYv.rCS8BS1RsT.vag3lF5NsSlkiDJi4urpXl/SMtihoky', NULL, 'Panitia A', NULL, '2023-01-18 09:45:36', '2023-01-18 09:45:36'),
 (3, 'Ahmad Fathullah', 'fathul77', 'mad_athul33@gmail.com', NULL, '$2y$10$tFZnuUK5uIQXKrqmx0ugJO4QJt.Uqp1Ciox4IAwIy9ifmWMwRJzb2', NULL, 'Panitia B', NULL, '2023-01-18 09:45:36', '2023-01-18 09:45:36'),
-(4, 'Muhammad Firmansyah', 'irman90', 'irman31@gmail.com', NULL, '$2y$10$2saMk58MrcqkmAX8PryS2eOmJmdOxPrtlG3WDj/4oQz.LqiiVCJSW', NULL, 'Panitia C', NULL, '2023-01-18 09:45:37', '2023-01-18 09:45:37');
+(4, 'Muhammad Firmansyah', 'irman90', 'irman31@gmail.com', NULL, '$2y$10$2saMk58MrcqkmAX8PryS2eOmJmdOxPrtlG3WDj/4oQz.LqiiVCJSW', NULL, 'Panitia C', NULL, '2023-01-18 09:45:37', '2023-01-18 09:45:37'),
+(5, 'Fian Raihandra', 'ihan573', 'andra.ian23@gmail.com', NULL, '$2y$10$Eo3IGY6aITMdrA.AjK5QW.6tZL6hCcntXZokYETR3fh28rv7rubW2', NULL, 'Administrator', NULL, '2023-01-20 08:41:21', '2023-01-24 01:32:41'),
+(6, 'Alifian', 'andfian05', 'andfian05@gmail.com', NULL, '$2y$10$72cy0wXGPHw5JelNRIWP5egzHCk.yEWBbTSV93wTfZrAeHJD0PAb6', NULL, 'Administrator', NULL, '2023-01-24 01:20:52', '2023-01-24 01:20:52');
 
 --
 -- Indexes for dumped tables
@@ -91698,7 +91710,7 @@ ALTER TABLE `jurusan`
 -- AUTO_INCREMENT for table `mahasantri`
 --
 ALTER TABLE `mahasantri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `mediainformasi`
@@ -91722,13 +91734,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `profilepetik`
 --
 ALTER TABLE `profilepetik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
