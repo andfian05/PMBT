@@ -45,7 +45,7 @@ class RegisterController extends Controller
     {
         $data = $request->all();
 
-        $fileName = $data['berkas']->getClientOriginalName() . '.' . $data['berkas']->extension();
+        $fileName = $data['berkas']->getClientOriginalName() . '-' . time(). '.' . $data['berkas']->extension();
         $data['berkas']->move(storage_path('app/upload'), $fileName);
 
         Mahasantri::create([
