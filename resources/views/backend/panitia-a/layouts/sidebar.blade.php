@@ -22,14 +22,14 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"  
           data-accordion="false">
-          <li class="nav-item menu-open">
-            <a href="{{ url('/admin') }}" class="nav-link">
+          <li class="nav-item {{ (Request::is('panitia-a') ? 'menu-open' : '') }}">
+            <a href="{{ url('/panitia-a') }}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{ url('/admin5') }}" class="nav-link">
+          <li class="nav-item {{ (Request::is('panitia-a/test-survey') ? 'menu-open' : '') }}{{ (Request::is('panitia-a/test-survey-done') ? 'menu-open' : '') }}">
+            <a href="{{ route('test-survey.create') }}" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
               <p>Test Survei</p>
             </a>

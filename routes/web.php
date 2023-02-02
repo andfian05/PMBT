@@ -6,6 +6,9 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SurveiController;
+// use App\Http\Controllers\TestSurveiController;
+use App\Http\Controllers\TestSurveyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -126,14 +129,25 @@ Route::middleware('auth:administrator')->prefix('admin')->group(function () {
     
     /** Manage Users */
     Route::resource('manage-user', UserController::class);
+
+    /** Survei */
+    Route::resource('survei', SurveiController::class);
 });
 
-/** PANITIA A (Test Survei) */
+/** PANITIA A (Test Survey) */
 Route::middleware('auth:panitia-a')->prefix('panitia-a')->group(function () {
     /** Dashboard */
     Route::get('/',function(){
         return view('backend.panitia-a.home');
     });
+
+    /** Test Survey */
+    Route::get('test-survey', [TestSurveyController::class, 'testsurvey'])->name('test-survey.create');
+    Route::post('test-survey', [TestSurveyController::class, 'store'])->name('test-survey.store');
+    // Route::resource('test-survey', TestSurveiController::class);
+    Route::get('test-survey-done', function(){
+        return view('backend.panitia-a.done');
+    })->name('test-survey.done');
 });
 
 /** PANITIA B (Test Al-Qur'an) */

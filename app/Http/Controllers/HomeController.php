@@ -13,6 +13,7 @@ use App\Models\Desa;
 use App\Models\Jurusan;
 use App\Models\MediaInformasi;
 use App\Models\ProfilePetik;
+use App\Models\Survei;
 
 use DB;
 
@@ -26,9 +27,11 @@ class HomeController extends Controller
     public function dashboardAdmin()
     {
         $mahasantri = Mahasantri::count();
+        $survei = Survei::count();
 
         return view('backend.admin.home')->with([
-            'mahasantri' => $mahasantri
+            'mahasantri' => $mahasantri,
+            'survei' => $survei
         ]);
     }
 }

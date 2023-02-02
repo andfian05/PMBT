@@ -21,7 +21,7 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item menu-open">
+          <li class="nav-item {{ (Request::is('admin') ? 'menu-open' : '') }}">
             <a href="{{ url('/admin') }}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
@@ -29,7 +29,11 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item 
+            {{ (Request::is('admin/manage-user') ? 'menu-open' : '') }}
+            {{ (Request::is('admin/manage-user/create') ? 'menu-open' : '') }}
+            {{ (Request::is('admin/manage-user/{manage_user}') ? 'menu-open' : '') }}
+            {{ (Request::is('admin/manage-user{manage_user}/edit') ? 'menu-open' : '') }}">
             <a href="{{ route('manage-user.index') }}" class="nav-link">
               <i class="nav-icon fas fa-user-group"></i>
               <p>
@@ -59,14 +63,22 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
+              <li class="nav-item 
+                {{ (Request::is('admin/mahasantri') ? 'menu-open' : '') }}
+                {{ (Request::is('admin/mahasantri/create') ? 'menu-open' : '') }}
+                {{ (Request::is('admin/mahasantri/{mahasantri}') ? 'menu-open' : '') }}
+                {{ (Request::is('admin/mahasantri{mahasantri}/edit') ? 'menu-open' : '') }}">
                 <a href="{{ route('mahasantri.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Mahasantri</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{ url('/admin2w') }}" class="nav-link">
+              <li class="nav-item
+                {{ (Request::is('admin/survei') ? 'menu-open' : '') }}
+                {{ (Request::is('admin/survei/create') ? 'menu-open' : '') }}
+                {{ (Request::is('admin/survei/{survei}') ? 'menu-open' : '') }}
+                {{ (Request::is('admin/survei{survei}/edit') ? 'menu-open' : '') }}">
+                <a href="{{ url('/admin/survei') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Survei</p>
                 </a>

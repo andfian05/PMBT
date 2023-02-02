@@ -37,14 +37,20 @@
           <div class="col-lg-3 col-6">
             <div class="small-box bg-warning-emphasis">
               <div class="inner">
-                <h3>-</h3>
+                <h3>
+                  @if ($survei == '')
+                    -
+                  @else
+                    {{ $survei }}
+                  @endif
+                </h3>
 
                 <p>Data Survei</p>
               </div>
               <div class="icon">
                 <i class="fa-solid fa-file-pen icon-feature  d-block mb-3 fa-3x"></i>
               </div>
-              <a href="#" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{ route('survei.index') }}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-6">
