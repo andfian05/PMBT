@@ -9,6 +9,8 @@ use App\Http\Requests\SurveiRequest;
 use App\Models\Survei;
 use App\Models\Mahasantri;
 
+use PDF;
+
 class SurveiController extends Controller
 {
     /**
@@ -107,5 +109,16 @@ class SurveiController extends Controller
         $survei->delete();
 
         return redirect()->route('survei.index');
+    }
+
+    public function exportPDF()
+    {
+        $surveis = Survei::with(['mahasantri'])->get();
+        $data = [
+            'surveis' => $surveis
+        ];
+
+        $pdf = PDF::loadView('backend.admin.survei.pdf', $data);
+        return $pdf->download('Data-Penilaian-Survei-Calon-Mahasantri-PeTIK-Jombang.pdf');
     }
 }

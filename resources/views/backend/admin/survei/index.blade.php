@@ -18,6 +18,9 @@
             <a class="btn btn-primary px-3 mb-2 mb-lg-0" title="Tambah Data Survei" href="{{ route('survei.create') }}">
               <i class="fa-solid fa-circle-plus"></i>&nbsp;Add Data
             </a>
+            <a class="btn btn-danger px-3 mb-2 mb-lg-0" title="Export Data Penilaian Survei" href="{{ route('survei.pdf') }}">
+              <i class="fa-solid fa-file-pdf"></i>
+            </a>
           </div>
           <div class="card-body">
             <div class="table-responsive" id="no-more-tables">

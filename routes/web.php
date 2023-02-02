@@ -7,7 +7,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SurveiController;
-// use App\Http\Controllers\TestSurveiController;
 use App\Http\Controllers\TestSurveyController;
 
 /*
@@ -132,6 +131,7 @@ Route::middleware('auth:administrator')->prefix('admin')->group(function () {
 
     /** Survei */
     Route::resource('survei', SurveiController::class);
+    Route::get('survei-exportPDF', [SurveiController::class, 'exportPDF'])->name('survei.pdf');
 });
 
 /** PANITIA A (Test Survey) */
