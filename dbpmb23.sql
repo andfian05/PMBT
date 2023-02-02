@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2023 at 07:33 PM
+-- Generation Time: Feb 02, 2023 at 05:52 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dbpmb023`
+-- Database: `dbpmb23`
 --
 
 -- --------------------------------------------------------
@@ -83545,23 +83545,6 @@ INSERT INTO `desa` (`id_desa`, `kec_id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
---
-
-CREATE TABLE `failed_jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
--- Error reading data for table dbpmb023.failed_jobs: #1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &#039;FROM `dbpmb023`.`failed_jobs`&#039; at line 1
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `jurusan`
 --
 
@@ -91405,18 +91388,6 @@ CREATE TABLE `mahasantri` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `mahasantri`
---
-
-INSERT INTO `mahasantri` (`id`, `nama`, `anak_ke`, `tmp_lahir`, `tgl_lahir`, `no_hp`, `email`, `alamat`, `prov_id`, `kab_id`, `kec_id`, `desa_id`, `nama_ayah`, `pkj_ayah`, `pdk_ayah`, `nama_ibu`, `pkj_ibu`, `pdk_ibu`, `jml_sdr`, `nohp_klg`, `skl_asal`, `jurusan_skl`, `thn_lulus`, `cita_cita`, `prestasi`, `penyakit`, `perokok`, `jurusan_id`, `alasan`, `media_id`, `metode_berkas`, `berkas`, `created_at`, `updated_at`) VALUES
-(1, 'Kaylo Ardian Arkanda', 2, 'London', '2023-01-03', '081120952719', 'admin@example.com', 'xxxxxxxxxxxx', '35', '3512', '351210', '3512102004', 'Steven Arkanda', 'Direktur', 'S2', 'Retna Arkanda', 'Manager', 'S1', 3, '082638268573', 'SMA Abraham Boarding School', 'IPA', 2019, 'xxxxxxxxxxxxxxxx', 'xxxxxxxxxxxxxxxxxx', 'xxxxxxxxxxxx', 'Tidak', 1, 'xxxxxxxxxxx', 4, 'offline', 'Screenshot (188).png.png', '2023-01-13 08:34:02', '2023-01-13 08:34:02'),
-(3, 'xx', 2, 'x', '2023-01-10', '084639874958', 'admin@gmail.com', 'x', '33', '3333', '333333', '333333333', 'x', 'x', 'x', 'x', 'x', 'x', 3, '08687856567', 'x', 'x', 2030, 'x', 'x', 'x', 'Tidak', 1, 'x', 3, 'online', 'xxx', '2023-01-20 10:41:45', '2023-01-20 10:41:45'),
-(4, 'Hamzah Abraham', 2, 'Bekasi', '2023-01-11', '081171923714', 'admin@example.com', 'l', '31', '3173', '317306', '3173061001', 'Arvandra Abraham', 'Manager', 'S2', 'Keyla Abraham', 'Ibu rumah tangga', 'S1', 3, '083691673672', 'SMA Abraham Boarding School', 'IPA', 2021, 'x', 'x', 'x', 'Tidak', 1, 'x', 4, 'offline', 'New Journal Document.jnt.bin', '2023-01-20 03:49:10', '2023-01-20 03:49:10'),
-(5, 'xx', 2, 'xx', '2023-01-23', '084639874958', 'admin@gmail.com', 'x', '31', '3173', '317306', '3173061001', 'xx', 'xx', 'xx', 'xx', 'xx', 'xx', 3, '08687856567', 'x', 'x', 2023, 'x', 'x', '-', 'Tidak', 2, 'xx', 5, 'offline', NULL, '2023-01-20 15:43:42', '2023-01-20 15:43:42'),
-(6, 'Fian Raihandra', 3, 'Jakarta', '2006-01-18', '084639874958', 'andra.ian23@gmail.com', 'Jakarta', '31', '3173', '317306', '3173061001', 'Kevan', 'Dokter', 'S3', 'Retna', 'S1', 'Ibu rumah tangga', 3, '08687856567', 'x', 'x', 2023, 'x', 'x', 'x', 'Tidak', 1, 'x', 4, 'offline', NULL, '2023-01-20 22:33:41', '2023-01-20 22:33:41'),
-(7, 'Ardan', 3, 'Jakarta', '2023-01-11', '085171512059', 'admin@example.com', 'Gambir', '31', '3171', '317101', '3171011001', 'Steven', 'Dokter', 'S3', 'Retna', 'Ibu rumah tangga', 'S1', 4, '082638268573', 'SMA Abraham Boarding School', 'IPA', 2023, 'Programmer', 'Banyak', '-', 'Tidak', 1, 'Bekerja, menyenangkan', 3, 'offline', 'HAT.png.png', '2023-01-20 16:20:38', '2023-01-20 16:20:38');
-
 -- --------------------------------------------------------
 
 --
@@ -91445,59 +91416,6 @@ INSERT INTO `mediainformasi` (`id_media`, `media_informasi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
---
-
-CREATE TABLE `migrations` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `migrations`
---
-
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_14_000001_create_personal_access_tokens_table', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `password_resets`
---
-
-CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `personal_access_tokens`
---
-
-CREATE TABLE `personal_access_tokens` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `tokenable_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `last_used_at` timestamp NULL DEFAULT NULL,
-  `expires_at` timestamp NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `profilepetik`
 --
 
@@ -91507,18 +91425,6 @@ CREATE TABLE `profilepetik` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `profilepetik`
---
-
-INSERT INTO `profilepetik` (`id`, `ket_profile`, `created_at`, `updated_at`) VALUES
-(1, 'test by kak fian hihi ~', '2023-01-13 08:30:47', '2023-01-13 08:30:47'),
-(3, 'Sebuah pesantren berbasis teknologi hihi ~', '2023-01-20 02:28:32', '2023-01-20 02:28:32'),
-(4, 'l', '2023-01-20 03:49:10', '2023-01-20 03:49:10'),
-(5, 'Sebuah pesantren teknologi', '2023-01-20 05:06:09', '2023-01-20 05:06:09'),
-(6, 'Disuruh kak Fian test', '2023-01-20 09:11:53', '2023-01-20 09:11:53'),
-(7, 'Pesantren', '2023-01-20 16:20:38', '2023-01-20 16:20:38');
 
 -- --------------------------------------------------------
 
@@ -91574,6 +91480,66 @@ INSERT INTO `provinsi` (`id_prov`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `survei`
+--
+
+CREATE TABLE `survei` (
+  `id` int(11) NOT NULL,
+  `mhs_id` int(11) NOT NULL,
+  `nama_pewawancara` varchar(100) NOT NULL,
+  `tmp_seleksi` varchar(45) NOT NULL,
+  `lks_seleksi` varchar(60) NOT NULL,
+  `sktm` varchar(100) NOT NULL,
+  `note_sktm` longtext NOT NULL,
+  `progbeasiswa` varchar(100) NOT NULL,
+  `note_progbea` longtext NOT NULL,
+  `izinbeasiswa` varchar(100) NOT NULL,
+  `note_izinbeasiswa` longtext NOT NULL,
+  `statuskel` varchar(100) NOT NULL,
+  `note_statuskel` longtext NOT NULL,
+  `pendkel` varchar(100) NOT NULL,
+  `note_pendkel` longtext NOT NULL,
+  `usiapend` varchar(100) NOT NULL,
+  `note_usiapend` longtext NOT NULL,
+  `kesehatankel` varchar(100) NOT NULL,
+  `note_kesehatankel` longtext NOT NULL,
+  `jenispekrj` varchar(100) NOT NULL,
+  `note_jenispekrj` longtext NOT NULL,
+  `statusrmh` varchar(100) NOT NULL,
+  `note_statusrmh` longtext NOT NULL,
+  `luasrmh` varchar(100) NOT NULL,
+  `note_luasrmh` longtext NOT NULL,
+  `dindingrmh` varchar(100) NOT NULL,
+  `note_dindingrmh` longtext NOT NULL,
+  `ataprmh` varchar(100) NOT NULL,
+  `note_ataprmh` longtext NOT NULL,
+  `lantairmh` varchar(100) NOT NULL,
+  `note_lantairmh` longtext NOT NULL,
+  `alatmsk` varchar(100) NOT NULL,
+  `note_alatmsk` longtext NOT NULL,
+  `perabotan` varchar(100) NOT NULL,
+  `note_perabotan` longtext NOT NULL,
+  `sumberair` varchar(100) NOT NULL,
+  `note_sumberair` longtext NOT NULL,
+  `mck` varchar(100) NOT NULL,
+  `note_mck` longtext NOT NULL,
+  `penerangan` varchar(100) NOT NULL,
+  `note_penerangan` longtext NOT NULL,
+  `lokasirmh` varchar(100) NOT NULL,
+  `note_lokasirmh` longtext NOT NULL,
+  `tataletak` varchar(100) NOT NULL,
+  `note_tataletak` longtext NOT NULL,
+  `miliktanah` varchar(100) NOT NULL,
+  `note_miliktanah` longtext NOT NULL,
+  `harta` varchar(100) NOT NULL,
+  `note_harta` longtext NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -91614,13 +91580,6 @@ ALTER TABLE `desa`
   ADD PRIMARY KEY (`id_desa`);
 
 --
--- Indexes for table `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
-
---
 -- Indexes for table `jurusan`
 --
 ALTER TABLE `jurusan`
@@ -91651,26 +91610,6 @@ ALTER TABLE `mediainformasi`
   ADD PRIMARY KEY (`id_media`);
 
 --
--- Indexes for table `migrations`
---
-ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `password_resets`
---
-ALTER TABLE `password_resets`
-  ADD KEY `password_resets_email_index` (`email`);
-
---
--- Indexes for table `personal_access_tokens`
---
-ALTER TABLE `personal_access_tokens`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
-  ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
-
---
 -- Indexes for table `profilepetik`
 --
 ALTER TABLE `profilepetik`
@@ -91681,6 +91620,12 @@ ALTER TABLE `profilepetik`
 --
 ALTER TABLE `provinsi`
   ADD PRIMARY KEY (`id_prov`);
+
+--
+-- Indexes for table `survei`
+--
+ALTER TABLE `survei`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -91695,12 +91640,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `jurusan`
 --
 ALTER TABLE `jurusan`
@@ -91710,7 +91649,7 @@ ALTER TABLE `jurusan`
 -- AUTO_INCREMENT for table `mahasantri`
 --
 ALTER TABLE `mahasantri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `mediainformasi`
@@ -91719,22 +91658,16 @@ ALTER TABLE `mediainformasi`
   MODIFY `id_media` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `migrations`
---
-ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `personal_access_tokens`
---
-ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `profilepetik`
 --
 ALTER TABLE `profilepetik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `survei`
+--
+ALTER TABLE `survei`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
