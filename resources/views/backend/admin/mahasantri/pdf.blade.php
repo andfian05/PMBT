@@ -37,7 +37,7 @@
       <tr class="text-center" style="font-size: .9rem;">
         <td>{{ $index+1 }}</td>
         <td>{{ $mahasantri->nama }}</td>
-        <td>{{ $mahasantri->tmp_lahir, date('d F Y', strtotime($mahasantri->tgl_lahir)) }}</td>
+        <td>{{ $mahasantri->tmp_lahir }}, {{ date('d F Y', strtotime($mahasantri->tgl_lahir)) }}</td>
         <td>{{ $mahasantri->no_hp }}</td>
         <td>{{ $mahasantri->email }}</td>
         <td>{{ $mahasantri->jurusan['nama_jurusan'] }}</td>

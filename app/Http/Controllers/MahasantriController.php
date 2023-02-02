@@ -268,7 +268,7 @@ class MahasantriController extends Controller
             'mahasantris' => $mahasantris
         ];
 
-        $pdf = PDF::loadView('backend.admin.mahasantri.pdf', $data);
+        $pdf = PDF::loadView('backend.admin.mahasantri.pdf', $data)->setPaper('a4', 'landscape');
         return $pdf->download('Data-Calon-Mahasantri-PeTIK-Jombang.pdf');
     }
 
