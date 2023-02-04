@@ -14,6 +14,7 @@ use App\Models\Jurusan;
 use App\Models\MediaInformasi;
 use App\Models\ProfilePetik;
 use App\Models\Survei;
+use App\Models\Wawancara;
 
 use DB;
 
@@ -28,10 +29,26 @@ class HomeController extends Controller
     {
         $mahasantri = Mahasantri::count();
         $survei = Survei::count();
+        $wawancara = Wawancara::count();
 
         return view('backend.admin.home')->with([
             'mahasantri' => $mahasantri,
-            'survei' => $survei
+            'survei' => $survei,
+            'wawancara' => $wawancara,
+        ]);
+    }
+
+    /**
+     * Show the application dashboard Panitia C (Tes Tanya Jawab / Wawancara).
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function dashboardPanitiaC()
+    {
+        $testwawancara = Wawancara::count();
+
+        return view('backend.panitia-c.home')->with([
+            'testwawancara' => $testwawancara
         ]);
     }
 }

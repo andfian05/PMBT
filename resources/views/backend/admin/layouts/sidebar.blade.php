@@ -76,9 +76,8 @@
               <li class="nav-item
                 {{ (Request::is('admin/survei') ? 'menu-open' : '') }}
                 {{ (Request::is('admin/survei/create') ? 'menu-open' : '') }}
-                {{ (Request::is('admin/survei/{survei}') ? 'menu-open' : '') }}
-                {{ (Request::is('admin/survei{survei}/edit') ? 'menu-open' : '') }}">
-                <a href="{{ url('/admin/survei') }}" class="nav-link">
+                {{ (Request::is('admin/survei/{survei}') ? 'menu-open' : '') }}">
+                <a href="{{ route('survei.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Survei</p>
                 </a>
@@ -89,8 +88,11 @@
                   <p>Data Bacaan Al Qur'an</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{ url('/admin2a') }}" class="nav-link">
+              <li class="nav-item
+              {{ (Request::is('admin/tanya-jawab') ? 'menu-open' : '') }}
+              {{ (Request::is('admin/tanya-jawab/create') ? 'menu-open' : '') }}
+              {{ (Request::is('admin/tanya-jawab/{tanya_jawab}') ? 'menu-open' : '') }}">
+                <a href="{{ route('tanya-jawab.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Tanya Jawab</p>
                 </a>

@@ -15,7 +15,7 @@
             alt="User Image">
         </div>
         <div class="info">
-          <a href="{{ url('/admin') }}" class="d-block">Admin</a>
+          <a href="{{ url('/panitia-c') }}" class="d-block">Admin</a>
         </div>
       </div>
 
@@ -23,14 +23,14 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"  
           data-accordion="false">
-          <li class="nav-item menu-open">
-            <a href="{{ url('/admin') }}" class="nav-link">
+          <li class="nav-item {{ (Request::is('panitia-c') ? 'menu-open' : '') }}">
+            <a href="{{ url('/panitia-c') }}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{ url('/admin4') }}" class="nav-link">
+          <li class="nav-item {{ (Request::is('panitia-c/test-wawancara') ? 'menu-open' : '') }}{{ (Request::is('panitia-c/test-wawancara-done') ? 'menu-open' : '') }}">
+            <a href="{{ route('test-wawancara.store') }}" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
               <p>Test Tanya Jawab</p>
             </a>

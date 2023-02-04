@@ -8,6 +8,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SurveiController;
 use App\Http\Controllers\TestSurveyController;
+use App\Http\Controllers\WawancaraController;
+use App\Http\Controllers\TestWawancaraController;
 
 /*
 |--------------------------------------------------------------------------
@@ -132,6 +134,10 @@ Route::middleware('auth:administrator')->prefix('admin')->group(function () {
     /** Survei */
     Route::resource('survei', SurveiController::class);
     Route::get('survei-exportPDF', [SurveiController::class, 'exportPDF'])->name('survei.pdf');
+
+    /** Tanya Jawab */
+    Route::resource('tanya-jawab', WawancaraController::class);
+    Route::get('tanya-jawab-exportPDF', [WawancaraController::class, 'exportPDF'])->name('tanya-jawab.pdf');
 });
 
 /** PANITIA A (Test Survey) */
@@ -161,9 +167,14 @@ Route::middleware('auth:panitia-b')->prefix('panitia-b')->group(function () {
 /** PANITIA C (Test Tanya Jawab) */
 Route::middleware('auth:panitia-c')->prefix('panitia-c')->group(function () {
     /** Dashboard */
-    Route::get('/',function(){
-        return view('backend.panitia-c.home');
-    });
+    Route::get('/', [HomeController::class, 'dashboardPanitiaC']);
+
+    /** Test Tanya Jawab */
+    Route::get('test-wawancara', [TestWawancaraController::class, 'testwawancara'])->name('test-wawancara.create');
+    Route::post('test-wawancara', [TestWawancaraController::class, 'store'])->name('test-wawancara.store');
+    Route::get('test-wawancara-done', function(){
+        return view('backend.panitia-c.done');
+    })->name('test-wawancara.done');
 });
 
 
