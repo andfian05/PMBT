@@ -149,9 +149,7 @@ Route::middleware('auth:administrator')->prefix('admin')->group(function () {
 /** PANITIA A (Test Survey) */
 Route::middleware('auth:panitia-a')->prefix('panitia-a')->group(function () {
     /** Dashboard */
-    Route::get('/',function(){
-        return view('backend.panitia-a.home');
-    });
+    Route::get('/', [HomeController::class, 'dashboardPanitiaA']);
 
     /** Test Survey */
     Route::get('test-survey', [TestSurveyController::class, 'testsurvey'])->name('test-survey.create');

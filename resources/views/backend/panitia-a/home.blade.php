@@ -16,7 +16,13 @@
           <div class="col-lg-3 col-6">
             <div class="small-box bg-warning-emphasis">
               <div class="inner">
-                <h3>-</h3>
+                <h3>
+                  @if ($testsurvei == 0)
+                    -
+                  @else
+                    {{ $testsurvei }}
+                  @endif
+                </h3>
                 <p>Test Survei</p>
               </div>
               <div class="icon">

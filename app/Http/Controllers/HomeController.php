@@ -42,6 +42,20 @@ class HomeController extends Controller
     }
 
     /**
+     * Show the application dashboard Panitia A (Tes Survei).
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function dashboardPanitiaA()
+    {
+        $testsurvei = Survei::count();
+
+        return view('backend.panitia-a.home')->with([
+            'testsurvei' => $testsurvei
+        ]);
+    }
+
+    /**
      * Show the application dashboard Panitia C (Tes Tanya Jawab / Wawancara).
      *
      * @return \Illuminate\Contracts\Support\Renderable
