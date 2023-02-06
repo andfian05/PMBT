@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2023 at 05:52 PM
+-- Generation Time: Feb 06, 2023 at 11:03 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `dbpmb23`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `baca_quran`
+--
+
+CREATE TABLE `baca_quran` (
+  `id` int(11) NOT NULL,
+  `mhs_id` int(11) NOT NULL,
+  `nama_pewawancara` varchar(100) NOT NULL,
+  `tmp_seleksi` varchar(30) NOT NULL,
+  `lks_seleksi` varchar(65) NOT NULL,
+  `tesbacaan` int(11) NOT NULL,
+  `nilaibacaan` int(11) NOT NULL,
+  `tajwidbacaan` int(11) NOT NULL,
+  `teshafalan` int(11) NOT NULL,
+  `jmlhafalan` int(11) NOT NULL,
+  `nilaihafalan` int(11) NOT NULL,
+  `tajwidhafalan` int(11) NOT NULL,
+  `kemampuanhafalan` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -91480,6 +91504,18 @@ INSERT INTO `provinsi` (`id_prov`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `quran`
+--
+
+CREATE TABLE `quran` (
+  `id` int(11) NOT NULL,
+  `surah` varchar(35) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- Error reading data for table dbpmb23.quran: #1064 - You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near &#039;FROM `dbpmb23`.`quran`&#039; at line 1
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `survei`
 --
 
@@ -91569,9 +91605,75 @@ INSERT INTO `users` (`id`, `nama`, `username`, `email`, `email_verified_at`, `pa
 (5, 'Fian Raihandra', 'ihan573', 'andra.ian23@gmail.com', NULL, '$2y$10$Eo3IGY6aITMdrA.AjK5QW.6tZL6hCcntXZokYETR3fh28rv7rubW2', NULL, 'Administrator', NULL, '2023-01-20 08:41:21', '2023-01-24 01:32:41'),
 (6, 'Alifian', 'andfian05', 'andfian05@gmail.com', NULL, '$2y$10$72cy0wXGPHw5JelNRIWP5egzHCk.yEWBbTSV93wTfZrAeHJD0PAb6', NULL, 'Administrator', NULL, '2023-01-24 01:20:52', '2023-01-24 01:20:52');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wawancara`
+--
+
+CREATE TABLE `wawancara` (
+  `id` int(11) NOT NULL,
+  `mhs_id` int(11) NOT NULL,
+  `nama_pewawancara` varchar(100) NOT NULL,
+  `tmp_seleksi` varchar(30) NOT NULL,
+  `lks_seleksi` varchar(60) NOT NULL,
+  `visimisi` varchar(100) NOT NULL,
+  `note_visimisi` longtext NOT NULL,
+  `komitmen` varchar(100) NOT NULL,
+  `note_komitmen` longtext NOT NULL,
+  `tanggungjawab` varchar(100) NOT NULL,
+  `note_tanggungjwb` longtext NOT NULL,
+  `kejujuran` varchar(100) NOT NULL,
+  `note_kejujuran` longtext NOT NULL,
+  `pekerjakeras` varchar(100) NOT NULL,
+  `note_pekerjakrs` longtext NOT NULL,
+  `bekerjasama` varchar(100) NOT NULL,
+  `note_bekerjasama` longtext NOT NULL,
+  `kemandirian` varchar(100) NOT NULL,
+  `note_kemandirian` longtext NOT NULL,
+  `tolongmenolong` varchar(100) NOT NULL,
+  `note_menolong` longtext NOT NULL,
+  `peduli` varchar(100) NOT NULL,
+  `note_peduli` longtext NOT NULL,
+  `pembelajar` varchar(100) NOT NULL,
+  `note_pembelajar` longtext NOT NULL,
+  `menghargaiprestasi` varchar(100) NOT NULL,
+  `note_hargaipres` longtext NOT NULL,
+  `percayadiri` varchar(100) NOT NULL,
+  `note_pd` longtext NOT NULL,
+  `demokratis` varchar(100) NOT NULL,
+  `note_demokratis` longtext NOT NULL,
+  `disiplinwaktu` varchar(100) NOT NULL,
+  `note_disiplinwkt` longtext NOT NULL,
+  `menjaganamabaik` varchar(100) NOT NULL,
+  `note_jaganmbaik` longtext NOT NULL,
+  `salam` varchar(100) NOT NULL,
+  `note_salam` longtext NOT NULL,
+  `motivasi` varchar(100) NOT NULL,
+  `note_motivasi` longtext NOT NULL,
+  `brgpolutan` varchar(100) NOT NULL,
+  `note_brgpolutan` longtext NOT NULL,
+  `brgharam` varchar(100) NOT NULL,
+  `note_brgharam` longtext NOT NULL,
+  `riwayatpenyakit` varchar(100) NOT NULL,
+  `note_rytpenyakit` longtext NOT NULL,
+  `ceritasingkat` varchar(100) NOT NULL,
+  `note_crtsingkat` longtext NOT NULL,
+  `medkom` varchar(100) NOT NULL,
+  `note_medkom` longtext NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `baca_quran`
+--
+ALTER TABLE `baca_quran`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `desa`
@@ -91622,6 +91724,12 @@ ALTER TABLE `provinsi`
   ADD PRIMARY KEY (`id_prov`);
 
 --
+-- Indexes for table `quran`
+--
+ALTER TABLE `quran`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `survei`
 --
 ALTER TABLE `survei`
@@ -91636,8 +91744,20 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
+-- Indexes for table `wawancara`
+--
+ALTER TABLE `wawancara`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `baca_quran`
+--
+ALTER TABLE `baca_quran`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `jurusan`
@@ -91664,6 +91784,12 @@ ALTER TABLE `profilepetik`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `quran`
+--
+ALTER TABLE `quran`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
+
+--
 -- AUTO_INCREMENT for table `survei`
 --
 ALTER TABLE `survei`
@@ -91674,6 +91800,12 @@ ALTER TABLE `survei`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `wawancara`
+--
+ALTER TABLE `wawancara`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
