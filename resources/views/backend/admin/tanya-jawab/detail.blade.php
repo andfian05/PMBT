@@ -85,42 +85,9 @@
                         </select>
                       </div>
                     </div> 
-                    <!-- Logic Script Menampilkan pesan Saat Salah Satu Option dipilih  -->
-                    <script>
-                      function tampilkan(){
-                          var pesan=document.getElementById("form1").keterangan.value;
-                          var p_kontainer=document.getElementById("container");
-                          
-                          if (pesan=="Virtual")
-                              {
-                                  p_kontainer.innerHTML=`
-                                  <div class="form-group">
-                                    <label class="col-12">Lokasi</label> 
-                                    <input type="text" name="lks_seleksi" class="form-control" value="{{ $wawancara->lks_seleksi }}" disabled>
-                                  </div>`;
-                              }
-                          else if (pesan=="PeTIK Jombang")
-                              {
-                                  p_kontainer.innerHTML=`
-                                  <div class="form-group">
-                                    <label class="col-12">Lokasi</label> 
-                                    <input type="text" name="lks_seleksi" class="form-control" value="{{ $wawancara->lks_seleksi }}" disabled>
-                                  </div>`;
-                              }
-                          else if (pesan=="YBM PLN")
-                              {
-                                  p_kontainer.innerHTML=`
-                                  <div class="form-group">
-                                    <label class="col-12">Lokasi</label> 
-                                    <input type="text" name="lks_seleksi" class="form-control" value="{{ $wawancara->lks_seleksi }}" disabled>
-                                  </div>
-                                  
-                                  `;
-                              }
-                      }
-                    </script>
-                    <div class="container">
-                      <p id="container"></p>
+                    <div class="form-group">
+                        <label class="col-12">Lokasi</label> 
+                        <input type="text" name="lks_seleksi" class="form-control" value="{{ $wawancara->lks_seleksi }}" disabled>
                     </div>
                   </div>
                   {{-- Rekam Jejak Calon Mahasantri --}}

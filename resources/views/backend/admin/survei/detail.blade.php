@@ -85,50 +85,9 @@
                         </select>
                       </div>
                     </div> 
-                    <!-- Logic Script Menampilkan pesan Saat Salah Satu Option dipilih  -->
-                    <script>
-                      function tampilkan(){
-                          var pesan=document.getElementById("form1").keterangan.value;
-                          var p_kontainer=document.getElementById("container");
-                          
-                          if (pesan=="Virtual")
-                              {
-                                  p_kontainer.innerHTML=`
-                                  <div class="form-group">
-                                    <label class="col-12">Lokasi</label> 
-                                    <div class="col-12">
-                                      <input type="text" name="lks_seleksi" value="{{ $survei->lks_seleksi }}">
-                                    </div> 
-                                  </div>`;
-                              }
-                          else if (pesan=="PeTIK Jombang")
-                              {
-                                  p_kontainer.innerHTML=`
-                                  <div class="form-group">
-                                    <label class="col-12">Lokasi</label> 
-                                    <div class="col-12">
-                                      <input type="text" name="lks_seleksi" value="{{ $survei->lks_seleksi }}">
-                                    </div> 
-                                  </div>`;
-                              }
-                          else if (pesan=="YBM PLN")
-                              {
-                                  p_kontainer.innerHTML=`
-                                  <div class="form-group">
-                                    <label class="col-12">Lokasi</label> 
-                                    <div class="col-12">
-                                      <select id="lks_seleksi" name="lks_seleksi" class="custom-select" disabled>
-                                        <option value="{{ $survei->lks_seleksi }}">{{ $survei->lks_seleksi }}</option>
-                                      </select>
-                                    </div> 
-                                  </div>
-                                  
-                                  `;
-                              }
-                      }
-                    </script>
-                    <div class="container">
-                      <p id="container"></p>
+                    <div class="form-group">
+                      <label class="col-12">Lokasi</label> 
+                      <input type="text" name="lks_seleksi" class="form-control" value="{{ $survei->lks_seleksi }}" disabled>
                     </div>
                   </div>
                   {{-- Kriteria Pendapatan --}}
