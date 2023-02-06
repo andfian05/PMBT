@@ -132,29 +132,6 @@
            
             </ul>
           </li>
-          
-          
-          <li class="nav-header">Optional</li>
-          <li class="nav-item">
-            <a href="{{ url('/admin5') }}" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Test Survei</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ url('/admin3') }}" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Test Al Qur'an</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{ url('/admin4') }}" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Test Tanya Jawab</p>
-            </a>
-          </li>
-         
-        
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
