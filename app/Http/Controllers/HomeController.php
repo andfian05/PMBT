@@ -15,6 +15,7 @@ use App\Models\MediaInformasi;
 use App\Models\ProfilePetik;
 use App\Models\Survei;
 use App\Models\Wawancara;
+use App\Models\BacaQuran;
 
 use DB;
 
@@ -30,11 +31,13 @@ class HomeController extends Controller
         $mahasantri = Mahasantri::count();
         $survei = Survei::count();
         $wawancara = Wawancara::count();
+        $bacaquran = BacaQuran::count();
 
         return view('backend.admin.home')->with([
             'mahasantri' => $mahasantri,
             'survei' => $survei,
             'wawancara' => $wawancara,
+            'bacaquran' => $bacaquran,
         ]);
     }
 
@@ -49,6 +52,20 @@ class HomeController extends Controller
 
         return view('backend.panitia-c.home')->with([
             'testwawancara' => $testwawancara
+        ]);
+    }
+
+    /**
+     * Show the application dashboard Panitia B (Test Baca dan Hafalan Al-Qur'an).
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function dashboardPanitiaB()
+    {
+        $testbacaquran = BacaQuran::count();
+
+        return view('backend.panitia-b.home')->with([
+            'testbacaquran' => $testbacaquran
         ]);
     }
 }

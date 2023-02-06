@@ -19,7 +19,7 @@
             <div class="small-box bg-warning-emphasis">
               <div class="inner">
                 <h3>
-                  @if ($mahasantri == '')
+                  @if ($mahasantri == 0)
                     -
                   @else
                     {{ $mahasantri }}
@@ -38,7 +38,7 @@
             <div class="small-box bg-warning-emphasis">
               <div class="inner">
                 <h3>
-                  @if ($survei == '')
+                  @if ($survei == 0)
                     -
                   @else
                     {{ $survei }}
@@ -56,21 +56,27 @@
           <div class="col-lg-3 col-6">
             <div class="small-box bg-warning-emphasis">
               <div class="inner">
-                <h3>-</h3>
+                <h3>
+                  @if ($bacaquran == 0)
+                    -
+                  @else
+                    {{ $bacaquran }}
+                  @endif
+                </h3>
 
                 <p>Data Bacaan Al Qur’an</p>
               </div>
               <div class="icon">
                 <i class="fa-solid fa-book-quran"></i>
               </div>
-              <a href="#" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{ route('baca-quran.index') }}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <div class="col-lg-3 col-6">
             <div class="small-box bg-warning-emphasis">
               <div class="inner">
                 <h3>
-                  @if ($wawancara == '')
+                  @if ($wawancara == 0)
                     -
                   @else
                     {{ $wawancara }}

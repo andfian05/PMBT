@@ -10,6 +10,8 @@ use App\Http\Controllers\SurveiController;
 use App\Http\Controllers\TestSurveyController;
 use App\Http\Controllers\WawancaraController;
 use App\Http\Controllers\TestWawancaraController;
+use App\Http\Controllers\BacaQuranController;
+use App\Http\Controllers\TestBacaQuranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -138,6 +140,10 @@ Route::middleware('auth:administrator')->prefix('admin')->group(function () {
     /** Tanya Jawab */
     Route::resource('tanya-jawab', WawancaraController::class);
     Route::get('tanya-jawab-exportPDF', [WawancaraController::class, 'exportPDF'])->name('tanya-jawab.pdf');
+
+    /** Baca Qur'an */
+    Route::resource('baca-quran', BacaQuranController::class);
+    Route::get('baca-quran-exportPDF', [BacaQuranController::class, 'exportPDF'])->name('baca-quran.pdf');
 });
 
 /** PANITIA A (Test Survey) */
@@ -156,12 +162,17 @@ Route::middleware('auth:panitia-a')->prefix('panitia-a')->group(function () {
     })->name('test-survey.done');
 });
 
-/** PANITIA B (Test Al-Qur'an) */
+/** PANITIA B (Test Baca dan Hafalan Al-Qur'an) */
 Route::middleware('auth:panitia-b')->prefix('panitia-b')->group(function () {
     /** Dashboard */
-    Route::get('/',function(){
-        return view('backend.panitia-b.home');
-    });
+    Route::get('/', [HomeController::class, 'dashboardPanitiaB']);
+
+    /** Test Baca dan Hafalan Al-Qur'an */
+    Route::get('test-baca-quran', [TestBacaQuranController::class, 'testbacaquran'])->name('test-baca-quran.create');
+    Route::post('test-baca-quran', [TestBacaQuranController::class, 'store'])->name('test-baca-quran.store');
+    Route::get('test-baca-quran-done', function(){
+        return view('backend.panitia-b.done');
+    })->name('test-baca-quran.done');
 });
 
 /** PANITIA C (Test Tanya Jawab) */

@@ -16,13 +16,19 @@
           <div class="col-lg-3 col-6">
             <div class="small-box bg-warning-emphasis">
               <div class="inner">
-                <h3>-</h3>
+                <h3>
+                  @if ($testbacaquran == 0)
+                    -
+                  @else
+                    {{ $testbacaquran }}
+                  @endif
+                </h3>
                 <p>Test Al-Qur'an</p>
               </div>
               <div class="icon">
                 <i class="fa-solid fa-users fa-1x"></i>
               </div>
-              <a href="#" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{ route('test-baca-quran.create') }}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>

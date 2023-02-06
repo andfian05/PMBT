@@ -14,7 +14,7 @@
           <img src="{{asset('assets/dist/img/user2-160x160.jpg')}} " class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="{{ url('/admin') }}" class="d-block">Admin</a>
+          <a href="{{ url('/panitia-b') }}" class="d-block">Admin</a>
         </div>
       </div>
 
@@ -22,14 +22,14 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"  
           data-accordion="false">
-          <li class="nav-item menu-open">
-            <a href="{{ url('/admin') }}" class="nav-link">
+          <li class="nav-item {{ (Request::is('panitia-b') ? 'menu-open' : '') }}">
+            <a href="{{ url('/panitia-b') }}" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{ url('/admin3') }}" class="nav-link">
+          <li class="nav-item {{ (Request::is('panitia-b/test-baca-quran') ? 'menu-open' : '') }}{{ (Request::is('panitia-b//test-baca-quran-done') ? 'menu-open' : '') }}">
+            <a href="{{ route('test-baca-quran.create') }}" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
               <p>Test Al-Qur'an</p>
             </a>

@@ -82,8 +82,11 @@
                   <p>Data Survei</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="{{ url('/admin2b') }}" class="nav-link">
+              <li class="nav-item 
+              {{ (Request::is('admin/baca-quran') ? 'menu-open' : '') }}
+              {{ (Request::is('admin/baca-quran/create') ? 'menu-open' : '') }}
+              {{ (Request::is('admin/baca-quran/{baca_quran}') ? 'menu-open' : '') }}">
+                <a href="{{ route('baca-quran.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Bacaan Al Qur'an</p>
                 </a>
