@@ -12,6 +12,7 @@ use App\Http\Controllers\WawancaraController;
 use App\Http\Controllers\TestWawancaraController;
 use App\Http\Controllers\BacaQuranController;
 use App\Http\Controllers\TestBacaQuranController;
+use App\Http\Controllers\PerhitunganController;
 
 /*
 |--------------------------------------------------------------------------
@@ -144,6 +145,13 @@ Route::middleware('auth:administrator')->prefix('admin')->group(function () {
     /** Baca Qur'an */
     Route::resource('baca-quran', BacaQuranController::class);
     Route::get('baca-quran-exportPDF', [BacaQuranController::class, 'exportPDF'])->name('baca-quran.pdf');
+
+    /** Perhitungan */
+    Route::get('perhitungan', [PerhitunganController::class, 'perhitungan'])->name('perhitungan.create');
+    Route::post('perhitungan', [PerhitunganController::class, 'store'])->name('perhitungan.store');
+    Route::get('perhitungan-done', function(){
+        return view('backend.admin.perhitungan.done');
+    })->name('perhitungan.done');
 });
 
 /** PANITIA A (Test Survey) */

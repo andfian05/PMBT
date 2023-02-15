@@ -104,6 +104,25 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Data Hitung Seleksi
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item
+              {{ (Request::is('admin/perhitungan') ? 'menu-open' : '') }}
+              {{ (Request::is('admin/perhitungan-done') ? 'menu-open' : '') }}">
+                <a href="{{ route('perhitungan.create') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Perhitungan</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Data Lulus Seleksi
