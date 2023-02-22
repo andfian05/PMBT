@@ -13,6 +13,7 @@ use App\Http\Controllers\TestWawancaraController;
 use App\Http\Controllers\BacaQuranController;
 use App\Http\Controllers\TestBacaQuranController;
 use App\Http\Controllers\PerhitunganController;
+use App\Http\Controllers\DTRController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,82 +44,6 @@ Route::get('/done-pmb', function () {
 Route::post('/getKabupaten', [RegisterController::class, 'getKabupaten'])->name('getKabupaten');
 Route::post('/getKecamatan', [RegisterController::class, 'getKecamatan'])->name('getKecamatan');
 Route::post('/getDesa', [RegisterController::class, 'getDesa'])->name('getDesa');
-
-
-/** Routes Administrator */
-/** Task Data Global Seleksi */
-Route::get('/mahasantri',function(){
-    return view('backend.mahasantri.index');
-});
-
-//data survei
-Route::get('/admin2w',function(){
-    return view('backend.datasurvei');
-});
-
-//data bacaan Al Qur'an
-Route::get('/admin2b',function(){
-    return view('backend.databacaan');
-});
-
-//data tanya jawab
-Route::get('/admin2a',function(){
-    return view('backend.datatanyajawab');
-});
-
-
-/** Task Views Data Global Seleksi */
-Route::get('/view2w',function(){
-    return view('backend.viewdatasurvei');
-});
-
-Route::get('/view2b',function(){
-    return view('backend.viewdatabacaan');
-});
-
-Route::get('/view2a',function(){
-    return view('backend.viewdatatanyajawab');
-});
-
-
-
-/** Task Data Lulus Seleksi */
-Route::get('/adminS1',function(){
-    return view('backend.dataseleksi');
-});
-
-/** Task Views Data Lulus Seleksi */
-Route::get('/viewS1',function(){
-    return view('backend.viewdataseleksi');
-});
-
-
-/** Task Baca Dan Hafalan Al Qur'an */
-Route::get('/admin3',function(){
-    return view('backend.testbacaalquran');
-});
-
-
-/** Task Tanya Jawab */
-Route::get('/admin4',function(){
-    return view('backend.tanyajawab');
-});
-
-Route::get('/admin4a',function(){
-    return view('backend.tanyajawab2');
-});
-
-
-
-/** Task Survey */
-Route::get('/admin5',function(){
-    return view('backend.testsurvey');
-});
-
-Route::get('/admin5a',function(){
-    return view('backend.testsurvey2');
-});
-
 
 /** ADMIN */
 Route::middleware('auth:administrator')->prefix('admin')->group(function () {
@@ -152,6 +77,10 @@ Route::middleware('auth:administrator')->prefix('admin')->group(function () {
     Route::get('perhitungan-done', function(){
         return view('backend.admin.perhitungan.done');
     })->name('perhitungan.done');
+
+    /** DTR */
+    Route::resource('dtr', DTRController::class);
+    Route::get('dtr-exportPDF', [DTRController::class, 'exportPDF'])->name('dtr.pdf');
 });
 
 /** PANITIA A (Test Survey) */
@@ -200,7 +129,3 @@ Route::middleware('auth:panitia-c')->prefix('panitia-c')->group(function () {
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/postlogin', [AuthController::class, 'login'])->name('postlogin');
 Route::post('/', [AuthController::class, 'logout'])->name('logout');
-
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

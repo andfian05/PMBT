@@ -130,25 +130,14 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ url('/adminS1') }}" class="nav-link">
+              <li class="nav-item
+              {{ (Request::is('admin/dtr') ? 'menu-open' : '') }}
+              {{ (Request::is('admin/dtr/{dtr}') ? 'menu-open' : '') }}">
+                <a href="{{ route('dtr.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>DTR</p>
                 </a>
               </li>
-              <!-- <li class="nav-item">
-                <a href="pages/examples/profile.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Tidak Diterima</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/e-commerce.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Rekomendasi</p>
-                </a>
-              </li> -->
-           
             </ul>
           </li>
         </ul>

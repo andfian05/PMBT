@@ -16,6 +16,7 @@ use App\Models\ProfilePetik;
 use App\Models\Survei;
 use App\Models\Wawancara;
 use App\Models\BacaQuran;
+use App\Models\Perhitungan;
 
 use DB;
 
@@ -32,12 +33,14 @@ class HomeController extends Controller
         $survei = Survei::count();
         $wawancara = Wawancara::count();
         $bacaquran = BacaQuran::count();
+        $dtr = Perhitungan::count();
 
         return view('backend.admin.home')->with([
             'mahasantri' => $mahasantri,
             'survei' => $survei,
             'wawancara' => $wawancara,
             'bacaquran' => $bacaquran,
+            'dtr' => $dtr,
         ]);
     }
 
