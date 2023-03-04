@@ -33,6 +33,9 @@
         <div class="card-header">
           <h3 class="card-title">Formulir Pendaftaran PeTIK Jombang</h3>
         </div>
+        @error('berkas')
+          <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
         <div class="card-body">
           <form action="{{ route('register.store') }}" method="POST" id="form1" name="form1" enctype="multipart/form-data">
             @csrf
@@ -378,7 +381,7 @@
                     <div class="form-group">
                       <div class="col-12">
                         <label class="form-label text-center">Upload Berkas :</label>
-                        <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                        <input name="berkas" type="file" class="form-control @error('berkas') is-invalid @enderror" value="{{ old('berkas') }}" multiple>
                       </div>
                     </div>
                     `;
@@ -394,7 +397,7 @@
                       <div class="form-group">
                       <div class="col-12">
                         <label class="form-label text-center">Upload Bukti Pengiriman :</label>
-                        <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                        <input name="berkas" type="file" class="form-control @error('berkas') is-invalid @enderror" value="{{ old('berkas') }}" multiple>
                       </div>
                     </div>
                     </div>
@@ -410,7 +413,7 @@
                       <div class="form-group">
                         <div class="col-12">
                           <label class="form-label text-center">Upload Bukti Pengiriman :</label>
-                          <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                          <input name="berkas" type="file" class="form-control @error('berkas') is-invalid @enderror" value="{{ old('berkas') }}" multiple>
                         </div>
                       </div>
                     </div>

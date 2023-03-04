@@ -54,7 +54,7 @@ class MahasantriRequest extends FormRequest
             'alasan' => 'required', 
             'media_id' => 'required', 
             'metode_berkas' => 'required', 
-            'berkas' => 'nullable',
+            'berkas' => 'nullable|mimes:zip,rar',
             'ket_profile' => 'required',
         ];
     }
