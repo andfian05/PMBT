@@ -5,7 +5,7 @@
     <div class="container">
       <div class="card">
         <div class="card-body">
-          <h4 class="text-center">Detail Data Calon Mahasantri</h4>
+          <h5 class="text-center">Detail Data Calon Mahasantri</h5>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
             </div>
             <div class="form-group">
               <div class="col-md-12">
-                <label for="">Tuliskan apa yang Anda pahami tentang Pesantren PeTIK Jombang :</label>
+                <label for="">Tuliskan Apa Yang Anda Pahami Tentang PeTIK Jombang?</label>
                 <textarea name="ket_profile"  class="form-control" id="" cols="6" rows="3" disabled>
                   {{ $profilePetik->ket_profile }}
                 </textarea>
@@ -52,13 +52,13 @@
             <div class="row mb-3 mt-6">
               <div class="col-md-6">
                 <div class="form mb-3 mb-md-0">
-                  <label for="nama">Nama Lengkap </label>
+                  <label for="nama" class="form-label text-justify">Nama Lengkap </label>
                   <input class="form-control" name="nama" id="nama" type="text" value="{{ $mahasantri->nama }}" disabled/>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <label for="anak_ke">Anak Ke- </label>
+                  <label for="anak_ke" class="form-label text-justify">Anak Ke- </label>
                   <input class="form-control" name="anak_ke" id="anak_ke" type="text" value="{{ $mahasantri->anak_ke }}" disabled/>
                 </div>
               </div>
@@ -66,13 +66,13 @@
             <div class="row mb-3">
               <div class="col-md-6">
                 <div class="form mb-3 mb-md-0">
-                  <label>Tempat Lahir </label>
+                  <label class="form-label text-justify">Tempat Lahir </label>
                   <input class="form-control" name="tmp_lahir" type="text" value="{{ $mahasantri->tmp_lahir }}" disabled/>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <label>Tanggal Lahir</label>
+                  <label class="form-label text-justify">Tanggal Lahir</label>
                   <input class="form-control" name="tgl_lahir" type="date" value="{{ $mahasantri->tgl_lahir }}" disabled/>
                 </div>
               </div>
@@ -80,19 +80,19 @@
             <div class="row mb-3">
               <div class="col-md-6">
                 <div class="form mb-3 mb-md-0">
-                  <label>No. Handphone</label>
+                  <label class="form-label text-justify">No. Handphone</label>
                   <input class="form-control" name="no_hp" type="text" value="{{ $mahasantri->no_hp }}" disabled/>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <label>Email </label>
+                  <label class="form-label text-justify">Email </label>
                   <input class="form-control" name="email" type="email" value="{{ $mahasantri->email }}" disabled/>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label>Alamat </label>
+              <label class="form-label text-justify">Alamat </label>
               <textarea name="alamat" class="form-control" cols="2" rows="2" disabled>
                 {{ $mahasantri->alamat }}
               </textarea>
@@ -100,7 +100,7 @@
             <div class="row mb-1">
               <div class="col-md-6">
                 <div class="form mb-3 mb-md-0">
-                  <label>Provinsi </label>
+                  <label class="form-label text-justify">Provinsi </label>
                   <div class="form-group -ml-3col-12">
                     <select name="prov_id" id="provinsi" class="custom-select" disabled>
                       <option value="{{ $mahasantri->provinsi->id_prov }}">{{ $mahasantri->provinsi->nama }}</option>
@@ -110,7 +110,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <label>Kabupaten/Kota </label>
+                  <label class="form-label text-justify">Kabupaten/Kota </label>
                   <div class="form-group -ml-3col-12">
                     <select name="kab_id" id="kabupaten" class="custom-select" disabled>
                       <option value="{{ $mahasantri->kabupaten->id_kab }}">{{ $mahasantri->kabupaten->nama }}</option>
@@ -122,7 +122,7 @@
             <div class="row mb-1">
               <div class="col-md-6">
                 <div class="form mb-3 mb-md-0">
-                  <label>Kecamatan </label>
+                  <label class="form-label text-justify">Kecamatan </label>
                   <div class="form-group -ml-3col-12">
                     <select name="kec_id" id="kecamatan" class="custom-select" disabled>
                       <option value="{{ $mahasantri->kecamatan->id_kec }}">{{ $mahasantri->kecamatan->nama }}</option>
@@ -132,7 +132,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <label>Kelurahan/Desa </label>
+                  <label class="form-label text-justify">Kelurahan/Desa </label>
                   <div class="form-group -ml-3col-12">
                     <select name="desa_id" id="desa" class="custom-select" disabled>
                       <option value="{{ $mahasantri->desa->id_desa }}">{{ $mahasantri->desa->nama }}</option>
@@ -152,25 +152,29 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Nama Ayah </label>
+              <label class="form-label text-justify">Nama Ayah </label>
               <input class="form-control" name="nama_ayah" type="text" value="{{ $mahasantri->nama_ayah }}" disabled/>
             </div>
             <div class="row mb-3">
               <div class="col-md-6">
                 <div class="form mb-3 mb-md-0">
-                  <label>Pekerjaan Ayah </label>
+                  <label class="form-label text-justify">Pekerjaan Ayah </label>
                   <input class="form-control" name="pkj_ayah" type="text" value="{{ $mahasantri->pkj_ayah }}" disabled/>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <label>Pendidikan Ayah </label>
-                  <input class="form-control" name="pdk_ayah" type="text" value="{{ $mahasantri->pdk_ayah }}" disabled/>
+                  <label class="form-label text-justify">Pendidikan Ayah </label>
+                  <!-- <input class="form-control" name="pdk_ayah" type="text" value="{{ $mahasantri->pdk_ayah }}" disabled/> -->
+
+                  <select name="pdk_ayah" class="custom-select" disabled>
+                    <option value="{{ $mahasantri->pdk_ayah }}" selected>{{ $mahasantri->pdk_ayah }}</option>
+                  </select>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label>Nama Ibu </label>
+              <label class="form-label text-justify">Nama Ibu </label>
               <input class="form-control" name="nama_ibu" type="text" value="{{ $mahasantri->nama_ibu }}" disabled/>
             </div>
             <div class="row mb-3">
@@ -183,20 +187,24 @@
               <div class="col-md-6">
                 <div class="form">
                   <label>Pendidikan Ibu </label>
-                  <input class="form-control" name="pdk_ibu" type="text" value="{{ $mahasantri->pdk_ibu }}" disabled/>
+                  <!-- <input class="form-control" name="pdk_ibu" type="text" value="{{ $mahasantri->pdk_ibu }}" disabled/> -->
+
+                  <select name="pdk_ibu" class="custom-select" disabled>
+                    <option value="{{ $mahasantri->pdk_ibu }}" selected>{{ $mahasantri->pdk_ibu }}</option>
+                  </select>
                 </div>
               </div>
             </div>
             <div class="row mb-1">
               <div class="col-md-6">
                 <div class="form mb-3 mb-md-0">
-                  <label>Jumlah Saudara Kandung </label>
+                  <label class="form-label text-justify">Jumlah Saudara Kandung </label>
                   <input class="form-control" name="jml_sdr" type="text" value="{{ $mahasantri->jml_sdr }}" disabled/>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <label>Nomor Handphone Keluarga Yang Bisa Dihubungi </label>
+                  <label class="form-label text-justify">Nomor Handphone Keluarga Yang Bisa Dihubungi, (Wajib Angka) </label>
                   <input class="form-control" name="nohp_klg" type="text" value="{{ $mahasantri->nohp_klg }}" disabled/>
                 </div>
               </div>
@@ -218,19 +226,19 @@
             <div class="row mb-3">
               <div class="col-md-6">
                 <div class="form mb-3 mb-md-0">
-                  <label>Jurusan </label>
+                  <label class="form-label text-justify">Jurusan </label>
                   <input class="form-control" name="jurusan_skl" type="text" value="{{ $mahasantri->jurusan_skl }}" disabled/>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <label>Tahun Lulus </label>
+                  <label class="form-label text-justify">Tahun Lulus, (Wajib Angka) </label>
                   <input class="form-control" name="thn_lulus" type="text" value="{{ $mahasantri->thn_lulus }}" disabled/>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label>Harapan Dan Cita-cita </label>
+              <label class="form-label text-justify">Harapan Dan Cita-cita </label>
               <textarea name="cita_cita" class="form-control" cols="2" rows="2" disabled>
                 {{ $mahasantri->cita_cita }}
               </textarea>
@@ -238,7 +246,7 @@
             <div class="row mb-3">
               <div class="col-md-6">
                 <div class="form mb-3 mb-md-0">
-                  <label>Prestasi </label>
+                  <label class="form-label text-justify">Prestasi, Jika Tidak Memiliki Tuliskan ( - ) </label>
                   <textarea name="prestasi" class="form-control" cols="2"rows="2" disabled>
                     {{ $mahasantri->prestasi }}
                   </textarea>
@@ -246,7 +254,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <label>Penyakit Yang Pernah Di Derita Jika Tidak Memiliki, Tuliskan ( - )</label>
+                  <label class="form-label text-justify">Penyakit Yang Pernah Di Derita Jika Tidak Memiliki, Tuliskan ( - )</label>
                   <textarea name="penyakit" class="form-control" cols="2" rows="2" disabled>
                     {{ $mahasantri->penyakit }}
                   </textarea>
@@ -255,7 +263,7 @@
             </div>
             <div class="form-group">
               <div class="form">
-                <label>Apakah Anda Perokok? </label>
+                <label class="form-label text-justify">Apakah Anda Perokok? </label>
                 <div class="form-group -ml-3col-12">
                   <select name="perokok" class="custom-select" disabled>
                     @if ($mahasantri->perokok == "Ya")
@@ -299,7 +307,7 @@
             <div class="row mb-1">
               <div class="col-md-6">
                 <div class="form mb-3 mb-md-0">
-                  <label class="mb-5">Jurusan Di PeTIK Jombang Yang Anda Minati?</label>
+                  <label class="form-label text-justify">Jurusan Di PeTIK Jombang Yang Anda Minati?</label>
                   <div class="form-group -ml-3col-12">
                     <select name="jurusan_id" class="custom-select" disabled>
                       <option value="{{ $mahasantri->jurusan->id_jurusan }}" selected>{{ $mahasantri->jurusan->nama_jurusan }}</option>
@@ -309,8 +317,8 @@
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <label>Jika kalian memilih point peminatan tersebut, Untuk kedepannya apakah Kamu ingin
-                      melanjutkan untuk kuliah atau bekerja? Tuliskan alasannya? </label>
+                  <label class="form-label text-justify">Jika Anda Memilih Point Peminatan Tersebut, Untuk Kedepannya Apakah Anda Ingin
+                      Melanjutkan Untuk Kuliah Atau Bekerja? Tuliskan Alasannya? </label>
                   <textarea name="alasan" class="form-control" cols="3" rows="3" disabled>
                     {{ $mahasantri->alasan }}
                   </textarea>
@@ -318,7 +326,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label>Darimana Anda Mengetahui Informasi Mengenai PeTIK Jombang?</label>
+              <label class="form-label text-justify">Darimana Anda Mengetahui Informasi Mengenai PeTIK Jombang?</label>
               <div class="form-group -ml-3col-12">
                 <select name="media_id" class="custom-select" disabled>
                   <option value="{{ $mahasantri->mediaInformasi->id_media }}" selected>{{ $mahasantri->mediaInformasi->media_informasi }}</option>
@@ -343,16 +351,11 @@
                 </select>
               </div>
             </div>
-            <!-- <div class="form-group">
-              <div class="col-12">
-                <label class="form-label text-center">Berkas :</label>
-                <a href="{{ url('/download/'.$mahasantri->id) }}">{{ $mahasantri->berkas }}</a>
-              </div>
-            </div> -->
+            
 
             <div class="form-group">
               <div class="col-12">
-                <label class="form-label text-center">Berkas :</label>
+                <label  class="form-label text-justify">Berkas :</label>
                 {{-- <a href="{{ url('/download/'.$mahasantri->id) }}">{{ $mahasantri->berkas }}</a> --}}
                 <a href="{!! route('download', $mahasantri->id) !!}">{{ $mahasantri->berkas }}</a>
               </div>

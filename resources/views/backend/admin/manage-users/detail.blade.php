@@ -5,7 +5,7 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <h4 class="text-center">Detail Data User</h4>
+                <h5 class="text-center">Detail Data User Management</h5>
             </div>
         </div>
     </div>
@@ -14,14 +14,13 @@
 
     <div class="container">
 
-        <!-- Main content -->
-        <!-- <section class="content"> -->
+      
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-mt-2 md-12">
 
 
-                        <!-- Profile Image -->
+                     
                         <div class="card card-primary card-outline">
                             <div class="card-body box-profile">
                                 <div class="text-center">
@@ -50,16 +49,13 @@
 
                                 <a href="{{ route('manage-user.index') }}" class="btn btn-success btn-block"><b>Back</b></a>
                             </div>
-                            <!-- /.card-body -->
+                          
                         </div>
-                        <!-- /.card -->
+                     
 
-                    </div>
-                    <!-- /.row -->
-                </div><!-- /.container-fluid -->
-        <!-- </section> -->
-        <!-- /.content -->
-
+                    </div> 
+                </div>
+    
 
     </div>
 </div>

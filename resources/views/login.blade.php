@@ -1,30 +1,24 @@
 @extends('layouts.app')
 @section('content')
 
-<body class="hold-transition login-page">
-    <div class="container">
-        <div class="login-box">
-            <div class="card card-outline card-primary">
-                
-                <div class="card-header text-sm-center">
-                    <img src="{{asset('foto/Petik_YBM2.png')}}" height="85px"
-                                width="300px" alt="">
-                </div>
-                <div class="card-body">
-                    <div class="content-header text-center">
-                        <div class="container-fluid">
-                            <div class="row mb-2">
-                                <div class="col-sm-12">
-                                    <h1 class="m-0"><b>Masuk Apps</b></h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <form method="POST" action="{{ route('postlogin') }}">
-                        @csrf
-                        <div class="input-group mb-4">
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt mt-5" data-tilt>
+					<img src="{{asset('foto/Petik_YBM2.png' )}}" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form" method="POST" action="{{ route('postlogin') }}">
+                @csrf
+					
+					<span class="login100-form-title">
+					
+						Masuk Aplikasi
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<!-- <input class="input100" type="text" name="email" placeholder="Email"> -->
+                        <input class="input100" id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                                 placeholder="{{ __('Email Akun') }}" name="email" value="{{ old('email') }}" required
                                 autocomplete="email" autofocus>
                             @error('email')
@@ -32,9 +26,16 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
-                        </div>
-                        <div class="input-group mb-3">
-                            <input for="password" id="password" type="password"
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+						<i class="fa fa-qrcode" aria-hidden="true"></i>
+						</span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<!-- <input class="input100" type="password" name="pass" placeholder="Password"> -->
+                        <input class="input100" for="password" id="password" type="password"
                                 class="form-control @error('password') is-invalid @enderror"
                                 placeholder="{{ __('Password Akun') }}" name="password" required
                                 autocomplete="current-password">
@@ -43,26 +44,51 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
-                        </div>
-                        <div class="content-header text-center">
-                            <div class="container-fluid">
-                                <div class="row mb-2">
-                                    <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-primary btn-block">
-                                            {{ __('Login') }}</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('assets/dist/js/adminlte.min.js')}}"></script>
-</body>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+						<i class="fa fa-qrcode" aria-hidden="true"></i>
+						</span>
+					</div><br>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+                        {{ __('Login') }}
+						</button>
+					</div>
 
-</html>
+					<div class="text-center p-t-136">
+						<p class="txt2" >
+							PMB PeTIK Jombang
+							
+						</p>
+					</div>
+
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+	
+	<script src="{{asset('Login_v1/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+
+	<script src="{{asset('Login_v1/vendor/bootstrap/js/popper.js')}}"></script>
+	<script src="{{asset('Login_v1/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+
+	<script src="{{asset('Login_v1/vendor/select2/select2.min.js')}}"></script>
+
+	<script src="{{asset('Login_v1/vendor/tilt/tilt.jquery.min.js')}}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+	<script src="{{asset('Login_v1/js/main.js')}}"></script>
+
+
+
 @endsection

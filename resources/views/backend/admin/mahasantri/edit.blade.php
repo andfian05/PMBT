@@ -5,7 +5,7 @@
   <div class="container">
     <div class="card">
       <div class="card-body">
-        <h4 class="text-center">Update Data Calon Mahasantri</h4>
+        <h5 class="text-center">Update Data Calon Mahasantri</h5>
       </div>
     </div>
   </div>
@@ -36,7 +36,7 @@
           </div>
           <div class="form-group">
             <div class="col-md-12">
-              <label for="">Tuliskan apa yang Anda pahami tentang Pesantren PeTIK Jombang :</label>
+              <label for="" class="form-label text-justify">Tuliskan Apa Yang Anda Pahami Tentang PeTIK Jombang?</label>
               <textarea name="ket_profile"  class="form-control" cols="6" rows="3">
                 {{ old('ket_profile') ? old('ket_profile') : $profilePetik->ket_profile }}
               </textarea>
@@ -54,27 +54,27 @@
           <div class="row mb-3 mt-6">
             <div class="col-md-6">
               <div class="form mb-3 mb-md-0">
-                <label for="nama">Nama Lengkap </label>
+                <label for="nama" class="form-label text-justify">Nama Lengkap </label>
                 <input class="form-control" name="nama" id="nama" type="text" value="{{ old('nama') ? old('nama') : $mahasantri->nama }}" />
               </div>
             </div>
             <div class="col-md-6">
               <div class="form">
-                <label for="anak_ke">Anak Ke- </label>
-                <input class="form-control" name="anak_ke" id="anak_ke" type="text" value="{{ old('anak_ke') ? old('anak_ke') : $mahasantri->anak_ke }}" />
+                <label for="anak_ke" class="form-label text-justify">Anak Ke- </label>
+                <input class="form-control" name="anak_ke" id="anak_ke" type="number" value="{{ old('anak_ke') ? old('anak_ke') : $mahasantri->anak_ke }}" />
               </div>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-md-6">
               <div class="form mb-3 mb-md-0">
-                <label>Tempat Lahir </label>
+                <label class="form-label text-justify">Tempat Lahir </label>
                 <input class="form-control" name="tmp_lahir" type="text" value="{{ old('tmp_lahir') ? old('tmp_lahir') : $mahasantri->tmp_lahir }}" />
               </div>
             </div>
             <div class="col-md-6">
               <div class="form">
-                <label>Tanggal Lahir</label>
+                <label class="form-label text-justify">Tanggal Lahir</label>
                 <input class="form-control" name="tgl_lahir" type="date" value="{{ old('tgl_lahir') ? old('tgl_lahir') : $mahasantri->tgl_lahir }}" />
               </div>
             </div>
@@ -82,19 +82,19 @@
           <div class="row mb-3">
             <div class="col-md-6">
               <div class="form mb-3 mb-md-0">
-                <label>No. Handphone</label>
+                <label class="form-label text-justify">No. Handphone</label>
                 <input class="form-control" name="no_hp" type="text" value="{{ old('no_hp') ? old('no_hp') : $mahasantri->no_hp }}" />
               </div>
             </div>
             <div class="col-md-6">
               <div class="form">
-                <label>Email </label>
+                <label class="form-label text-justify">Email </label>
                 <input class="form-control" name="email" type="email" value="{{ old('email') ? old('email') : $mahasantri->email }}" />
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label>Alamat </label>
+            <label class="form-label text-justify">Alamat </label>
             <textarea name="alamat" class="form-control" cols="2" rows="2">
               {{ old('alamat') ? old('alamat') : $mahasantri->alamat }}
             </textarea>
@@ -102,7 +102,7 @@
           <div class="row mb-1">
             <div class="col-md-6">
               <div class="form mb-3 mb-md-0">
-                <label>Provinsi </label>
+                <label class="form-label text-justify">Provinsi </label>
                 <div class="form-group -ml-3col-12">
                   <select name="prov_id" id="provinsi" class="custom-select">
                     @foreach ($provinsis as $provinsi)
@@ -118,7 +118,7 @@
             </div>
             <div class="col-md-6">
               <div class="form">
-                <label>Kabupaten/Kota </label>
+                <label class="form-label text-justify">Kabupaten/Kota </label>
                 <div class="form-group -ml-3col-12">
                   <select name="kab_id" id="kabupaten" class="custom-select">
                     @foreach ($kabupatens as $kabupaten)
@@ -136,7 +136,7 @@
           <div class="row mb-1">
             <div class="col-md-6">
               <div class="form mb-3 mb-md-0">
-                <label>Kecamatan </label>
+                <label class="form-label text-justify">Kecamatan </label>
                 <div class="form-group -ml-3col-12">
                   <select name="kec_id" id="kecamatan" class="custom-select">
                     @foreach ($kecamatans as $kecamatan)
@@ -152,7 +152,7 @@
             </div>
             <div class="col-md-6">
               <div class="form">
-                <label>Kelurahan/Desa </label>
+                <label class="form-label text-justify">Kelurahan/Desa </label>
                 <div class="form-group -ml-3col-12">
                   <select name="desa_id" id="desa" class="custom-select">
                     @foreach ($desas as $desa)
@@ -178,51 +178,53 @@
             </div>
           </div>
           <div class="form-group">
-            <label>Nama Ayah </label>
+            <label class="form-label text-justify">Nama Ayah </label>
             <input class="form-control" name="nama_ayah" type="text" value="{{ old('nama_ayah') ? old('nama_ayah') : $mahasantri->nama_ayah }}"/>
           </div>
           <div class="row mb-3">
             <div class="col-md-6">
               <div class="form mb-3 mb-md-0">
-                <label>Pekerjaan Ayah </label>
+                <label class="form-label text-justify">Pekerjaan Ayah </label>
                 <input class="form-control" name="pkj_ayah" type="text" value="{{ old('pkj_ayah') ? old('pkj_ayah') : $mahasantri->pkj_ayah }}"/>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form">
-                <label>Pendidikan Ayah </label>
+                <label class="form-label text-justify">Pendidikan Ayah </label>
                 <input class="form-control" name="pdk_ayah" type="text" value="{{ old('pdk_ayah') ? old('pdk_ayah') : $mahasantri->pdk_ayah }}"/>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label>Nama Ibu </label>
+            <label class="form-label text-justify">Nama Ibu </label>
             <input class="form-control" name="nama_ibu" type="text" value="{{ old('nama_ibu') ? old('nama_ibu') : $mahasantri->nama_ibu }}"/>
           </div>
           <div class="row mb-3">
             <div class="col-md-6">
               <div class="form mb-3 mb-md-0">
-                <label>Pekerjaan Ibu </label>
+                <label class="form-label text-justify">Pekerjaan Ibu </label>
                 <input class="form-control" name="pkj_ibu" type="text" value="{{ old('pkj_ibu') ? old('pkj_ibu') : $mahasantri->pkj_ibu }}"/>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form">
-                <label>Pendidikan Ibu </label>
+                <label class="form-label text-justify">Pendidikan Ibu </label>
                 <input class="form-control" name="pdk_ibu" type="text" value="{{ old('pdk_ibu') ? old('pdk_ibu') : $mahasantri->pdk_ibu }}"/>
+
+              
               </div>
             </div>
           </div>
           <div class="row mb-1">
             <div class="col-md-6">
               <div class="form mb-3 mb-md-0">
-                <label>Jumlah Saudara Kandung </label>
-                <input class="form-control" name="jml_sdr" type="text" value="{{ old('jml_sdr') ? old('jml_sdr') : $mahasantri->jml_sdr }}"/>
+                <label class="form-label text-justify">Jumlah Saudara Kandung </label>
+                <input class="form-control" name="jml_sdr" type="number" value="{{ old('jml_sdr') ? old('jml_sdr') : $mahasantri->jml_sdr }}"/>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form">
-                <label>Nomor Handphone Keluarga Yang Bisa Dihubungi </label>
+                <label class="form-label text-justify">Nomor Handphone Keluarga Yang Bisa Dihubungi, (Wajib Angka) </label>
                 <input class="form-control" name="nohp_klg" type="text" value="{{ old('nohp_klg') ? old('nohp_klg') : $mahasantri->nohp_klg }}"/>
               </div>
             </div>
@@ -238,25 +240,25 @@
             </div>
           </div>
           <div class="form-group">
-            <label>Nama Sekolah Asal </label>
+            <label class="form-label text-justify">Nama Sekolah Asal </label>
             <input class="form-control" name="skl_asal" type="text" value="{{ old('skl_asal') ? old('skl_asal') : $mahasantri->skl_asal }}"/>
           </div>
           <div class="row mb-3">
             <div class="col-md-6">
               <div class="form mb-3 mb-md-0">
-                <label>Jurusan </label>
+                <label class="form-label text-justify">Jurusan </label>
                 <input class="form-control" name="jurusan_skl" type="text" value="{{ old('jurusan_skl') ? old('jurusan_skl') : $mahasantri->jurusan_skl }}"/>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form">
-                <label>Tahun Lulus </label>
+                <label class="form-label text-justify">Tahun Lulus, (Wajib Angka) </label>
                 <input class="form-control" name="thn_lulus" type="text" value="{{ old('thn_lulus') ? old('thn_lulus') : $mahasantri->thn_lulus }}"/>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <label>Harapan Dan Cita-cita </label>
+            <label class="form-label text-justify">Harapan Dan Cita-cita </label>
             <textarea name="cita_cita" class="form-control" cols="2" rows="2">
               {{ old('cita_cita') ? old('cita_cita') : $mahasantri->cita_cita }}
             </textarea>
@@ -264,7 +266,7 @@
           <div class="row mb-3">
             <div class="col-md-6">
               <div class="form mb-3 mb-md-0">
-                <label>Prestasi </label>
+                <label class="form-label text-justify">Prestasi, Jika Tidak Memiliki Tuliskan ( - ) </label>
                 <textarea name="prestasi" class="form-control" cols="2"rows="2">
                   {{ old('prestasi') ? old('prestasi') : $mahasantri->prestasi }}
                 </textarea>
@@ -272,7 +274,7 @@
             </div>
             <div class="col-md-6">
               <div class="form">
-                <label>Penyakit Yang Pernah Di Derita Jika Tidak Memiliki, Tuliskan ( - )</label>
+                <label class="form-label text-justify">Penyakit Yang Pernah Di Derita Jika Tidak Memiliki, Tuliskan ( - )</label>
                 <textarea name="penyakit" class="form-control" cols="2" rows="2">
                   {{ old('penyakit') ? old('penyakit') : $mahasantri->penyakit }}
                 </textarea>
@@ -281,7 +283,7 @@
           </div>
           <div class="form-group">
             <div class="form">
-              <label>Apakah Anda Perokok? </label>
+              <label class="form-label text-justify">Apakah Anda Perokok? </label>
               <div class="form-group -ml-3col-12">
                 <select name="perokok" class="custom-select">
                   @if ($mahasantri->perokok == "Ya")
@@ -325,7 +327,7 @@
           <div class="row mb-1">
             <div class="col-md-6">
               <div class="form mb-3 mb-md-0">
-                <label class="mb-5">Jurusan Di PeTIK Jombang Yang Anda Minati?</label>
+                <label class="form-label text-justify">Jurusan Di PeTIK Jombang Yang Anda Minati?</label>
                 <div class="form-group -ml-3col-12">
                   <select name="jurusan_id" class="custom-select" value="{{ old('jurusan_id') }}">
                     @foreach ($jurusans as $jurusan)
@@ -341,8 +343,8 @@
             </div>
             <div class="col-md-6">
               <div class="form">
-                <label>Jika kalian memilih point peminatan tersebut, Untuk kedepannya apakah Kamu ingin
-                    melanjutkan untuk kuliah atau bekerja? Tuliskan alasannya? </label>
+                <label class="form-label text-justify">Jika Anda Memilih Point Peminatan Tersebut, Untuk Kedepannya Apakah Anda Ingin
+                      Melanjutkan Untuk Kuliah Atau Bekerja? Tuliskan Alasannya? </label>
                 <textarea name="alasan" class="form-control" cols="3" rows="3">
                   {{ old('alasan') ? old('alasan') : $mahasantri->alasan }}
                 </textarea>
@@ -374,7 +376,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label>Metode Pengiriman Berkas</label>
+            <label class="form-label text-justify">Metode Pengiriman Berkas</label>
             <div class="form-group -ml-3col-12">
               <select name="metode_berkas" id="metode_berkas" class="custom-select" value="{{ old('metode_berkas') }}" onclick="tampilkan()">
                 @if ($mahasantri->metode_berkas == "online")
@@ -389,11 +391,11 @@
           </div>
           <div class="form-group">
             <div class="col-12">
-              <label class="form-label text-center">Berkas :</label>
+              <label class="form-label text-justify">Berkas :</label>
               <a href="{{ url('/download/'.$mahasantri->id) }}">{{ $mahasantri->berkas }}</a>
             </div>
           </div>
-          <!-- Logic Script Menampilkan pesan Saat Salah Satu Option dipilih  -->
+        
           <script>
             function tampilkan() {
               var pesan = document.getElementById("form1").metode_berkas.value;
@@ -401,8 +403,8 @@
 
               if (pesan == "online") {
                   p_kontainer.innerHTML = `
-                    <div class="form-group">
-                      <label class="col-12 mt-3">Silahkan Upload Semua Berkas Persyaratan Yang Telah Ditentukan Lalu Jadikan Satu File .PDF atau .Word :</label>
+                  <div class="form-group">
+                      <label class="col-12 mt-3">Silahkan Upload Semua Berkas Persyaratan Yang Telah Ditentukan Dengan Format Yang Kalian Inginkan (.PDF /.Word /.PNG /.JPG /.JPEG) Lalu Jadikan Satu Folder Dan Bentuk Dengan Format (.ZIP Atau .RAR) Lalu Diberi Nama Folder (NamaLengkap), Berikut Berkas Yang Kalian Upload:</label>
                       <div class="col-12">
                         <ol>
                           <li>Surat Keterangan Tidak Mampu</li>
@@ -415,8 +417,9 @@
                     </div>
                     <div class="form-group">
                       <div class="col-12">
-                        <label class="form-label text-center">Upload Berkas :</label>
+                        <label class="form-label text-center">Upload Berkas Anda Disini </label>
                         <input name="berkas" type="file" class="form-control" value="{{ old('berkas') }}" multiple>
+                        
                       </div>
                     </div>
                     `;
@@ -464,12 +467,12 @@
             <button type="submit" class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0"
               style="margin-right: 10px;">Update
             </button>
-            <button type="reset" class="btn btn-secondary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0"
-              style="margin-right: 10px;">Cancel
-            </button>
+            <a class="btn btn-success btn-sm-2 px-3 mb-2 mb-lg-0" href="{{ route('mahasantri.index') }}">
+              Back
+            </a>
           </div>
         </form>
-        <!-- Tutup Formulir Keseluruhan -->
+      
       </div>
     </div>
   </div>

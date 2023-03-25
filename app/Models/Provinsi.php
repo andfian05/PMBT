@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Kyslik\ColumnSortable\Sortable;
 
 class Provinsi extends Model
 {
     use HasFactory;
+    use Sortable;
 
     protected $table = 'provinsi';
     protected $fillable = [
@@ -18,5 +20,9 @@ class Provinsi extends Model
     {
         return $this->hasOne(Kabupaten::class, 'prov_id');
     }
+
+    public $sortable = [
+        'id_prov', 'nama'
+    ];
 
 }

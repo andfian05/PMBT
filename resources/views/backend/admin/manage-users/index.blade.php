@@ -1,19 +1,12 @@
 @extends('backend.admin.index')
 @section('content')
-    <!-- <div class="col-8">
-      @if (session('success'))
-          <div class="alert alert-success">
-              {{ session('success') }}
-          </div>
-      @endif
-    </div> -->
-
+ 
     <div class="content-wrapper">
       <br><br>
       <div class="container">
         <div class="card">
           <div class="card-body">
-            <h4 class="text-center">Data User</h4>
+            <h5 class="text-center">Data User Management</h5>
           </div>
         </div>
       </div>
@@ -30,12 +23,12 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">No</th>
+                    <th scope="col" class="text-center">No</th>
                     <th scope="col">Nama Lengkap</th>
                     <th scope="col">Username</th>
                     <th scope="col">Email</th>
                     <th scope="col">Role</th>
-                    <th scope="col">Action</th> 
+                    <th scope="col" class="text-center">Action</th> 
                   </tr>
                 </thead>
                 <tbody>

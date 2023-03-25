@@ -185,6 +185,8 @@ return [
         // Provider Lain
         AzisHapidin\IndoRegion\IndoRegionServiceProvider::class,
 
+        
+
         /*
          * Package Service Providers...
          */
@@ -197,6 +199,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        //sweet-alert
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+
+        Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
 
     ],
 
@@ -214,6 +221,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
     ])->toArray(),
 
 ];

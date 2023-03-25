@@ -1,10 +1,10 @@
 @extends('daftar.layouts.index')
 @section('content')
 <body id="page-top">
-    <!-- Navigation-->
+   
     <nav class="navbar navbar-expand-lg mb-5 navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
-            <!-- <img class="navbar-brand" src="{{asset('foto/Petik_YBM.png' )}}" height="70px" width="149px" alt=""> -->
+        <div class="container px-4">
+          
             <img class="navbar-brand" src="{{asset('foto/Petik_YBM2.png' )}}" height="50px" width="149px" alt="">
 
             <a class="navbar-brand fw-bold" href="#page-top"></a>
@@ -19,7 +19,7 @@
                 </ul>
 
                 <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 
-                    rounded-pill" href="https://drive.google.com/file/d/18h-YZAjQh93j9QkPralRgCQa6gEyvRPW/view?usp=sharing" target="_blank"> 
+                    rounded-pill" href="https://drive.google.com/file/d/1HAExg37krI1UrifiqEC0WAMYuoCVxqc9/view" target="_blank"> 
                     <i class="fa-solid fa-cloud-arrow-down"></i>&nbsp; 
                     Download Brosur
                 </a>&nbsp;&nbsp;
@@ -38,30 +38,28 @@
 
 
     <div class="container mb-5">
-        <!-- Basic features section-->
+       
 
 
         <section class="bg-white" id="LampiranBerkas">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
                     <div class="col-12 col-lg-5 mb-5">
-                        <!-- <h4 class="display-3 lh-1 mb-4">Lampiran Berkas</h4>
-                        <p class="lead fw-normal text-muted mb-5 mb-lg-0">How much prosedure</p> -->
-                        <!-- <img class="" src="{{asset('foto/lampiran.svg' )}}" height="180%" width="100%" alt=""> -->
+                      
                         <img class="" src="{{asset('foto/TY.svg' )}}" height="80%" width="100%" alt="">
                     </div>
                     <div class="col-sm-9 col-md-6">
 
 
-                        <!-- <h4 class="display-3 lh-1 mb-4">Terimakasih</h4> -->
+                      
 
-                        <p class="lead mb-1 mb-lg-0 text-center">Terimakasih, Anda Telah <b>Berhasil</b> Melakukan
-                            Registrasi Pendaftaran Calon Mahasantri Pesantren PeTIK Jombang Tahun Akademik 2023/2024.
+                        <p class="lead mb-1 mb-lg-0 text-center">Terimakasih, Anda telah <b>Berhasil</b> melakukan
+                            registrasi pendaftaran Calon Mahasantri PeTIK Jombang tahun akademik 2023/2024.
                         </p><br>
-                        <p class="lead mb-1 mb-lg-0 text-justify">Mohon Menunggu Pengumuman Hasil Seleksi Berkas Pada
-                            Tanggal 30 Juni 2023. Silahkan Masuk Ke Dalam Grup Whatsapp Berikut Ini : <a
-                                href="https://chat.whatsapp.com/KG2Wm2XYIURJtvj72Mv3J0" target="_blank">Pendaftar PeTIK Jombang
-                                2023</a> Untuk Melihat Informasi Selanjutnya.</p>
+                        <p class="lead mb-1 mb-lg-0 text-justify">Mohon menunggu informasi kembali pengumuman hasil seleksi PMB pada
+                            tanggal 30 Juni 2023. Silahkan masuk ke dalam grup Whatsapp dibawah ini untuk melihat informasi selanjutnya yang akan disampaikan oleh pihak panitia.</p><br>
+                        <p class="lead mb-1 mb-lg-0 text-center"><a class="btn btn-success bg-gradient-primary-to-success  px-3 mb-2 mb-lg-0 rounded-pill"
+                                href="https://chat.whatsapp.com/F0i1cpL4pVhF8cTgr9e3Lw" target="_blank"><i class="fa-brands fa-whatsapp fa-2"></i>&nbsp;Pendaftar PeTIK 2023/2024</a></p>
 
                     </div>
                 </div>

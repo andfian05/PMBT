@@ -18,6 +18,7 @@ use App\Models\ProfilePetik;
 
 use DB;
 use PDF;
+Use Alert;
 
 
 class MahasantriController extends Controller
@@ -29,10 +30,24 @@ class MahasantriController extends Controller
      */
     public function index()
     {
-        $mahasantris = Mahasantri::all();
+        //pagination laravel
+        $mahasantris = Mahasantri::sortable()->paginate(10)->onEachSide(1)->fragment('mahasantri');
+       
+
+        // $cari = $request->query('cari');
+
+        // if(!empty($cari)){
+        //     $mahasantris = Mahasantri::sortable()
+        //     ->where('mahasantri.nama', 'like', '%' .$cari. '%')
+        //     ->onWhere('mahasantri.nama', 'like', '%' .$cari. '%')
+        //     ->paginate(3)->onEachSide(1)->fragment('mahasantri');
+        // }else {
+        //     $mahasantris = Mahasantri::sortable()->paginate(3)->onEachSide(1)->fragment('mahasantri');
+        // }
 
         return view('backend.admin.mahasantri.index')->with([
-            'mahasantris' => $mahasantris
+            'mahasantris' => $mahasantris,
+            // 'cari' => $cari,
         ]);
     }
 
@@ -106,7 +121,7 @@ class MahasantriController extends Controller
             'ket_profile' => $data['ket_profile']
         ]);
 
-        return redirect()->route('mahasantri.index')->with('success', 'Mahasantri added successfully');
+        return redirect()->route('mahasantri.index')->with('success', 'Data Calon Mahasantri Berhasil Ditambah');
     }
 
     /**
@@ -239,7 +254,7 @@ class MahasantriController extends Controller
             'ket_profile' => $data['ket_profile']
         ]);
 
-        return redirect()->route('mahasantri.index')->with('success', 'Mahasantri updated successfully');
+        return redirect()->route('mahasantri.index')->with('success', 'Data Calon Mahasantri Berhasil Diupdate');
     }
 
     /**
@@ -258,7 +273,7 @@ class MahasantriController extends Controller
         $profilePetik = ProfilePetik::findOrFail($id);
         $profilePetik->delete();
 
-        return redirect()->route('mahasantri.index')->with('success', 'Mahasantri deleted successfully');
+        return redirect()->route('mahasantri.index')->with('success', 'Data Calon Mahasantri Telah Dihapus');
     }
 
     /**

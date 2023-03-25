@@ -1,15 +1,13 @@
 @extends('backend.admin.index')
 @section('content')
-<!-- @if (session('success'))
-  <p class="alert alert-success">{{ session('success') }}</p>
-@endif -->
+
 
     <div class="content-wrapper">
       <br><br>
       <div class="container">
         <div class="card">
           <div class="card-body">
-            <h4 class="text-center">Data Calon Mahasantri</h4>
+            <h5 class="text-center">Data Calon Mahasantri</h5>
           </div>
         </div>
       </div>
@@ -23,6 +21,7 @@
             <a class="btn btn-danger px-3 mb-2 mb-lg-0" title="Export Data Mahasantri" href="{{ route('mahasantri.pdf') }}">
               <i class="fa-solid fa-file-pdf"></i>
             </a>
+
            
           </div>
           <div class="card-body">
@@ -30,20 +29,22 @@
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Nama Lengkap</th>
+                    <th scope="col" class="text-center">No</th>
+                    <th scope="col">@sortablelink('nama','Nama Lengkap')</th>
+                    <th scope="col">Domisili</th>
                     <th scope="col">Tempat Lahir</th>
                     <th scope="col">Tanggal Lahir</th>
-                    <th scope="col">No.Hp</th>
-                    <th scope="col">Action</th> 
+                    <th scope="col">No.Handphone</th>
+                    <th scope="col" class="text-center">Action</th> 
                   </tr>
                 </thead>
                 <tbody class="table-group-divider">
-                  @php $no = 1; @endphp
+                  @php $no = 1 + (($mahasantris->currentPage()-1) * $mahasantris->perPage()); @endphp
                   @foreach($mahasantris as $mahasantri)
                     <tr>
                       <td scope="row" data-title="No" class="text-center">{{ $no++ }}</td>
                       <td data-title="Nama Lengkap">{{ $mahasantri->nama }}</td>
+                      <td data-title="Domisili">{{ $mahasantri->provinsi->nama }}</td>
                       <td data-title="Tempat Lahir">{{ $mahasantri->tmp_lahir }}</td>
                       <td data-title="Tanggal Lahir">{{ date('d F Y', strtotime($mahasantri->tgl_lahir)) }}</td>
                       <td data-title="No. Handphone">{{ $mahasantri->no_hp }}</td>
@@ -63,7 +64,12 @@
                     </tr>
                   @endforeach
                 </tbody>
+                
               </table>
+
+              <!-- {{ $mahasantris->links() }} -->
+
+              {!! $mahasantris->appends(Request::except('page'))->render() !!}
             </div>
           </div>
         </div>

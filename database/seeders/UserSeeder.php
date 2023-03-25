@@ -18,18 +18,19 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             'id' => 1,
-            'nama' => 'Ahmad Faruq',
-            'username' => 'mad_faruq15',
-            'email' => 'p3t1kj0mb4ng99@gmail.com',
+            'nama' => 'PeTIKJombang',
+            'username' => 'petik_jombang',
+            'email' => 'p3t1kj0mbang@gmail.com',
             'password' => Hash::make('Aruq13@admin'),
             'role' => 'Administrator',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')
         ]);
 
+        //clear task
         DB::table('users')->insert([
             'id' => 2,
-            'nama' => 'Panitia A',
+            'nama' => 'Panitia A / Survei',
             'username' => 'panitiaA',
             'email' => 'panitiasatu@gmail.com',
             'password' => Hash::make('Ian21@panitA'),
@@ -38,9 +39,10 @@ class UserSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
 
+        //clear task
         DB::table('users')->insert([
             'id' => 3,
-            'nama' => 'Panitia B',
+            'nama' => 'Panitia B / Al Quran',
             'username' => 'panitiaB',
             'email' => 'panitiadua@gmail.com',
             'password' => Hash::make('Athull55@panitB'),
@@ -49,9 +51,10 @@ class UserSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s')
         ]);
 
+        //clear task
         DB::table('users')->insert([
             'id' => 4,
-            'nama' => 'Panitia C',
+            'nama' => 'Panitia C / Tanya Jawab',
             'username' => 'panitiaC',
             'email' => 'panitiatiga@gmail.com',
             'password' => Hash::make('Ansyah79@panitC'),
@@ -63,9 +66,20 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'id' => 5,
             'nama' => 'PeTIK Jombang',
-            'username' => 'petik_jombang',
-            'email' => 'p3t1kjombang@gmail.com',
-            'password' => Hash::make('qwerty123'),
+            'username' => 'petikjombang_admin',
+            'email' => 'zoom.petikjombang@gmail.com',
+            'password' => Hash::make('Asdfgh!234'),
+            'role' => 'Administrator',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
+        ]);
+
+        DB::table('users')->insert([
+            'id' => 6,
+            'nama' => 'Alifian',
+            'username' => 'fianfi',
+            'email' => 'andfian05@gmail.com',
+            'password' => Hash::make('Asdfgh!23'),
             'role' => 'Administrator',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')

@@ -5,7 +5,7 @@
     <div class="container">
       <div class="card">
         <div class="card-body">
-          <h4 class="text-center">Update Data User</h4>
+          <h5 class="text-center">Update Data User Management</h5>
         </div>
       </div>
     </div>
@@ -104,9 +104,9 @@
               <button type="submit" class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0"
                 style="margin-right: 10px;">Save
               </button>
-              <button type="reset" class="btn btn-secondary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0"
-                style="margin-right: 10px;">Cancel
-              </button>
+               <a class="btn btn-success btn-sm-2 px-3 mb-2 mb-lg-0" href="{{ route('manage-user.index') }}">
+                Back
+               </a>
             </div>
           </form>
         </div>
