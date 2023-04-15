@@ -39,7 +39,7 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group col-md-12">
-                        <label for="">Nama Calon Mahasantri</label>
+                        <label for="" class="form-label text-justify" for="" style="color : #0E8388">Nama Calon Mahasantri <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                         <select id="" name="mhs_id" class="custom-select" disabled>
                           <option value="{{ $survei->mahasantri->id }}">{{ $survei->mahasantri->nama }}</option>
                         </select>
@@ -48,7 +48,7 @@
 
                     <div class="col-md-6">
                       <div class="form-group col-md-12">
-                        <label for="">No. Hp Calon Mahasantri</label>
+                        <label for="" class="form-label text-justify" for="" style="color : #0E8388">No. Hp Calon Mahasantri <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                         <select id="" name="mhs_id" class="custom-select" disabled>
                           <option value="{{ $survei->mahasantri->id }}">{{ $survei->mahasantri->no_hp }}</option>
                         </select>
@@ -66,7 +66,7 @@
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label for="">Nama Pewawancara Survei</label>
+                      <label for="" class="form-label text-justify" for="" style="color : #0E8388">Nama Pewawancara Survei <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                       <input class="form-control" name="nama_pewawancara" id="" type="text" value="{{ $survei->nama_pewawancara }}" disabled/>
                     </div>
                   </div><br>
@@ -81,7 +81,7 @@
                   </div>
                   <div class="form-group">
                     <div class="form-group col-md-12">
-                      <label for="keterangan">Tempat Seleksi</label> 
+                      <label for="keterangan" class="form-label text-justify" for="" style="color : #0E8388">Tempat Seleksi <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                       <div class="form-group">
                         <select id="keterangan" name="tmp_seleksi" class="custom-select" onclick="tampilkan()" disabled>
                           <option value="{{ $survei->tmp_seleksi }}">{{ $survei->tmp_seleksi }}</option>
@@ -89,42 +89,11 @@
                       </div>
                     </div> 
                     <div class="form-group col-md-12">
-                      <label class="col-ml-12">Lokasi</label> 
+                      <label class="col-ml-12" class="form-label text-justify" for="" style="color : #0E8388">Lokasi <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                       <input type="text" name="lks_seleksi" class="form-control" value="{{ $survei->lks_seleksi }}" disabled>
                     </div>
                   </div><br>
 
-                 
-                      
-
-                  {{-- Kriteria Pendapatan --}}
-                  <div class="container">
-                    <div class="card">
-                        <div class="bg-info">
-                          <h6 class="text-center mt-2">Kelayakan Pendapatan Keluarga</h6>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="row mb-3">
-                      <div class="col-md-6">
-                        <div class="form-group col-md-12">
-                          <label>Surat Keterangan Tidak Mampu (SKTM) Dari Sekolah/Kelurahan/DKM</label> 
-                          <div>
-                            <select name="sktm" class="custom-select" disabled>
-                              <option value="">{{ $survei->sktm }}</option>
-                            </select>
-                          </div> 
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
-                          <textarea name="note_sktm"  class="form-control" id="" cols="4" rows="4" disabled>
-                            {{ $survei->note_sktm }}
-                          </textarea>
-                        </div>
-                      </div>                           
-                  </div><br>
                   
                   {{-- Program Beasiswa --}}
                   <div class="container">
@@ -137,28 +106,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Apakah Yang Bersangkutan Dan Keluarga Saat Ini Sedang Mengikuti Program Serupa Dari Lembaga Lain?</label> 
-                          <div>
-                            <select name="progbeasiswa" class="custom-select" disabled>
-                              <option value="">{{ $survei->progbeasiswa }}</option>
-                            </select>
-                          </div> 
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group col-md-12">
-                          <label>Catatan</label>
-                          <textarea name="note_progbea"  class="form-control" cols="4" rows="4" disabled>
-                            {{ $survei->note_progbea }}
-                          </textarea>
-                        </div>
-                      </div>                           
-                  </div><br>
-
-                  <div class="row mb-3">
-                      <div class="col-md-6">
-                        <div class="form-group col-md-12">
-                          <label>Apakah Yang Bersangkutan Mendapat Izin Dari Orang Tua Untuk Mengikuti Beasiswa Pendidikan Pesantren PeTIK Jombang?</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Apakah Yang Bersangkutan Mendapat Izin Dari Orang Tua Untuk Mengikuti Beasiswa Pendidikan Pesantren PeTIK Jombang? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="izinbeasiswa" class="custom-select" disabled>
                               <option value="">{{ $survei->izinbeasiswa }}</option>
@@ -168,7 +116,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Catatan</label>
+                          <label class="form-label text-justify" for="" style="color : #0E8388"> Catatan,  Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_izinbeasiswa"  class="form-control" cols="4" rows="4" disabled>
                             {{ $survei->note_izinbeasiswa }}
                           </textarea>
@@ -186,7 +134,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Status Dalam Keluarga</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Status Dalam Keluarga <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="statuskel" class="custom-select" disabled>
                               <option value="">{{ $survei->statuskel }}</option>
@@ -196,7 +144,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Catatan</label>
+                          <label class="form-label text-justify" for="" style="color : #0E8388"> Catatan, , Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_statuskel"  class="form-control" cols="4" rows="4" disabled>
                             {{ $survei->note_statuskel }}
                           </textarea>
@@ -206,7 +154,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Pendidikan Terakhir Kepala Keluarga</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Pendidikan Terakhir Kepala Keluarga <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="pendkel" class="custom-select" disabled>
                               <option value="">{{ $survei->pendkel }}</option>
@@ -216,7 +164,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Catatan</label>
+                          <label class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_pendkel"  class="form-control" cols="4" rows="4" disabled>
                             {{ $survei->note_pendkel }}
                           </textarea>
@@ -226,7 +174,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Usia Program Pendidikan Kepala Keluarga</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Usia Program Pendidikan Kepala Keluarga <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="usiapend" class="custom-select" disabled>
                               <option value="">{{ $survei->usiapend }}</option>
@@ -236,7 +184,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Catatan</label>
+                          <label class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_usiapend"  class="form-control" cols="4" rows="4" disabled>
                             {{ $survei->note_usiapend }}
                           </textarea>
@@ -246,7 +194,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Kondisi Kesehatan Kepala Keluarga</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Kondisi Kesehatan Kepala Keluarga <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="kesehatankel" class="custom-select" disabled>
                               <option value="">{{ $survei->kesehatankel }}</option>
@@ -256,7 +204,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_kesehatankel"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_kesehatankel }}
                           </textarea>
@@ -266,7 +214,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Jenis Pekerjaan Kepala Keluarga</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Jenis Pekerjaan Kepala Keluarga <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="jenispekrj" class="custom-select" disabled>
                               <option value="">{{ $survei->jenispekrj }}</option>
@@ -276,7 +224,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan,Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_jenispekrj"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_jenispekrj }}
                           </textarea>
@@ -295,7 +243,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Status</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Status <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="statusrmh" class="custom-select" disabled>
                               <option value="">{{ $survei->statusrmh }}</option>
@@ -305,7 +253,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_statusrmh"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_statusrmh }}
                           </textarea>
@@ -315,7 +263,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Luas</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Luas <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="luasrmh" class="custom-select" disabled>
                               <option value="">{{ $survei->luasrmh }}</option>
@@ -325,7 +273,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan,  Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_luasrmh"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_luasrmh }}
                           </textarea>
@@ -335,7 +283,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Dinding</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Dinding <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="dindingrmh" class="custom-select" disabled>
                               <option value="">{{ $survei->dindingrmh }}</option>
@@ -345,7 +293,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan,  Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_dindingrmh"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_dindingrmh }}
                           </textarea>
@@ -355,7 +303,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Atap</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Atap <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="ataprmh" class="custom-select" disabled>
                               <option value="">{{ $survei->ataprmh }}</option>
@@ -365,7 +313,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan,  Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_ataprmh"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_ataprmh }}
                           </textarea>
@@ -375,7 +323,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Lantai</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Lantai <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="lantairmh" class="custom-select" disabled>
                               <option value="">{{ $survei->lantairmh }}</option>
@@ -385,7 +333,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_lantairmh"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_lantairmh }}
                           </textarea>
@@ -395,7 +343,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Alat Masak</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Alat Masak <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="alatmsk" class="custom-select" disabled>
                               <option value="">{{ $survei->alatmsk }}</option>
@@ -405,7 +353,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_alatmsk"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_alatmsk }}
                           </textarea>
@@ -415,7 +363,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Perabotan</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Perabotan <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="perabotan" class="custom-select" disabled>
                               <option value="">{{ $survei->perabotan }}</option>
@@ -425,7 +373,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_perabotan"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_perabotan }}
                           </textarea>
@@ -435,7 +383,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Sumber Air</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Sumber Air <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="sumberair" class="custom-select" disabled>
                               <option value="">{{ $survei->sumberair }}</option>
@@ -445,7 +393,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_sumberair"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_sumberair }}
                           </textarea>
@@ -455,7 +403,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>MCK</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">MCK <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="mck" class="custom-select" disabled>
                               <option value="">{{ $survei->mck }}</option>
@@ -465,7 +413,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_mck"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_mck }}
                           </textarea>
@@ -475,7 +423,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Penerangan</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Penerangan <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="penerangan" class="custom-select" disabled>
                               <option value="">{{ $survei->penerangan }}</option>
@@ -485,7 +433,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_penerangan"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_penerangan }}
                           </textarea>
@@ -495,7 +443,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Lokasi Rumah</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Lokasi Rumah <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="lokasirmh" class="custom-select" disabled>
                               <option value="">{{ $survei->lokasirmh }}</option>
@@ -505,7 +453,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_lokasirmh"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_lokasirmh }}
                           </textarea>
@@ -515,7 +463,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Tata Letak Rumah</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Tata Letak Rumah <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="tataletak" class="custom-select" disabled>
                               <option value="">{{ $survei->tataletak }}</option>
@@ -525,7 +473,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib) </sup></label>
                           <textarea name="note_tataletak"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_tataletak }}
                           </textarea>
@@ -535,7 +483,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Kepemilikan Tanah</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Kepemilikan Tanah <sup class="text-danger" font-size="20px">* (Wajib) </sup></label> 
                           <div>
                             <select name="miliktanah" class="custom-select" disabled>
                               <option value="">{{ $survei->miliktanah }}</option>
@@ -545,7 +493,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_miliktanah"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_miliktanah }}
                           </textarea>
@@ -555,7 +503,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label>Kepemilikan Harta Tidak Bergerak</label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Kepemilikan Harta Tidak Bergerak <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="harta" class="custom-select" disabled>
                               <option value="">{{ $survei->harta }}</option>
@@ -565,7 +513,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="">Catatan</label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_harta"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_harta }}
                           </textarea>

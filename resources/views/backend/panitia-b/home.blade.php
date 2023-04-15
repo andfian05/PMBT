@@ -23,10 +23,10 @@
                     {{ $testbacaquran }}
                   @endif
                 </h3>
-                <p>Test Al Qur'an</p>
+                <p>Tes Al Qur'an</p>
               </div>
               <div class="icon">
-                <i class="fa-solid fa-users fa-1x"></i>
+                <i class="fa-solid fa-users fa-1x fa-bounce"></i>
               </div>
               <a href="{{ route('test-baca-quran.create') }}" class="small-box-footer">Mulai Tes <i class="fas fa-arrow-circle-right"></i></a>
             </div>

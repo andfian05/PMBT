@@ -27,8 +27,8 @@
                 
                        
                             
-                            <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 rounded-pill" href="{{ url('/pmbpetikjombang') }}"> <i class="fa-solid fa-graduation-cap"></i>&nbsp;Daftar Sekarang</a>&nbsp;
-                            <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 rounded-pill" href="https://drive.google.com/file/d/1HAExg37krI1UrifiqEC0WAMYuoCVxqc9/view" target="_blank"> <i class="fa-solid fa-cloud-arrow-down"></i>&nbsp;Download Brosur</a>
+                            <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 rounded-pill" href="{{ url('/pmbpetikjombang') }}"> <i class="fa-solid fa-graduation-cap fa-bounce"></i>&nbsp;Daftar Sekarang</a>&nbsp;
+                            <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 rounded-pill" href="https://drive.google.com/file/d/1yW-uyivR_1-3NTDajTnF6B2IkouYAra7/view?usp=sharing" target="_blank"> <i class="fa-solid fa-cloud-arrow-down fa-bounce"></i>&nbsp;Download Brosur</a>
                           
 
         
@@ -108,7 +108,7 @@
                                 <div class="col-md-6 mb-5">
                                  
                                     <div class="text-center">
-                                        <i class="fa-solid fa-file-circle-check icon-feature  d-block mb-3 fa-3x"></i>
+                                        <i class="fa-solid fa-file-circle-check icon-feature fa-flip d-block mb-3 fa-3x"></i>
                                         <h4 class="font-alt">Syarat & Ketentuan</h4>
                                     
                                         <a href="#Syarat&Ketentuan" class="stretched-link">Selengkapnya</a>
@@ -117,9 +117,10 @@
                                 <div class="col-md-6 mb-5">
                                 
                                     <div class="text-center">
-                                        <i class="fa-solid fa-shoe-prints icon-feature  d-block mb-3 fa-3x"></i>
+                                        <!-- <i class="fa-solid fa-shoe-prints icon-feature fa-bounce d-block mb-3 fa-3x" style="color: #009bb9;"></i> -->
+                                        <i class="fa-solid fa-shoe-prints icon-feature fa-flip d-block mb-3 fa-3x" ></i>
                                        
-                                        <h4 class="font-alt">Alur Pendaftaran</h4>
+                                        <h4 class="font-alt" >Alur Pendaftaran</h4>
                                      
                                         <a href="#AlurPendaftaran" class="stretched-link">Selengkapnya</a>
                                     </div>
@@ -129,8 +130,8 @@
                                 <div class="col-md-6 mb-5 mb-md-0">
                                     
                                     <div class="text-center">
-                                        <i class="fa-solid fa-file-lines icon-feature  d-block mb-3 fa-3x"></i>
-                                        <h4 class="font-alt">Lampiran Berkas</h4>
+                                        <i class="fa-solid fa-file-lines icon-feature fa-flip d-block mb-3 fa-3x" ></i>
+                                        <h4 class="font-alt" >Lampiran Berkas</h4>
                                       
                                         <a href="#LampiranBerkas" class="stretched-link">Selengkapnya</a>
                                     </div>
@@ -138,8 +139,9 @@
                                 <div class="col-md-6">
                                    
                                     <div class="text-center">
-                                        <i class="fa-solid fa-file-pen icon-feature  d-block mb-3 fa-3x"></i>
-                                        <h4 class="font-alt">Formulir Pendaftaran</h4>
+                                        <i class="fa-solid fa-file-pen icon-feature fa-flip d-block mb-3 fa-3x" ></i>
+                                        
+                                        <h4 class="font-alt" >Formulir Pendaftaran</h4>
                                         <a href="#FormulirPendaftaran" class="stretched-link">Selengkapnya</a>
                                     </div>
                                 </div>
@@ -285,23 +287,26 @@
                     <div class="col-12 col-lg-5 mb-5">
                     <div class="row gx-5">
                                 <div class="col-md-6 mb-5">
+
+                               
                                  
                                     <div class="text-center">
                                         <!-- <i class="fa-solid fa-file-circle-check icon-feature  d-block mb-3 fa-3x"></i> -->
-                                        <i class="fa-solid fa-1 icon-feature d-block mb-3 fa-3x"></i>
-                                        <h4 class="font-alt">Tes Akademik</h4>
-                                        <p>19 Januari 2023</p>
+                                        <!-- <i class="fa-solid fa-1 icon-feature d-block mb-3 fa-3x"></i> -->
+                                        <i class="fa-solid fa-book-bookmark fa-flip d-block mb-3 fa-3x" ></i>
+                                        <h4 class="font-alt" >Tes Akademik</h4>
+                                        <p class="lead mb-5 mb-lg-0 text-justify">3 Juli 2023</p>
                                     
                                         <!-- <a href="#Syarat&Ketentuan" class="stretched-link">Selengkapnya</a> -->
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-5">
-                                
                                     <div class="text-center">
                                         <!-- <i class="fa-solid fa-shoe-prints icon-feature  d-block mb-3 fa-3x"></i> -->
-                                        <i class="fa-solid fa-2 icon-feature d-block mb-3 fa-3x"></i>
-                                        <h4 class="font-alt">Tes Al Qur'an</h4>
-                                        <p>19 Januari 2023</p>
+                                        <!-- <i class="fa-solid fa-2 icon-feature d-block mb-3 fa-3x"></i> -->
+                                        <i class="fa-solid fa-book-quran fa-flip d-block mb-3 fa-3x" ></i>
+                                        <h4 class="font-alt" >Tes Al Qur'an</h4>
+                                        <p class="lead mb-5 mb-lg-0 text-justify">3 Juli 2023</p>
                                         <!-- <a href="#AlurPendaftaran" class="stretched-link">Selengkapnya</a> -->
                                     </div>
                                 </div>
@@ -311,9 +316,10 @@
                                     
                                     <div class="text-center">
                                         <!-- <i class="fa-solid fa-file-lines icon-feature  d-block mb-3 fa-3x"></i> -->
-                                        <i class="fa-solid fa-3 icon-feature d-block mb-3 fa-3x"></i>
-                                        <h4 class="font-alt">Tes Tanya Jawab</h4>
-                                        <p>19 Januari 2023</p>
+                                        <!-- <i class="fa-solid fa-3 icon-feature d-block mb-3 fa-3x"></i> -->
+                                        <i class="fa-solid fa-user-check fa-flip d-block mb-3 fa-3x" ></i>
+                                        <h4 class="font-alt" >Tes Tanya Jawab</h4>
+                                        <p class="lead mb-5 mb-lg-0 text-justify">3 Juli 2023</p>
                                         <!-- <a href="#LampiranBerkas" class="stretched-link">Selengkapnya</a> -->
                                     </div>
                                 </div>
@@ -321,9 +327,10 @@
                                    
                                     <div class="text-center">
                                         <!-- <i class="fa-solid fa-file-pen icon-feature  d-block mb-3 fa-3x"></i> -->
-                                        <i class="fa-solid fa-4 icon-feature d-block mb-3 fa-3x"></i>
-                                        <h4 class="font-alt">Tes Survei</h4>
-                                        <p>19 Januari 2023</p>
+                                        <!-- <i class="fa-solid fa-4 icon-feature d-block mb-3 fa-3x"></i> -->
+                                        <i class="fa-solid fa-user-group fa-flip d-block mb-3 fa-3x" ></i>
+                                        <h4 class="font-alt" >Tes Survei</h4>
+                                        <p class="lead mb-5 mb-lg-0 text-justify">3 Juli 2023</p>
                                         <!-- <a href="#FormulirPendaftaran" class="stretched-link">Selengkapnya</a> -->
                                     </div>
                                 </div>

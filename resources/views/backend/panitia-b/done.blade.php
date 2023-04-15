@@ -12,7 +12,7 @@
 
             <div class="card-body text-center">
                 <a class="btn btn-success btn-sm-2" href="{{ route('test-baca-quran.create') }}">
-                    <i class="fa-solid fa-arrows-rotate"></i>&nbsp;Memulai Tes Baca dan Hafalan Al Qur'an
+                    <i class="fa-solid fa-arrows-rotate fa-spin fa-spin-reverse"></i>&nbsp;Memulai Tes Baca dan Hafalan Al Qur'an
                 </a>
             </div>
         </div>

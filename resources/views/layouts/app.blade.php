@@ -7,6 +7,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="{{asset('foto/favicon/Logo.jpg')}}" />
+
+	 <!-- font awesome -->
+	 <link href="{{asset('icon/css/all.css')}}" rel="stylesheet" />
 	
 	<!-- <link rel="icon" type="image/png" href="{{asset('Login_v1/images/icons/favicon.ico')}}"/> -->
 

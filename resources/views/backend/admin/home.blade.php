@@ -29,7 +29,7 @@
                 <p>Biodata Mahasantri</p>
               </div>
               <div class="icon">
-                <i class="fa-solid fa-users fa-1x"></i>
+                <i class="fa-solid fa-users fa-bounce fa-1x"></i>
               </div>
               <a href="{{ route('mahasantri.index') }}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -48,7 +48,7 @@
                 <p>Data Survei</p>
               </div>
               <div class="icon">
-                <i class="fa-solid fa-file-pen icon-feature  d-block mb-3 fa-3x"></i>
+                <i class="fa-solid fa-file-pen icon-feature fa-bounce d-block mb-3 fa-3x"></i>
               </div>
               <a href="{{ route('survei.index') }}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -67,7 +67,7 @@
                 <p>Data Bacaan Al Qur’an</p>
               </div>
               <div class="icon">
-                <i class="fa-solid fa-book-quran"></i>
+                <i class="fa-solid fa-book-quran fa-bounce"></i>
               </div>
               <a href="{{ route('baca-quran.index') }}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -86,7 +86,7 @@
                 <p>Data Tanya Jawab</p>
               </div>
               <div class="icon">
-                <i class="fa-solid fa-file-lines"></i>
+                <i class="fa-solid fa-file-lines fa-bounce"></i>
               </div>
               <a href="{{ route('tanya-jawab.index')}}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -96,7 +96,28 @@
             <div class="small-box bg-warning-emphasis">
               <div class="inner">
                 <h3>
-                  @if ($dtr == 0)
+                  @if ($potensi_akademik == '')
+                    -
+                  @else
+                    {{ $potensi_akademik }}
+                  @endif
+                </h3>
+
+                <p>Data Potensi Akademik</p>
+              </div>
+              <div class="icon">
+              <i class="fa-solid fa-book-open-reader fa-bounce"></i>
+              
+              </div>
+              <a href="{{ route('potensi-akademik.index') }}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <div class="small-box bg-warning-emphasis">
+              <div class="inner">
+                <h3>
+                  @if ($dtr == '')
                     -
                   @else
                     {{ $dtr }}
@@ -106,17 +127,20 @@
                 <p>Data DTR Seleksi</p>
               </div>
               <div class="icon">
-              <i class="fa-solid fa-award"></i>
+              <i class="fa-solid fa-award fa-bounce"></i>
               </div>
               <a href="{{ route('dtr.index') }}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 
+
+          
+
           <div class="col-lg-3 col-6">
             <div class="small-box bg-warning-emphasis">
               <div class="inner">
                 <h3>
-                  @if ($user == 0)
+                  @if ($user == '')
                     -
                   @else
                     {{ $user }}
@@ -126,7 +150,7 @@
                 <p>Management User</p>
               </div>
               <div class="icon">
-              <i class="fa-solid fa-user-shield"></i>
+              <i class="fa-solid fa-user-shield fa-bounce"></i>
               </div>
               <a href="{{ route('manage-user.index') }}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -135,11 +159,11 @@
 
         </div>
       </div>
-    </section>
+    <!-- </section> -->
 
 
 
-    <section class="content mt-5 mb-5">
+    <!-- <section class="content mt-5 mb-5"> -->
      
     <div class="container-fluid">
         <div class="row">
@@ -147,7 +171,7 @@
             <!-- AREA CHART -->
             <div class="card card-bg-warning-emphasis">
               <div class="card-header">
-                <h3 class="card-title">Area Chart</h3>
+                <h3 class="card-title">API (Application Programming Interface)</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -172,7 +196,7 @@
             <!-- /.card -->
 
             <!-- DONUT CHART -->
-            <div class="card card-bg-warning-emphasis">
+            <!-- <div class="card card-bg-warning-emphasis">
               <div class="card-header">
                 <h3 class="card-title">Donut Chart</h3>
 
@@ -180,20 +204,18 @@
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
                   </button>
-                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button> -->
+                 
                 </div>
               </div>
               <div class="card-body">
                 <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
               </div>
-              <!-- /.card-body -->
-            </div>
+              
+            </div> -->
             <!-- /.card -->
 
             <!-- PIE CHART -->
-            <div class="card card-bg-warning-emphasis">
+            <!-- <div class="card card-bg-warning-emphasis">
               <div class="card-header">
                 <h3 class="card-title">Pie Chart</h3>
 
@@ -201,33 +223,29 @@
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
                   </button>
-                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button> -->
+                 
                 </div>
               </div>
               <div class="card-body">
                 <canvas id="pieChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
               </div>
-              <!-- /.card-body -->
-            </div>
+             
+            </div> -->
             <!-- /.card -->
 
           </div>
           <!-- /.col (LEFT) -->
           <div class="col-md-6">
-            <!-- LINE CHART -->
+           
             <div class="card card-bg-warning-emphasis">
               <div class="card-header">
-                <h3 class="card-title">Line Chart</h3>
+                <h3 class="card-title">Grafik</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
                   </button>
-                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button> -->
+                 
                 </div>
               </div>
               <div class="card-body">
@@ -235,12 +253,12 @@
                   <canvas id="lineChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                 </div>
               </div>
-              <!-- /.card-body -->
+             
             </div>
             <!-- /.card -->
 
             <!-- BAR CHART -->
-            <div class="card card-bg-warning-emphasis">
+            <!-- <div class="card card-bg-warning-emphasis">
               <div class="card-header">
                 <h3 class="card-title">Bar Chart</h3>
 
@@ -248,9 +266,7 @@
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
                   </button>
-                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button> -->
+                 
                 </div>
               </div>
               <div class="card-body">
@@ -258,12 +274,12 @@
                   <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                 </div>
               </div>
-              <!-- /.card-body -->
-            </div>
+              
+            </div> -->
             <!-- /.card -->
 
             <!-- STACKED BAR CHART -->
-            <div class="card card-bg-warning-emphasis">
+            <!-- <div class="card card-bg-warning-emphasis">
               <div class="card-header">
                 <h3 class="card-title">Stacked Bar Chart</h3>
 
@@ -271,9 +287,7 @@
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
                   </button>
-                  <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
-                    <i class="fas fa-times"></i>
-                  </button> -->
+                 
                 </div>
               </div>
               <div class="card-body">
@@ -281,8 +295,8 @@
                   <canvas id="stackedBarChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                 </div>
               </div>
-              <!-- /.card-body -->
-            </div>
+             
+            </div> -->
             <!-- /.card -->
 
           </div>

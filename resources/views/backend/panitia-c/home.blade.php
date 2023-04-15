@@ -23,10 +23,10 @@
                     {{ $testwawancara }}
                   @endif
                 </h3>
-                <p>Test Tanya Jawab</p>
+                <p>Tes Tanya Jawab</p>
               </div>
               <div class="icon">
-                <i class="fa-solid fa-users fa-1x"></i>
+                <i class="fa-solid fa-users fa-1x fa-bounce"></i>
               </div>
               <a href="{{ route('test-wawancara.create')}}" class="small-box-footer">Melihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>

@@ -31,7 +31,7 @@
           <li class="nav-item {{ (Request::is('panitia-b/test-baca-quran') ? 'menu-open' : '') }}{{ (Request::is('panitia-b//test-baca-quran-done') ? 'menu-open' : '') }}">
             <a href="{{ route('test-baca-quran.create') }}" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
-              <p>Test Al Qur'an</p>
+              <p>Tes Al Qur'an</p>
             </a>
           </li>
         </ul>

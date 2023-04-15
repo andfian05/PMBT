@@ -14,7 +14,7 @@
 
                 <div class="card-body text-center">
                     <a class="btn btn-success btn-sm-2" href="{{ route('test-survey.create') }}">
-                        <i class="fa-solid fa-arrows-rotate"></i>&nbsp;Memulai Tes Survei
+                        <i class="fa-solid fa-arrows-rotate fa-spin fa-spin-reverse"></i>&nbsp;Memulai Tes Survei
                     </a>
                 </div>
             </div>

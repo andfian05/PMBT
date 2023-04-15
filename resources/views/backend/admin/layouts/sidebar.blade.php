@@ -91,6 +91,13 @@
                   <p>Data Tanya Jawab</p>
                 </a>
               </li>
+              <li class="nav-item
+              {{ (Request::is('admin/potensi-akademik') ? 'menu-open' : '') }}">
+                <a href="{{ route('potensi-akademik.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Potensi Akademik</p>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">

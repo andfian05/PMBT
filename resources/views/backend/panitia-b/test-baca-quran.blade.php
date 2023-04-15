@@ -23,7 +23,7 @@
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label for="">Calon Mahasantri</label>
+                          <label for="" class="form-label text-justify" style="color : #0E8388">Nama Calon Mahasantri <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <select id="" name="mhs_id" class="custom-select" required>
                             <option value="">-- Pilihan --</option>
                             @foreach ($mahasantris as $mahasantri)
@@ -43,7 +43,7 @@
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label for="">Nama Pewawancara Tes Baca Dan Hafalan Al-Qur'an</label>
+                          <label for=""  class="form-label text-justify" style="color : #0E8388">Nama Pewawancara Tes Baca Dan Hafalan Al-Qur'an <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <input class="form-control" name="nama_pewawancara" id="" type="text" required/>
                         </div>
                       </div><br>
@@ -58,7 +58,7 @@
                       </div>
                       <div class="form-group col-md-12">
                         <div class="form-group">
-                          <label for="keterangan">Tempat Seleksi</label> 
+                          <label for="keterangan" class="form-label text-justify" style="color : #0E8388">Tempat Seleksi <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div class="form-group">
                             <select id="keterangan" name="tmp_seleksi" class="custom-select" required onclick="tampilkan()">
                               <option value="">-- Pilihan --</option>
@@ -108,7 +108,7 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12">Surah Al Qur'an Yang Diuji Untuk Bacaan</label>
+                          <label class="col-12" class="form-label text-justify" style="color : #0E8388">Surah Al Qur'an Yang Diuji Untuk Bacaan <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select id="" name="tesbacaan" class="custom-select" required>
                                   <option value="">-- Pilihan Surah --</option>
@@ -120,23 +120,27 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="">Nilai Kelancaran Membaca Al Qur'an</label>
+                              <label for="" class="form-label text-justify" style="color : #0E8388">Nilai Kelancaran Membaca Al Qur'an <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <select id="" name="nilaibacaan" class="custom-select" required>
-                                  <option value="">-- Nilai --</option>
-                                  @foreach ($nilais as $nilai)
-                                    <option value="{{ $nilai }}">{{ $nilai }}</option>
-                                  @endforeach
+                                  <option value="">-- Pilihan --</option>
+                                  <option value="20">Sangat Baik</option>
+                                  <option value="18">Baik</option>
+                                  <option value="16">Cukup Baik</option>
+                                  <option value="14">Kurang Baik</option>
+                                  <option value="12">Kurang</option>
                               </select>
                           </div>
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="">Nilai Tajwid Dalam Membaca Al Qur'an</label>
+                              <label for="" class="form-label text-justify" style="color : #0E8388">Nilai Tajwid Dalam Membaca Al Qur'an <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <select id="" name="tajwidbacaan" class="custom-select" required>
-                                  <option value="">-- Nilai --</option>
-                                  @foreach ($nilais as $nilai)
-                                    <option value="{{ $nilai }}">{{ $nilai }}</option>
-                                  @endforeach
+                                  <option value="">-- Pilihan --</option>
+                                  <option value="20">Sangat Baik</option>
+                                  <option value="18">Baik</option>
+                                  <option value="16">Cukup Baik</option>
+                                  <option value="14">Kurang Baik</option>
+                                  <option value="12">Kurang</option>
                               </select>
                           </div>
                       </div><br>
@@ -149,7 +153,7 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12">Surah Al Qur'an Yang Diuji Untuk Hafalan</label>
+                          <label class="col-12" class="form-label text-justify" style="color : #0E8388">Surah Al Qur'an Yang Diuji Untuk Hafalan <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select id="" name="teshafalan" class="custom-select" required>
                                   <option value="">-- Pilihan Surah --</option>
@@ -161,40 +165,46 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="">Jumlah Hafalan, (Wajib Angka)</label>
-                              <input class="form-control" name="jmlhafalan" id="" type="text" required/>
+                              <label for="" class="form-label text-justify" style="color : #0E8388">Jumlah Hafalan Yang Dimiliki <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <input class="form-control" name="jmlhafalan" id="" type="number" required/>
                           </div>
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="">Nilai Kelancaran Hafalan Al Qur'an</label>
+                              <label for="" class="form-label text-justify" style="color : #0E8388">Nilai Kelancaran Hafalan Al Qur'an <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <select id="" name="nilaihafalan" class="custom-select" required>
-                                  <option value="">-- Nilai --</option>
-                                  @foreach ($nilais as $nilai)
-                                    <option value="{{ $nilai }}">{{ $nilai }}</option>
-                                  @endforeach
+                                  <option value="">-- Pilihan --</option>
+                                  <option value="20">Sangat Baik</option>
+                                  <option value="18">Baik</option>
+                                  <option value="16">Cukup Baik</option>
+                                  <option value="14">Kurang Baik</option>
+                                  <option value="12">Kurang</option>
                               </select>
                           </div>
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="">Nilai Tajwid Dalam Hafalan Al Qur'an</label>
+                              <label for="" class="form-label text-justify" style="color : #0E8388">Nilai Tajwid Dalam Hafalan Al Qur'an <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <select id="" name="tajwidhafalan" class="custom-select" required>
-                                  <option value="">-- Nilai --</option>
-                                  @foreach ($nilais as $nilai)
-                                    <option value="{{ $nilai }}">{{ $nilai }}</option>
-                                  @endforeach
+                                  <option value="">-- Pilihan --</option>
+                                  <option value="20">Sangat Baik</option>
+                                  <option value="18">Baik</option>
+                                  <option value="16">Cukup Baik</option>
+                                  <option value="14">Kurang Baik</option>
+                                  <option value="12">Kurang</option>
                               </select>
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12">Kemampuan Hafalan Al Qur'an</label>
+                          <label class="col-12" class="form-label text-justify" style="color : #0E8388">Kemampuan Dalam Menghafal <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select id="" name="kemampuanhafalan" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
-                                  <option value="50">Kurang Baik</option>
-                                  <option value="80">Baik</option>
-                                  <option value="100">Sangat Baik</option>
+                                  <option value="20">Sangat Baik</option>
+                                  <option value="18">Baik</option>
+                                  <option value="16">Cukup Baik</option>
+                                  <option value="14">Kurang Baik</option>
+                                  <option value="12">Kurang</option>
                               </select>
                           </div>
                       </div><br>
@@ -205,7 +215,7 @@
                               style="margin-right: 10px;">Keputusan PMB
                           </button>
                           <a class="btn btn-success btn-sm-2 px-3 mb-2 mb-lg-0" href="{{ route('test-baca-quran.create') }}">
-                            <i class="fa-solid fa-arrows-rotate"></i>&nbsp;Refresh
+                            <i class="fa-solid fa-arrows-rotate fa-spin fa-spin-reverse"></i>&nbsp;Refresh
                           </a>
                       </div>
                   </form>

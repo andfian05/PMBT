@@ -18,13 +18,13 @@
                 <h4 class="text-center text-white font-alt mb-4">Media Sosial</h4>
                 <div class="flex-row ml-6col-md-8 col-md-offset-2 mb-3">
                     <a href="https://petikjombang.com" target="_blank"><i
-                            class="fa-solid fa-earth-asia fa-2x"></i></a>&nbsp;&nbsp;
+                            class="fa-solid fa-earth-asia fa-2x fa-shake"></i></a>&nbsp;&nbsp;
                     <a href="https://www.instagram.com/petik_jombang/" target="_blank"><i
-                            class="fa-brands fa-instagram fa-2x"></i></a>&nbsp;&nbsp;
+                            class="fa-brands fa-instagram fa-2x fa-shake"></i></a>&nbsp;&nbsp;
                     <a href="https://www.youtube.com/@petikjombang4973" target="_blank"><i
-                            class="fa-brands fa-youtube fa-2x"></i></a>&nbsp;&nbsp;
+                            class="fa-brands fa-youtube fa-2x fa-shake"></i></a>&nbsp;&nbsp;
                     <a href="https://www.facebook.com/petikIIjombang/" target="_blank"><i
-                            class="fa-brands fa-facebook-f fa-2x"></i></a>
+                            class="fa-brands fa-facebook-f fa-2x fa-shake"></i></a>
                 </div>
             </div>
 
@@ -44,7 +44,7 @@
 </footer>
 
 <div class="copyright cont py-4 text-center text-black">
-    <div><small>PMB PeTIK Jombang</small></div>
+    <div><i class="fa-solid fa-graduation-cap fa-bounce fa-2" style="color: #000000;"></i>&nbsp;<small>PMB PeTIK Jombang</small></div>
 </div>
 
 

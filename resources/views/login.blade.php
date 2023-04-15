@@ -28,7 +28,7 @@
                             @enderror
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-						<i class="fa fa-qrcode" aria-hidden="true"></i>
+						<i class="fa fa-qrcode fa-shake" aria-hidden="true"></i>
 						</span>
 					</div>
 
@@ -46,7 +46,7 @@
                             @enderror
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
-						<i class="fa fa-qrcode" aria-hidden="true"></i>
+						<i class="fa fa-qrcode fa-shake" aria-hidden="true"></i>
 						</span>
 					</div><br>
 					
@@ -56,11 +56,11 @@
 						</button>
 					</div>
 
-					<div class="text-center p-t-136">
-						<p class="txt2" >
-							PMB PeTIK Jombang
+					<div class="text-center p-t-136 ">
+						<small class="txt2" >
+						<i class="fa-solid fa-graduation-cap fa-bounce fa-2" style="color: #000000;"></i>&nbsp;PMB PeTIK Jombang
 							
-						</p>
+						</small>
 					</div>
 
 					

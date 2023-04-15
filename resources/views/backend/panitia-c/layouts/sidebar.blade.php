@@ -32,7 +32,7 @@
           <li class="nav-item {{ (Request::is('panitia-c/test-wawancara') ? 'menu-open' : '') }}{{ (Request::is('panitia-c/test-wawancara-done') ? 'menu-open' : '') }}">
             <a href="{{ route('test-wawancara.store') }}" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
-              <p>Test Tanya Jawab</p>
+              <p>Tes Tanya Jawab</p>
             </a>
           </li>
         </ul>

@@ -36,6 +36,7 @@ class HomeController extends Controller
         $survei = Survei::count();
         $wawancara = Wawancara::count();
         $bacaquran = BacaQuran::count();
+        $potensi_akademik = BacaQuran::count();
         $dtr = Perhitungan::count();
         $user = User::count();
 
@@ -48,6 +49,7 @@ class HomeController extends Controller
             'survei' => $survei,
             'wawancara' => $wawancara,
             'bacaquran' => $bacaquran,
+            'potensi_akademik' => $potensi_akademik,
             'dtr' => $dtr,
             'user' => $user,
             'provinsis' => $provinsis,

@@ -30,7 +30,7 @@
           <li class="nav-item {{ (Request::is('panitia-a/test-survey') ? 'menu-open' : '') }}{{ (Request::is('panitia-a/test-survey-done') ? 'menu-open' : '') }}">
             <a href="{{ route('test-survey.create') }}" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
-              <p>Test Survei</p>
+              <p>Tes Survei</p>
             </a>
           </li>
         </ul>

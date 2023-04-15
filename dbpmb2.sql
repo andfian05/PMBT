@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2023 at 08:09 AM
+-- Generation Time: Apr 13, 2023 at 05:38 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dbpmb`
+-- Database: `dbpmb2`
 --
 
 -- --------------------------------------------------------
@@ -37,7 +37,7 @@ CREATE TABLE `baca_quran` (
   `nilaibacaan` int(11) NOT NULL,
   `tajwidbacaan` int(11) NOT NULL,
   `teshafalan` int(11) NOT NULL,
-  `jmlhafalan` int(11) NOT NULL,
+  `jmlhafalan` varchar(50) NOT NULL,
   `nilaihafalan` int(11) NOT NULL,
   `tajwidhafalan` int(11) NOT NULL,
   `kemampuanhafalan` int(11) NOT NULL,
@@ -50,7 +50,13 @@ CREATE TABLE `baca_quran` (
 --
 
 INSERT INTO `baca_quran` (`id`, `mhs_id`, `nama_pewawancara`, `tmp_seleksi`, `lks_seleksi`, `tesbacaan`, `nilaibacaan`, `tajwidbacaan`, `teshafalan`, `jmlhafalan`, `nilaihafalan`, `tajwidhafalan`, `kemampuanhafalan`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Andika Alifian', 'PeTIK Jombang', 'Offline di PeTIK Jombang', 14, 90, 68, 13, 12, 60, 61, 50, '2023-02-20 19:29:03', '2023-02-20 19:29:03');
+(1, 1, 'Andika Alifian', 'PeTIK Jombang', 'Offline di PeTIK Jombang', 14, 90, 68, 13, '12', 60, 61, 50, '2023-02-20 19:29:03', '2023-02-20 19:29:03'),
+(6, 2, 'Admin', 'Virtual', 'Virtual (Online)', 1, 16, 16, 1, '2', 18, 18, 18, '2023-04-02 21:24:30', '2023-04-02 21:24:30'),
+(7, 2, 'Admin', 'Virtual', 'Virtual (Online)', 2, 20, 16, 2, '1', 18, 20, 16, '2023-04-02 23:08:17', '2023-04-02 23:08:17'),
+(8, 2, 'Admin', 'PeTIK Jombang', 'Offline di PeTIK Jombang', 3, 20, 18, 1, '1 Juz', 14, 16, 18, '2023-04-02 23:12:36', '2023-04-02 23:12:36'),
+(9, 2, 'Andika Alifian', 'YBM PLN', 'YBM PLN', 2, 20, 20, 1, '3', 20, 20, 20, '2023-04-10 23:37:10', '2023-04-10 23:37:10'),
+(10, 1, 'kugila', 'PeTIK Jombang', 'Offline di PeTIK Jombang', 1, 16, 16, 2, '5', 20, 18, 16, '2023-04-11 00:11:12', '2023-04-11 00:11:12'),
+(11, 2, 'kugila', 'Virtual', 'Virtual (Online)', 2, 20, 20, 3, '11', 20, 20, 20, '2023-04-11 08:51:54', '2023-04-11 08:51:54');
 
 -- --------------------------------------------------------
 
@@ -91424,7 +91430,7 @@ CREATE TABLE `mahasantri` (
 --
 
 INSERT INTO `mahasantri` (`id`, `nama`, `anak_ke`, `tmp_lahir`, `tgl_lahir`, `no_hp`, `email`, `alamat`, `prov_id`, `kab_id`, `kec_id`, `desa_id`, `nama_ayah`, `pkj_ayah`, `pdk_ayah`, `nama_ibu`, `pkj_ibu`, `pdk_ibu`, `jml_sdr`, `nohp_klg`, `skl_asal`, `jurusan_skl`, `thn_lulus`, `cita_cita`, `prestasi`, `penyakit`, `perokok`, `jurusan_id`, `alasan`, `media_id`, `metode_berkas`, `berkas`, `created_at`, `updated_at`) VALUES
-(1, 'Dummy 1', 1, 'Jakarta', '2023-02-21', '085714118514', 'andfian05@gmail.com', 'Kapuk', '35', '3513', '351316', '3513162008', 'Joshua', 'PNS', 'S1', 'Rucika', 'PNS', 'SMA', 1, '0867889900', 'Jombang Suzuran', 'Tata Boga', 2022, '-', '-', '-', 'Ya', 1, '-', 3, 'online', 'Rafael Antantya.png.png', '2023-02-20 18:36:42', '2023-02-20 18:36:42');
+(1, 'Deffindra Ahmad Tirtapandu', 1, 'Lamongan', '2003-12-20', '089616071025', 'deffindraahmad@gmail.com', 'Jln. Rejoso Rt.03/Rw.06 Dsn. Rejoso', '35', '3517', '351719', '3517192008', 'Suyono', 'Karyawan Sekolah', 'SMA', 'Siti Khodijah', 'IRT', 'MTS', 2, '0895343025653', 'SMK Cakra Kusuma', 'Multimedia', 2023, 'Harapan : menjadi kebanggaan kedua orang tua dengan menjadi anak yang berpendidikan tinggi, berakhlaqul karimah, dan berbudi luhur untuk bekal dunia dan akhirat.\r\n\r\nCita - Cita : Dosen, Pengusaha.', 'uara 2 Olimpiade Sains Matematika Tingkat SMP/MTs Se-Kab. Jombang', '-', 'Tidak', 2, 'Saya ingin melanjutkan kuliah.\r\nKarena saya ingin mendalami lagi jurusan yang saya ambil di PeTIK Jombang. Dan melanjutkan ke jenjang yang lebih tinggi.', 8, 'online', 'Deffindra Ahmad Tirtapandu.zip.zip.zip', '2023-04-12 20:28:28', '2023-04-12 20:28:28');
 
 -- --------------------------------------------------------
 
@@ -91454,6 +91460,18 @@ INSERT INTO `mediainformasi` (`id_media`, `media_informasi`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `perhitungan`
 --
 
@@ -91479,7 +91497,34 @@ CREATE TABLE `perhitungan` (
 --
 
 INSERT INTO `perhitungan` (`id`, `mhs_id`, `nilai_berkas`, `note_berkas`, `nilai_survei`, `note_survei`, `nilai_wawancara`, `note_wawancara`, `nilai_quran`, `note_quran`, `nilai_akademik`, `note_akademik`, `created_at`, `updated_at`) VALUES
-(3, 1, 100, '-', 100, '-', 100, '-', 50, '-', 100, '-', '2023-02-23 23:48:26', '2023-02-23 23:48:26');
+(3, 1, 100, '-', 100, '-', 100, '-', 50, '-', 100, '-', '2023-02-23 23:48:26', '2023-02-23 23:48:26'),
+(5, 2, 100, '-', 100, '-', 50, '-', 100, '-', 100, '-', '2023-04-04 07:14:58', '2023-04-04 07:14:58');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `potensi_akademik`
+--
+
+CREATE TABLE `potensi_akademik` (
+  `id` int(11) NOT NULL,
+  `mhs_id` int(11) NOT NULL,
+  `b_inggris` int(11) NOT NULL,
+  `komputer` int(11) NOT NULL,
+  `aritmatika` int(11) NOT NULL,
+  `mekanikal` int(11) NOT NULL,
+  `simbol` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `potensi_akademik`
+--
+
+INSERT INTO `potensi_akademik` (`id`, `mhs_id`, `b_inggris`, `komputer`, `aritmatika`, `mekanikal`, `simbol`, `created_at`, `updated_at`) VALUES
+(1, 1, 20, 20, 20, 20, 20, NULL, NULL),
+(12, 2, 16, 14, 3, 4, 5, '2023-04-02 21:06:42', '2023-04-02 21:06:42');
 
 -- --------------------------------------------------------
 
@@ -91499,7 +91544,11 @@ CREATE TABLE `profilepetik` (
 --
 
 INSERT INTO `profilepetik` (`id`, `ket_profile`, `created_at`, `updated_at`) VALUES
-(1, 'Dummy', '2023-02-20 18:36:42', '2023-02-20 18:36:42');
+(1, 'Dummy', '2023-02-20 18:36:42', '2023-02-20 18:36:42'),
+(2, 'PeTIK Jombang', '2023-03-28 21:09:28', '2023-03-28 21:09:28'),
+(3, 'Siswa', '2023-04-11 09:03:35', '2023-04-11 09:03:35'),
+(4, 'aass', '2023-04-11 09:29:58', '2023-04-11 09:29:58'),
+(5, 'Tidak Mengisi Informasi Tentang PeTIK Jombang', '2023-04-12 20:28:28', '2023-04-12 20:28:28');
 
 -- --------------------------------------------------------
 
@@ -91568,120 +91617,9 @@ CREATE TABLE `quran` (
 --
 
 INSERT INTO `quran` (`id`, `surah`) VALUES
-(1, 'Al Fatihah'),
-(2, 'Al Baqarah'),
-(3, 'Ali \'Imran'),
-(4, 'An Nisa'),
-(5, 'Al Ma\'idah'),
-(6, 'Al An\'am'),
-(7, 'Al A\'raf'),
-(8, 'Al Anfal'),
-(9, 'At Taubah'),
-(10, 'Yunus'),
-(11, 'Hud'),
-(12, 'Yusuf'),
-(13, 'Ar Ra\'d'),
-(14, 'Ibrahim'),
-(15, 'Al Hijr'),
-(16, 'An Nahl'),
-(17, 'Al Isra'),
-(18, 'Al Kahf'),
-(19, 'Maryam'),
-(20, 'Taha'),
-(21, 'Al Anbiya\''),
-(22, 'Al Hajj'),
-(23, 'Al Mu\'munin'),
-(24, 'An Nur'),
-(25, 'Al Furqan'),
-(26, 'Asy Syu\'ara'),
-(27, 'An Naml'),
-(28, 'Al Qasas'),
-(29, 'Al \'Ankabut'),
-(30, 'Ar Rum'),
-(31, 'Luqman'),
-(32, 'As Sajdah'),
-(33, 'Al Ahzab'),
-(34, 'Saba\''),
-(35, 'Fatir'),
-(36, 'Yasin'),
-(37, 'As Saffat'),
-(38, 'Sad'),
-(39, 'Az Zumar'),
-(40, 'Gafir'),
-(41, 'Fussilat'),
-(42, 'Asy Syura'),
-(43, 'Az Zuhruf'),
-(44, 'Ad Dukhan'),
-(45, 'Al Jasiyah'),
-(46, 'Al Ahqaf'),
-(47, 'Muhammad'),
-(48, 'Al Fath'),
-(49, 'Al Hujurat'),
-(50, 'Qaf'),
-(51, 'Az Zariyat'),
-(52, 'At Tur'),
-(53, 'An Najm'),
-(54, 'Al Qamar'),
-(55, 'Ar Rahman'),
-(56, 'Al Waqi\'ah'),
-(57, 'Al Hadid'),
-(58, 'Al Mujadalah'),
-(59, 'Al Hasyr'),
-(60, 'Al Mumtahanah'),
-(61, 'As Saff'),
-(62, 'Al Jumu\'ah'),
-(63, 'Al Munafiqun'),
-(64, 'At Tagabun'),
-(65, 'At Talaq'),
-(66, 'At Tahrim'),
-(67, 'Al Mulk'),
-(68, 'Al Qalam'),
-(69, 'Al Haqqah'),
-(70, 'Al Ma\'arij'),
-(71, 'Nuh'),
-(72, 'Al Jinn'),
-(73, 'Al Muzzammil'),
-(74, 'Al Muddassir'),
-(75, 'Al Qiyamah'),
-(76, 'Al Insan'),
-(77, 'Al Mursalat'),
-(78, 'An Naba\''),
-(79, 'An Naziat'),
-(80, 'Abasa'),
-(81, 'At Takwir'),
-(82, 'Al Infitar'),
-(83, 'Al Mutaffifin'),
-(84, 'Al Insyiqaq'),
-(85, 'Al Buruj'),
-(86, 'At Tariq'),
-(87, 'Al A\'la'),
-(88, 'Al Gasyiyah'),
-(89, 'Al Fajr'),
-(90, 'Al Balad'),
-(91, 'As Syams'),
-(92, 'Al Lail'),
-(93, 'Ad Dhuha'),
-(94, 'Asy Syarh'),
-(95, 'At Tin'),
-(96, 'Al \'Alaq'),
-(97, 'Al Qadr'),
-(98, 'Al Bayyinah'),
-(99, 'Al Zalzalah'),
-(100, 'Al \'Adiyat'),
-(101, 'Al Qari\'ah'),
-(102, 'At Takasur'),
-(103, 'Al \'Asr'),
-(104, 'Al Humazah'),
-(105, 'Al Fil'),
-(106, 'Quraisy'),
-(107, 'Al Ma\'un'),
-(108, 'Al Kausar'),
-(109, 'Al Kafirun'),
-(110, 'An Nasr'),
-(111, 'Al Lahab'),
-(112, 'Al Ikhlas'),
-(113, 'Al Falaq'),
-(114, 'An Nas');
+(1, 'Surah Al Hajj ayat 1-5'),
+(2, 'Surah Asy Syu\'ara ayat 1-19'),
+(3, 'Surah An Naml ayat 36-44');
 
 -- --------------------------------------------------------
 
@@ -91695,10 +91633,6 @@ CREATE TABLE `survei` (
   `nama_pewawancara` varchar(100) NOT NULL,
   `tmp_seleksi` varchar(45) NOT NULL,
   `lks_seleksi` varchar(60) NOT NULL,
-  `sktm` varchar(100) NOT NULL,
-  `note_sktm` longtext NOT NULL,
-  `progbeasiswa` varchar(100) NOT NULL,
-  `note_progbea` longtext NOT NULL,
   `izinbeasiswa` varchar(100) NOT NULL,
   `note_izinbeasiswa` longtext NOT NULL,
   `statuskel` varchar(100) NOT NULL,
@@ -91742,13 +91676,6 @@ CREATE TABLE `survei` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `survei`
---
-
-INSERT INTO `survei` (`id`, `mhs_id`, `nama_pewawancara`, `tmp_seleksi`, `lks_seleksi`, `sktm`, `note_sktm`, `progbeasiswa`, `note_progbea`, `izinbeasiswa`, `note_izinbeasiswa`, `statuskel`, `note_statuskel`, `pendkel`, `note_pendkel`, `usiapend`, `note_usiapend`, `kesehatankel`, `note_kesehatankel`, `jenispekrj`, `note_jenispekrj`, `statusrmh`, `note_statusrmh`, `luasrmh`, `note_luasrmh`, `dindingrmh`, `note_dindingrmh`, `ataprmh`, `note_ataprmh`, `lantairmh`, `note_lantairmh`, `alatmsk`, `note_alatmsk`, `perabotan`, `note_perabotan`, `sumberair`, `note_sumberair`, `mck`, `note_mck`, `penerangan`, `note_penerangan`, `lokasirmh`, `note_lokasirmh`, `tataletak`, `note_tataletak`, `miliktanah`, `note_miliktanah`, `harta`, `note_harta`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Andika Alifian', 'YBM PLN', 'YBM PLN Malang', '10', '-', '0', '-', '10', '-', '10', '-', '10', '-', '5', '-', '10', '-', '10', '-', '10', '-', '10', '-', '10', '-', '0', '-', '10', '-', '10', '-', '0', '-', '10', '-', '10', '-', '10', '-', '5', '-', '5', '-', '10', '-', '0', '-', '2023-02-20 19:27:46', '2023-02-20 19:27:46');
 
 -- --------------------------------------------------------
 
@@ -91837,16 +91764,15 @@ CREATE TABLE `wawancara` (
   `note_crtsingkat` longtext NOT NULL,
   `medkom` varchar(100) NOT NULL,
   `note_medkom` longtext NOT NULL,
+  `nkri` varchar(100) NOT NULL,
+  `note_nkri` longtext NOT NULL,
+  `khilafah` varchar(100) NOT NULL,
+  `note_khilafah` longtext NOT NULL,
+  `tentang` varchar(100) NOT NULL,
+  `note_tentang` longtext NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `wawancara`
---
-
-INSERT INTO `wawancara` (`id`, `mhs_id`, `nama_pewawancara`, `tmp_seleksi`, `lks_seleksi`, `visimisi`, `note_visimisi`, `komitmen`, `note_komitmen`, `tanggungjawab`, `note_tanggungjwb`, `kejujuran`, `note_kejujuran`, `pekerjakeras`, `note_pekerjakrs`, `bekerjasama`, `note_bekerjasama`, `kemandirian`, `note_kemandirian`, `tolongmenolong`, `note_menolong`, `peduli`, `note_peduli`, `pembelajar`, `note_pembelajar`, `menghargaiprestasi`, `note_hargaipres`, `percayadiri`, `note_pd`, `demokratis`, `note_demokratis`, `disiplinwaktu`, `note_disiplinwkt`, `menjaganamabaik`, `note_jaganmbaik`, `salam`, `note_salam`, `motivasi`, `note_motivasi`, `brgpolutan`, `note_brgpolutan`, `brgharam`, `note_brgharam`, `riwayatpenyakit`, `note_rytpenyakit`, `ceritasingkat`, `note_crtsingkat`, `medkom`, `note_medkom`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Jaya', 'PeTIK Jombang', 'Offline di PeTIK Jombang', '5', '-', '5', '-', '0', '-', '5', '-', '0', '-', '5', '-', '5', '-', '0', '-', '5', '-', '5', '-', '0', '-', '5', '-', '0', '-', '0', '-', '5', '-', '5', '-', '5', '-', '0', '-', '0', '-', '5', '-', '0', '-', '10', '-', '2023-02-20 19:30:50', '2023-02-20 19:30:50');
 
 --
 -- Indexes for dumped tables
@@ -91895,9 +91821,21 @@ ALTER TABLE `mediainformasi`
   ADD PRIMARY KEY (`id_media`);
 
 --
+-- Indexes for table `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `perhitungan`
 --
 ALTER TABLE `perhitungan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `potensi_akademik`
+--
+ALTER TABLE `potensi_akademik`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -91946,7 +91884,7 @@ ALTER TABLE `wawancara`
 -- AUTO_INCREMENT for table `baca_quran`
 --
 ALTER TABLE `baca_quran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `jurusan`
@@ -91967,16 +91905,28 @@ ALTER TABLE `mediainformasi`
   MODIFY `id_media` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `perhitungan`
 --
 ALTER TABLE `perhitungan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `potensi_akademik`
+--
+ALTER TABLE `potensi_akademik`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `profilepetik`
 --
 ALTER TABLE `profilepetik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `quran`
@@ -91988,7 +91938,7 @@ ALTER TABLE `quran`
 -- AUTO_INCREMENT for table `survei`
 --
 ALTER TABLE `survei`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -92000,7 +91950,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `wawancara`
 --
 ALTER TABLE `wawancara`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

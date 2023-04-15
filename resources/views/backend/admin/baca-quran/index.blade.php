@@ -34,7 +34,7 @@
                     <th scope="col">No. Handphone</th>
                     <th scope="col">N.Pewawancara</th>
                     <th scope="col">@sortablelink('tmp_seleksi','Temp.Seleksi')</th>
-                    <th scope="col">Lokasi</th>
+                    <!-- <th scope="col">Lokasi</th> -->
                     <th scope="col">Nilai Total</th>
                     <th scope="col" class="text-center">Action</th>
                   </tr>
@@ -49,7 +49,7 @@
                       <td data-title="No. Handphone">{{ $baca_quran->mahasantri['no_hp'] }}</td>
                       <td data-title="N.Pewawancara">{{ $baca_quran->nama_pewawancara }}</td>
                       <td data-title="Tempat Seleksi">{{ $baca_quran->tmp_seleksi }}</td>
-                      <td data-title="Lokasi"> {{ $baca_quran->lks_seleksi }}</td>
+                      <!-- <td data-title="Lokasi"> {{ $baca_quran->lks_seleksi }}</td> -->
                       <td data-title="Nilai Total">{{ $baca_quran->nilaibacaan + $baca_quran->tajwidbacaan + $baca_quran->nilaihafalan + $baca_quran->tajwidhafalan + $baca_quran->kemampuanhafalan }}</td>
                       <th class="d-flex justify-content-center">
                         <a class="btn btn-primary btn-sm me-2"

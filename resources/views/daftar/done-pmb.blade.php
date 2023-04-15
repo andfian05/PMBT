@@ -19,14 +19,14 @@
                 </ul>
 
                 <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 
-                    rounded-pill" href="https://drive.google.com/file/d/1HAExg37krI1UrifiqEC0WAMYuoCVxqc9/view" target="_blank"> 
-                    <i class="fa-solid fa-cloud-arrow-down"></i>&nbsp; 
+                    rounded-pill" href="https://drive.google.com/file/d/1yW-uyivR_1-3NTDajTnF6B2IkouYAra7/view?usp=sharing" target="_blank"> 
+                    <i class="fa-solid fa-cloud-arrow-down fa-bounce"></i>&nbsp; 
                     Download Brosur
                 </a>&nbsp;&nbsp;
                 <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 
                     rounded-pill"
                     href="{{ url('/') }}"> 
-                    <i class="fa-solid fa-bookmark"></i>&nbsp; 
+                    <i class="fa-solid fa-bookmark fa-bounce"></i>&nbsp; 
                     Panduan Informasi
                 </a>
                 
@@ -53,14 +53,14 @@
 
                       
 
-                        <p class="lead mb-1 mb-lg-0 text-center">Terimakasih, Anda telah <b>Berhasil</b> melakukan
+                        <p class="lead mb-1 mb-lg-0 text-center" >Terimakasih, Anda telah <b>Berhasil</b> melakukan
                             registrasi pendaftaran Calon Mahasantri PeTIK Jombang tahun akademik 2023/2024.
                         </p><br>
-                        <p class="lead mb-1 mb-lg-0 text-justify">Mohon menunggu informasi kembali pengumuman hasil seleksi PMB pada
+                        <p class="lead mb-1 mb-lg-0 text-justify" >Mohon menunggu informasi kembali pengumuman hasil seleksi PMB pada
                             tanggal 30 Juni 2023. Silahkan masuk ke dalam grup Whatsapp dibawah ini untuk melihat informasi selanjutnya yang akan disampaikan oleh pihak panitia.</p><br>
-                        <p class="lead mb-1 mb-lg-0 text-center"><a class="btn btn-success bg-gradient-primary-to-success  px-3 mb-2 mb-lg-0 rounded-pill"
-                                href="https://chat.whatsapp.com/F0i1cpL4pVhF8cTgr9e3Lw" target="_blank"><i class="fa-brands fa-whatsapp fa-2"></i>&nbsp;Pendaftar PeTIK 2023/2024</a></p>
-
+                        <p class="lead mb-1 mb-lg-0 text-center" ><a class="btn btn-success bg-gradient-primary-to-success text-center px-3 mb-2 ms-0 mb-lg-0 rounded-pill"
+                                href="https://chat.whatsapp.com/F0i1cpL4pVhF8cTgr9e3Lw" target="_blank"><i class="fa-brands fa-whatsapp fa-2 fa-bounce"></i>&nbsp;Pendaftar PeTIK 2023/2024</a></p>
+                               
                     </div>
                 </div>
             </div>

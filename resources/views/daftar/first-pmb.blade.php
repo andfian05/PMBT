@@ -15,12 +15,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0"></ul>
           <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 rounded-pill"
-            href="https://drive.google.com/file/d/1HAExg37krI1UrifiqEC0WAMYuoCVxqc9/view" target="_blank"> 
-            <i class="fa-solid fa-cloud-arrow-down"></i>&nbsp; 
+            href="https://drive.google.com/file/d/1yW-uyivR_1-3NTDajTnF6B2IkouYAra7/view?usp=sharing" target="_blank"> 
+            <i class="fa-solid fa-cloud-arrow-down fa-bounce"></i>&nbsp; 
             Download Brosur
           </a>&nbsp;&nbsp;
           <a class="btn btn-primary bg-gradient-primary-to-secondary  px-3 mb-2 mb-lg-0 rounded-pill" href="{{ url('/') }}"> 
-            <i class="fa-solid fa-bookmark"></i>&nbsp; 
+            <i class="fa-solid fa-bookmark fa-bounce"></i>&nbsp; 
             Panduan Informasi
           </a>
         </div>
@@ -44,7 +44,7 @@
             <form action="#" method="GET" id="form1" name="form1">
               @csrf
               <div class="form-group">
-                <label class="form-label text-justify" for="keterangan">Apakah Anda Sudah Mengetahui Gambaran Mengenai PeTIK Jombang, Dan Yakin Untuk 
+                <label class="form-label text-justify" style="color : #0E8388" for="keterangan">Apakah Anda Sudah Mengetahui Gambaran Mengenai PeTIK Jombang, Dan Yakin Untuk 
                   Melakukan Pendaftaran?</label>
                 <div class="form-group -ml-3col-12">
                   <select id="keterangan" class="custom-select" required="required"
@@ -65,7 +65,7 @@
                     p_kontainer.innerHTML = `
                     <div class="form-group text-center">
                       <div class="col-md-12">
-                        <label for="" >Persiapkan Catatan Anda Mengenai PeTIK Jombang (Wajib).</label>
+                        <label for="" style="color : #0E8388" >Persiapkan Catatan Anda Mengenai PeTIK Jombang <sup class="text-danger" font-size="20px">* (Wajib)</sup> </label>
                       </div>                   
                     </div>
                     <div class="form-group text-center">
@@ -75,7 +75,12 @@
                     </div>`;
                   } else if (pesan == "bm") {
                     p_kontainer.innerHTML =
-                      `<p align="center" class="text-danger"><b>Silakan Pahami Video Tersebut Hingga Anda Memahami (Wajib).</b></p>`;
+                    `<div class="form-group text-center">
+                      <div class="col-md-12">
+                        <label for="" style="color : #0E8388" >Silakan Pahami Video Tersebut Hingga Anda Memahami <sup class="text-danger" font-size="20px">* (Wajib)</sup> </label>
+                      </div>                   
+                    </div>`
+                     ;
                   }
                 }
               </script>

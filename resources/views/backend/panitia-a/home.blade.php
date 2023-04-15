@@ -23,10 +23,10 @@
                     {{ $testsurvei }}
                   @endif
                 </h3>
-                <p>Test Survei</p>
+                <p>Tes Survei</p>
               </div>
               <div class="icon">
-                <i class="fa-solid fa-users fa-1x"></i>
+                <i class="fa-solid fa-users fa-1x fa-bounce"></i>
               </div>
               <a href="{{ route('test-survey.create') }}" class="small-box-footer">Mulai Tes <i class="fas fa-arrow-circle-right"></i></a>
             </div>
