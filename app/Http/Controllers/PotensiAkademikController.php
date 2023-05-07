@@ -67,6 +67,11 @@ class PotensiAkademikController extends Controller
         $nilai_simbol = $request->input('simbol');
         $hasil_simbol = $nilai_simbol * 0.15;
         $data['simbol'] = $hasil_simbol;
+
+        // menghitung total nilai
+        $ntotal_pa = $hasil_inggris + $hasil_komputer + $hasil_aritmatika + $hasil_mekanikal + $hasil_simbol;
+        $data['ntotal_pa'] = $ntotal_pa;
+
         PotensiAkademik::create($data);
         
         return redirect()->route('potensi-akademik.index');

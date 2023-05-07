@@ -24,7 +24,7 @@ class DTRController extends Controller
     {
         $dtrs = Perhitungan::with(['mahasantri'])->get();
 
-        // $dtrs = Perhitungan::sortable()->paginate(10)->onEachSide(1)->fragment('dtr');
+        // $dtrs = ::sortable()->paginate(1)->onEachSide(1)->fragment('dtr');
         // $mahasantris = Perhitungan::sortable()->paginate(10)->onEachSide(1)->fragment('dtr');
 
         return view('backend.admin.dtr.index')->with([

@@ -60,6 +60,9 @@ class BacaQuranController extends Controller
     public function store(BacaQuranRequest $request)
     {
         $data = $request->all();
+
+        $ntotal_bq = $data['nilaibacaan'] + $data['tajwidbacaan'] + $data['nilaihafalan'] + $data['tajwidhafalan'] + $data['kemampuanhafalan'];
+        $data['ntotal_bq'] = $ntotal_bq;
         BacaQuran::create($data);
 
         return redirect()->route('baca-quran.index');

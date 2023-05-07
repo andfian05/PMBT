@@ -35,31 +35,31 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="">Nama Calon Mahasantri</label>
+                                <label for="" class="form-label text-justify" style="color : #0E8388">Nama Calon Mahasantri <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                 <input class="form-control" name="mhs_id" type="text" value="{{ $dtr->mahasantri->nama }}"  disabled/>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="">No. Handphone</label>
+                                <label for="" class="form-label text-justify" style="color : #0E8388">No. Handphone <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                 <input class="form-control" name="mhs_id" type="text" value="{{ $dtr->mahasantri->no_hp }}"  disabled/>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="">Email</label>
+                                <label for="" class="form-label text-justify" style="color : #0E8388">Email <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                 <input class="form-control" name="mhs_id" type="text" value="{{ $dtr->mahasantri->email }}"  disabled/>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <label for="">Domisili</label>
+                                <label for="" class="form-label text-justify" style="color : #0E8388">Domisili <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                 <input class="form-control" name="mhs_id" type="text" value="{{ $dtr->mahasantri->kabupaten->nama }}"  disabled/>
                             </div>
                         </div><br>
                     </div>
 
-                    <div class="container mt-2 col-md-12">
+                    <!-- <div class="container mt-2 col-md-12">
                         <div class="card">
                             <div class="bg-info">
                                 <h6 class="text-center mt-2">Penilaian Berkas File Upload</h6>
@@ -68,7 +68,7 @@
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <div class="form mb-3 mb-md-0">
-                                    <label>Bagaimana Keputusan Berkas Pendaftarann Yang Telah Diupload?</label>
+                                    <label class="form-label text-justify" style="color : #0E8388">Bagaimana Keputusan Berkas Pendaftarann Yang Telah Diupload?</label>
                                     <div>
                                         <select name="" class="custom-select" disabled>
                                             <option value="{{ $dtr->nilai_berkas }}">{{ $dtr->nilai_berkas }}</option>
@@ -85,7 +85,7 @@
                                 </div>
                             </div>
                         </div><br>
-                    </div>
+                    </div> -->
 
                     <div class="container mt-2 col-md-12">
                         <div class="card">
@@ -96,7 +96,7 @@
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <div class="form mb-3 mb-md-0">
-                                    <label>Bagaimana Keputusan Tes Survei?</label>
+                                    <label class="form-label text-justify" style="color : #0E8388">Bagaimana Keputusan Tes Survei? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                     <div>
                                         <select name="" class="custom-select" disabled>
                                             <option value="{{ $dtr->nilai_survei }}">{{ $dtr->nilai_survei }}</option>
@@ -106,7 +106,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form">
-                                    <label for="">Catatan</label>
+                                    <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                     <textarea name="" class="form-control" cols="4" rows="4" disabled>
                                         {{ $dtr->note_survei }}
                                     </textarea>
@@ -124,7 +124,7 @@
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <div class="form mb-3 mb-md-0">
-                                    <label>Bagaimana Keputusan Tes Wawancara?</label>
+                                    <label class="form-label text-justify" style="color : #0E8388">Bagaimana Keputusan Tes Wawancara? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                     <div>
                                         <select name="" class="custom-select" disabled>
                                             <option value="{{ $dtr->nilai_wawancara }}">{{ $dtr->nilai_wawancara }}</option>
@@ -134,7 +134,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form">
-                                    <label for="">Catatan</label>
+                                    <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                     <textarea name="" class="form-control" cols="4" rows="4" disabled>
                                         {{ $dtr->note_wawancara }}
                                     </textarea>
@@ -153,7 +153,7 @@
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <div class="form mb-3 mb-md-0">
-                                    <label>Bagaimana Keputusan Tes Baca Dan Hafalan Al Qur'an?</label>
+                                    <label class="form-label text-justify" style="color : #0E8388">Bagaimana Keputusan Tes Baca Dan Hafalan Al Qur'an? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                     <div>
                                         <select name="" class="custom-select" disabled>
                                             <option value="{{ $dtr->nilai_quran }}">{{ $dtr->nilai_quran }}</option>
@@ -163,7 +163,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form">
-                                    <label for="">Catatan</label>
+                                    <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                     <textarea name="" class="form-control" cols="4" rows="4" disabled>
                                         {{ $dtr->note_quran }}
                                     </textarea>
@@ -181,7 +181,7 @@
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <div class="form mb-3 mb-md-0">
-                                    <label>Bagaimana Keputusan Tes Akademik?</label>
+                                    <label class="form-label text-justify" style="color : #0E8388">Bagaimana Keputusan Tes Akademik? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                     <div>
                                         <select name="" class="custom-select" disabled>
                                             <option value="{{ $dtr->nilai_akademik }}">{{ $dtr->nilai_akademik }}</option>
@@ -191,7 +191,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form">
-                                    <label for="">Catatan</label>
+                                    <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                     <textarea name="" class="form-control" cols="4" rows="4" disabled>
                                         {{ $dtr->note_akademik }}
                                     </textarea>
@@ -209,7 +209,7 @@
                         <div class="row mb-3">
                             <div class="col-md-12">
                                 <div class="form mb-3 mb-md-0">
-                                    <label>Status</label>
+                                    <label class="form-label text-justify" style="color : #0E8388">Status <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                     <div>
                                         <select name="" class="custom-select" disabled>
                                             <option value="">

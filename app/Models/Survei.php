@@ -36,7 +36,8 @@ class Survei extends Model
         'lokasirmh', 'note_lokasirmh', 
         'tataletak', 'note_tataletak', 
         'miliktanah', 'note_miliktanah', 
-        'harta', 'note_harta'
+        'harta', 'note_harta',
+        'ntotal_survei'
     ];
 
     public function mahasantri()
@@ -68,6 +69,7 @@ class Survei extends Model
         'lokasirmh', 'note_lokasirmh', 
         'tataletak', 'note_tataletak', 
         'miliktanah', 'note_miliktanah', 
-        'harta', 'note_harta'
+        'harta', 'note_harta',
+        'ntotal_survei'
     ];
 }

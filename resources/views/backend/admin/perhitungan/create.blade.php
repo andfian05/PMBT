@@ -17,7 +17,7 @@
                 </div>
                 
             </div> -->
-            <div class="card">
+            <!-- <div class="card">
                 <div class="card-body bg-fuchsia">
                     <p class="text-center">Kriteria Tes Survei : NT > 220-151 (Nilai Tinggi) | 150 + Catatan Baik (Nilai Sedang) | NT < 150 (Nilai Rendah)  </h4>
                    
@@ -39,7 +39,7 @@
                     <p class="text-center">Kriteria Tes Wawancara : NT > 220-151 (Nilai Tinggi) | 150 + Catatan Baik (Nilai Sedang) | NT < 150 (Nilai Rendah)  </h4>
                 </div>
                 
-            </div>
+            </div> -->
         </div>
         <br><br>
 
@@ -60,8 +60,8 @@
                             </div>
                             <div class="col-md-13">
                                 <div class="form-group">
-                                    <label for="">Nama Calon Mahasantri</label>
-                                    <select id="" name="mhs_id" class="custom-select" required>
+                                    <label for="" class="form-label text-justify" style="color : #0E8388">Nama Calon Mahasantri <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                                    <select id="mahasantri" name="mhs_id" class="custom-select" value="{{ old('mhs_id') }}" required>
                                       <option value="">-- Pilihan --</option>
                                       @foreach ($mahasantris as $mahasantri)
                                         <option value="{{ $mahasantri->id }}">Nama: {{ $mahasantri->nama }} | No. Hp: {{ $mahasantri->no_hp }} | Email: {{ $mahasantri->email }}</option>
@@ -71,35 +71,7 @@
                             </div>
                         </div><br>
         
-                        <div class="container mt-2 col-md-12">
-                            <div class="card">
-                                <div class="bg-info">
-                                    <h6 class="text-center mt-2">Penilaian Berkas File Upload</h6>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <div class="form mb-3 mb-md-0">
-                                        <label>Bagaimana Keputusan Berkas Pendaftaran Yang Telah Diupload?</label>
-                                        <div>
-                                            <select id="" name="nilai_berkas" class="custom-select" required>
-                                                <option value="">-- Pilihan --</option>
-                                                <option value="100">Lulus Seleksi</option>
-                                                <option value="0">Tidak Lulus Seleksi</option>
-                                                <option value="50">Rekomendasi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form">
-                                        <label for="">Catatan, Apabila Tidak Ada Tuliskan (-)</label>
-                                        <textarea name="note_berkas" class="form-control" id="" cols="4" rows="4"
-                                            required></textarea>
-                                    </div>
-                                </div>
-                            </div><br>
-                        </div>
+                        
         
                         <div class="container mt-2 col-md-12">
                             <div class="card">
@@ -110,20 +82,20 @@
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form mb-3 mb-md-0">
-                                        <label>Bagaimana Keputusan Tes Survei?</label>
+                                        <label class="form-label text-justify" style="color : #0E8388">Bagaimana Keputusan Tes Survei? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                         <div>
-                                            <select id="" name="nilai_survei" class="custom-select" required>
+                                            <select id="survei" name="nilai_survei" class="custom-select" required>
                                                 <option value="">-- Pilihan --</option>
-                                                <option value="100">Nilai Total Tinggi</option>
-                                                <option value="50">Nilai Total Sedang</option>
-                                                <option value="30">Nilai Total Rendah</option>
+                                                {{-- @foreach ($survei as $surve)
+                                                    <option value="{{ $surve->ntotal_survei * (30/100) }}">{{ $surve->ntotal_survei * (30/100) }}</option>
+                                                @endforeach --}}
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form">
-                                        <label for="">Catatan, Apabila Tidak Ada Tuliskan (-)</label>
+                                        <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                         <textarea name="note_survei" class="form-control" id="" cols="4" rows="4"></textarea>
                                     </div>
                                 </div>
@@ -139,20 +111,20 @@
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form mb-3 mb-md-0">
-                                        <label>Bagaimana Keputusan Tes Wawancara?</label>
+                                        <label class="form-label text-justify" style="color : #0E8388">Bagaimana Keputusan Tes Wawancara? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                         <div>
-                                            <select id="" name="nilai_wawancara" class="custom-select" required>
+                                            <select id="wawancara" name="nilai_wawancara" class="custom-select" required>
                                                 <option value="">-- Pilihan --</option>
-                                                <option value="100">Nilai Total Tinggi</option>
-                                                <option value="50">Nilai Total Sedang</option>
-                                                <option value="30">Nilai Total Rendah</option>
+                                                {{-- @foreach ($wawancara as $wacara)
+                                                    <option value="{{ $wacara->ntotal_wawancara * (25/100) }}">{{ $wacara->ntotal_wawancara * (25/100) }}</option>
+                                                @endforeach --}}
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form">
-                                        <label for="">Catatan, Apabila Tidak Ada Tuliskan (-)</label>
+                                        <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                         <textarea name="note_wawancara" class="form-control" id="" cols="4" rows="4"></textarea>
                                     </div>
                                 </div>
@@ -168,20 +140,20 @@
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form mb-3 mb-md-0">
-                                        <label>Bagaimana Keputusan Tes Baca Dan Hafalan Al Qur'an?</label>
+                                        <label class="form-label text-justify" style="color : #0E8388">Bagaimana Keputusan Tes Baca Dan Hafalan Al Qur'an? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                         <div>
-                                            <select id="" name="nilai_quran" class="custom-select" required>
+                                            <select id="quran" name="nilai_quran" class="custom-select" required>
                                                 <option value="">-- Pilihan --</option>
-                                                <option value="100">Nilai Total Tinggi</option>
-                                                <option value="50">Nilai Total Sedang</option>
-                                                <option value="30">Nilai Total Rendah</option>
+                                                {{-- @foreach ($baca_quran as $quran)
+                                                    <option value="{{ $quran->ntotal_bq * (30/100) }}">{{ $quran->ntotal_bq * (30/100) }}</option>
+                                                @endforeach --}}
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form">
-                                        <label for="">Catatan, Apabila Tidak Ada Tuliskan (-)</label>
+                                        <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                         <textarea name="note_quran" class="form-control" id="" cols="4" rows="4"></textarea>
                                     </div>
                                 </div>
@@ -197,20 +169,20 @@
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form mb-3 mb-md-0">
-                                        <label>Bagaimana Keputusan Tes Akademik?</label>
+                                        <label class="form-label text-justify" style="color : #0E8388">Bagaimana Keputusan Tes Akademik? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                         <div>
-                                            <select id="" name="nilai_akademik" class="custom-select" required>
+                                            <select id="akademik" name="nilai_akademik" class="custom-select" required>
                                                 <option value="">-- Pilihan --</option>
-                                                <option value="100">Nilai Total Tinggi</option>
-                                                <option value="50">Nilai Total Sedang</option>
-                                                <option value="30">Nilai Total Rendah</option>
+                                                {{-- @foreach ($potensi_akademik as $akademik)
+                                                    <option value="{{ $akademik->ntotal_pa * (15/100) }}">{{ $akademik->ntotal_pa * (15/100) }}</option>
+                                                @endforeach --}}
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form">
-                                        <label for="">Catatan, Apabila Tidak Ada Tuliskan (-)</label>
+                                        <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                                         <textarea name="note_akademik" class="form-control" id="" cols="4" rows="4"></textarea>
                                     </div>
                                 </div>

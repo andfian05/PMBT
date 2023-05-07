@@ -13,7 +13,7 @@ class PotensiAkademik extends Model
 
     protected $table = 'potensi_akademik';
     protected $fillable = [
-        'mhs_id', 'b_inggris', 'komputer', 'aritmatika', 'mekanikal', 'simbol'
+        'mhs_id', 'b_inggris', 'komputer', 'aritmatika', 'mekanikal', 'simbol', 'ntotal_pa'
     ];
 
     public function mahasantri()
@@ -23,6 +23,6 @@ class PotensiAkademik extends Model
     
 
     public $sortable = [
-        'mhs_id', 'b_inggris', 'komputer', 'aritmatika', 'mekanikal', 'simbol'
+        'mhs_id', 'b_inggris', 'komputer', 'aritmatika', 'mekanikal', 'simbol', 'ntotal_pa'
     ];
 }

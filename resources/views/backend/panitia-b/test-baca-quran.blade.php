@@ -52,7 +52,7 @@
                       <div class="container">
                         <div class="card">
                           <div class="bg-info">
-                            <h6 class="text-center mt-2">Tempat Seleksi Tes Tanya Jawab</h6>
+                            <h6 class="text-center mt-2">Tempat Seleksi Tes Baca Qur'an</h6>
                           </div>
                         </div>
                       </div>
@@ -196,7 +196,7 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12" class="form-label text-justify" style="color : #0E8388">Kemampuan Dalam Menghafal <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12" class="form-label text-justify" style="color : #0E8388">Kemampuan Dalam Menghafal Al Qur'an <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select id="" name="kemampuanhafalan" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>

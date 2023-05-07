@@ -36,6 +36,9 @@ class TestWawancaraController extends Controller
     public function store(WawancaraRequest $request)
     {
         $data = $request->all();
+
+        $ntotal_wawancara = $data['visimisi'] + $data['komitmen'] + $data['tanggungjawab'] + $data['kejujuran'] + $data['pekerjakeras'] + $data['pekerjakeras'] + $data['bekerjasama'] + $data['kemandirian'] + $data['tolongmenolong'] + $data['peduli'] + $data['pembelajar'] + $data['menghargaiprestasi'] + $data['percayadiri'] + $data['demokratis'] + $data['disiplinwaktu'] + $data['menjaganamabaik'] + $data['salam'] + $data['motivasi'] + $data['brgpolutan'] + $data['brgharam'] + $data['riwayatpenyakit'] + $data['ceritasingkat'] + $data['medkom'] + $data['nkri'] + $data['khilafah'] + $data['tentang'];
+        $data['ntotal_wawancara'] = $ntotal_wawancara;
         Wawancara::create($data);
 
         return redirect()->route('test-wawancara.done');

@@ -25,8 +25,8 @@ class PerhitunganRequest extends FormRequest
     {
         return [
             'mhs_id' => 'required', 
-            'nilai_berkas' => 'required', 
-            'note_berkas' => 'required', 
+            // 'nilai_berkas' => 'required', 
+            // 'note_berkas' => 'required', 
             'nilai_survei' => 'required', 
             'note_survei' => 'required', 
             'nilai_wawancara' => 'required', 

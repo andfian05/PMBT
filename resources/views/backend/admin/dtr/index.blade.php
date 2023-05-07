@@ -50,11 +50,11 @@
                       @php
                         $nilai = $dtr->nilai_berkas + $dtr->nilai_survei + $dtr->nilai_wawancara + $dtr->nilai_quran + $dtr->nilai_akademik;
                       @endphp
-                      @if ($nilai == 500)
+                      @if ($nilai >= 80)
                         {{'Lulus Seleksi'}}
-                      @elseif($nilai > 250)
+                      @elseif($nilai >= 70 && $nilai < 80)
                         {{'Rekomendasi'}}
-                      @elseif($nilai < 250)
+                      @elseif($nilai < 70)
                         {{'Tidak Lulus Seleksi'}}
                       @else
                         {{'Belum Ada Pengimputan'}}

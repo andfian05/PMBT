@@ -124,7 +124,7 @@
                   @endif
                 </h3>
 
-                <p>Data DTR Seleksi</p>
+                <p>Data Hasil Seleksi</p>
               </div>
               <div class="icon">
               <i class="fa-solid fa-award fa-bounce"></i>

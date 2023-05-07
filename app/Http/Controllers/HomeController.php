@@ -17,8 +17,7 @@ use App\Models\Survei;
 use App\Models\Wawancara;
 use App\Models\BacaQuran;
 use App\Models\Perhitungan;
-
-
+use App\Models\PotensiAkademik;
 use DB;
 use Illuminate\Support\Facades\DB as FacadesDB;
 
@@ -36,7 +35,7 @@ class HomeController extends Controller
         $survei = Survei::count();
         $wawancara = Wawancara::count();
         $bacaquran = BacaQuran::count();
-        $potensi_akademik = BacaQuran::count();
+        $potensi_akademik = PotensiAkademik::count();
         $dtr = Perhitungan::count();
         $user = User::count();
 

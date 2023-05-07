@@ -77,6 +77,13 @@ Route::middleware('auth:administrator')->prefix('admin')->group(function () {
     // Route::get('baca-quran-exportPDF', [BacaQuranController::class, 'exportPDF'])->name('baca-quran.pdf');
 
     /** Perhitungan */
+
+    /** For URL Select */
+    Route::post('/getSurvei', [PerhitunganController::class, 'getSurvei'])->name('getSurvei');
+    Route::post('/getWawancara', [PerhitunganController::class, 'getWawancara'])->name('getWawancara');
+    Route::post('/getQuran', [PerhitunganController::class, 'getQuran'])->name('getQuran');
+    Route::post('/getAkademik', [PerhitunganController::class, 'getAkademik'])->name('getAkademik');
+
     Route::get('perhitungan', [PerhitunganController::class, 'perhitungan'])->name('perhitungan.create');
     Route::post('perhitungan', [PerhitunganController::class, 'store'])->name('perhitungan.store');
     Route::get('perhitungan-done', function(){

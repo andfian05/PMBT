@@ -120,7 +120,63 @@
   })
 </script>
 
+<script>
+  $(function () {
+    // select data mahasantri
+    $('#mahasantri').on('change', function(){
+      let id_mhs = $('#mahasantri').val();
 
+      $.ajax({
+        type : 'POST',
+        url : "{{ route('getSurvei') }}",
+        data : {id_mhs:id_mhs, _token:"{{ csrf_token() }}"},
+        cache : false,
+        success: function(msg) {
+          $('#survei').html(msg);
+        },
+        error: function(data) {
+          console.log('error:', data);
+        },
+      })
+      $.ajax({
+        type : 'POST',
+        url : "{{ route('getWawancara') }}",
+        data : {id_mhs:id_mhs, _token:"{{ csrf_token() }}"},
+        cache : false,
+        success: function(msg) {
+          $('#wawancara').html(msg);
+        },
+        error: function(data) {
+          console.log('error:', data);
+        },
+      })
+      $.ajax({
+        type : 'POST',
+        url : "{{ route('getQuran') }}",
+        data : {id_mhs:id_mhs, _token:"{{ csrf_token() }}"},
+        cache : false,
+        success: function(msg) {
+          $('#quran').html(msg);
+        },
+        error: function(data) {
+          console.log('error:', data);
+        },
+      })
+      $.ajax({
+        type : 'POST',
+        url : "{{ route('getAkademik') }}",
+        data : {id_mhs:id_mhs, _token:"{{ csrf_token() }}"},
+        cache : false,
+        success: function(msg) {
+          $('#akademik').html(msg);
+        },
+        error: function(data) {
+          console.log('error:', data);
+        },
+      })
+    })
+  })
+</script>
 
 
 

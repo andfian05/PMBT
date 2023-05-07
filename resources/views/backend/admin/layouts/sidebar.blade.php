@@ -135,7 +135,7 @@
               {{ (Request::is('admin/dtr/{dtr}') ? 'menu-open' : '') }}">
                 <a href="{{ route('dtr.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>DTR</p>
+                  <p>Hasil Seleksi</p>
                 </a>
               </li>
             </ul>

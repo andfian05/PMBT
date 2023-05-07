@@ -13,7 +13,7 @@ class BacaQuran extends Model
 
     protected $table = 'baca_quran';
     protected $fillable = [
-        'mhs_id', 'nama_pewawancara', 'tmp_seleksi', 'lks_seleksi', 'tesbacaan', 'nilaibacaan', 'tajwidbacaan', 'teshafalan', 'jmlhafalan', 'nilaihafalan', 'tajwidhafalan', 'kemampuanhafalan'
+        'mhs_id', 'nama_pewawancara', 'tmp_seleksi', 'lks_seleksi', 'tesbacaan', 'nilaibacaan', 'tajwidbacaan', 'teshafalan', 'jmlhafalan', 'nilaihafalan', 'tajwidhafalan', 'kemampuanhafalan', 'ntotal_bq'
     ];
 
     public function mahasantri()
@@ -32,6 +32,6 @@ class BacaQuran extends Model
     }
 
     public $sortable = [
-        'mhs_id', 'nama_pewawancara', 'tmp_seleksi', 'lks_seleksi', 'tesbacaan', 'nilaibacaan', 'tajwidbacaan', 'teshafalan', 'jmlhafalan', 'nilaihafalan', 'tajwidhafalan', 'kemampuanhafalan'
+        'mhs_id', 'nama_pewawancara', 'tmp_seleksi', 'lks_seleksi', 'tesbacaan', 'nilaibacaan', 'tajwidbacaan', 'teshafalan', 'jmlhafalan', 'nilaihafalan', 'tajwidhafalan', 'kemampuanhafalan', 'ntotal_bq'
     ];
 }

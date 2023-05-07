@@ -56,6 +56,9 @@ class SurveiController extends Controller
     public function store(SurveiRequest $request)
     {
         $data = $request->all();
+
+        $ntotal_survei = $data['izinbeasiswa'] + $data['statuskel'] + $data['pendkel'] + $data['usiapend'] + $data['kesehatankel'] + $data['jenispekrj'] + $data['statusrmh'] + $data['luasrmh'] + $data['dindingrmh'] + $data['ataprmh'] + $data['lantairmh'] + $data['alatmsk'] + $data['perabotan'] + $data['sumberair'] + $data['mck'] + $data['penerangan'] + $data['lokasirmh'] + $data['tataletak'] + $data['miliktanah'] + $data['harta'];
+        $data['ntotal_survei'] = $ntotal_survei;
         Survei::create($data);
 
         return redirect()->route('survei.index');

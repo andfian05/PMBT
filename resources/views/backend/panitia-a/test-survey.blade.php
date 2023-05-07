@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="" class="text-justify" style="color : #0E8388">Nama Calon Mahasantri <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                            <label for="" class="text-justify" style="color : #0E8388">Nama Calon Mahasantri <sup class="text-danger" font-size="20px">* (Wajib) </sup></label>
                             <select id="" name="mhs_id" class="custom-select" required>
                                 <option value="">-- Pilihan --</option>
                                 @foreach ($mahasantris as $mahasantri)
@@ -336,7 +336,7 @@
                       <div class="row mb-3">
                           <div class="col-md-6">
                             <div class="form-group col-12">
-                              <label class="text-justify" style="color : #0E8388">Atap</label> 
+                              <label class="text-justify" style="color : #0E8388">Atap <sup class="text-danger" font-size="20px">* (Wajib) </sup></label> 
                               <div>
                                 <select name="ataprmh" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>

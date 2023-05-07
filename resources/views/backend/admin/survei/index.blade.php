@@ -49,7 +49,7 @@
                       <td data-title="N.Pewawancara">{{ $survei->nama_pewawancara }}</td>
                       <td data-title="Tempat Seleksi">{{ $survei->tmp_seleksi }}</td>
                       <!-- <td data-title="Lokasi"> {{ $survei->lks_seleksi }}</td> -->
-                      <td data-title="Nilai Total">{{ $survei->izinbeasiswa + $survei->statuskel + $survei->pendkel + $survei->usiapend + $survei->kesehatankel + $survei->jenispekrj + $survei->statusrmh + $survei->luasrmh + $survei->dindingrmh + $survei->ataprmh + $survei->lantairmh + $survei->alatmsk + $survei->perabotan + $survei->sumberair + $survei->mck + $survei->penerangan + $survei->lokasirmh + $survei->tataletak + $survei->miliktanah + $survei->harta }}</td>
+                      <td data-title="Nilai Total">{{ $survei->ntotal_survei }}</td>
                       <th class="d-flex justify-content-center">
                         <a class="btn btn-primary btn-sm me-2"
                             href="{{ route('survei.show', $survei->id) }}"><i class="fa-sharp fa-solid fa-magnifying-glass"></i>  Detail</a>

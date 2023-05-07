@@ -473,7 +473,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib) </sup></label>
+                          <label for="" class="form-label text-justify" for="" style="color : #0E8388"> Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <textarea name="note_tataletak"  class="form-control" id="" cols="4" rows="4" disabled>
                             {{ $survei->note_tataletak }}
                           </textarea>
@@ -483,7 +483,7 @@
                   <div class="row mb-3">
                       <div class="col-md-6">
                         <div class="form-group col-md-12">
-                          <label class="form-label text-justify" for="" style="color : #0E8388">Kepemilikan Tanah <sup class="text-danger" font-size="20px">* (Wajib) </sup></label> 
+                          <label class="form-label text-justify" for="" style="color : #0E8388">Kepemilikan Tanah <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div>
                             <select name="miliktanah" class="custom-select" disabled>
                               <option value="">{{ $survei->miliktanah }}</option>

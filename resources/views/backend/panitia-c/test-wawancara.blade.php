@@ -23,7 +23,7 @@
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label for="" class="form-label text-justify" style="color : #0E8388">Nama Calon Mahasantri<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label for="" class="form-label text-justify" style="color : #0E8388">Nama Calon Mahasantri <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <select id="" name="mhs_id" class="custom-select" required>
                             <option value="">-- Pilihan --</option>
                             @foreach ($mahasantris as $mahasantri)
@@ -43,7 +43,7 @@
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label for="" class="form-label text-justify" style="color : #0E8388">Nama Pewawancara Tes Tanya Jawab<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label for="" class="form-label text-justify" style="color : #0E8388">Nama Pewawancara Tes Tanya Jawab <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <input class="form-control" name="nama_pewawancara" id="" type="text"/>
                         </div>
                       </div><br>
@@ -58,7 +58,7 @@
                       </div>
                       <div class="form-group">
                         <div class="form-group col-md-12">
-                          <label for="keterangan" class="form-label text-justify" style="color : #0E8388">Tempat Seleksi<sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
+                          <label for="keterangan" class="form-label text-justify" style="color : #0E8388">Tempat Seleksi <sup class="text-danger" font-size="20px">* (Wajib)</sup></label> 
                           <div class="form-group">
                             <select id="keterangan" name="tmp_seleksi" class="custom-select" required onclick="tampilkan()">
                               <option value="">-- Pilihan --</option>
@@ -108,7 +108,7 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Visi Dan Misi Hidup Pribadi<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388"> Visi Dan Misi Hidup Pribadi <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="visimisi" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -121,7 +121,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class=" form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class="text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_visimisi" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -134,8 +134,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Sanksi Apa Yang Menurut Anda Paling Berat Saat Anda Menerima Hukuman Di
-                              Sekolah/Pesantren?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Sanksi Apa Yang Menurut Anda Paling Berat Saat Anda Menerima Hukuman Di
+                              Sekolah/Pesantren? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="komitmen" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -148,7 +148,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class=" form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class="text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_komitmen" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -161,7 +161,7 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Realisasi Tanggung Jawab Apa Yang Pernah Anda Lakukan?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388" class="">Realisasi Tanggung Jawab Apa Yang Pernah Anda Lakukan? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="tanggungjawab" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -174,7 +174,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class=" form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class="text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_tanggungjwb" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -187,8 +187,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label  class="col-12 form-label text-justify" style="color : #0E8388">Pernah Anda Mendapatkan Amanah Sebagai (Bendahara Atau Jabatan Lainnya)
-                              Untuk Menjaga Keutuhan Materi Atau Barang?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label  class="col-12 text-justify"  style="color : #0E8388">Pernah Anda Mendapatkan Amanah Sebagai (Bendahara Atau Jabatan Lainnya)
+                              Untuk Menjaga Keutuhan Materi Atau Barang? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="kejujuran" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -201,7 +201,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class=" form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class="text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_kejujuran" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -214,8 +214,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label  cclass="col-12 form-label text-justify" style="color : #0E8388">Ketika Anda Mendapatkan Tugas Dari Seseorang, Apa Yang Anda
-                              Lakukan?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label  class="col-12 text-justify"  style="color : #0E8388">Ketika Anda Mendapatkan Tugas Dari Seseorang, Apa Yang Anda
+                              Lakukan? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="pekerjakeras" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -228,7 +228,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class=" form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class="text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_pekerjakrs" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -241,7 +241,7 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Apa Yang Memudahkan Anda Dalam Mengerjakan Tugas Pekarjaan?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Apa Yang Memudahkan Anda Dalam Mengerjakan Tugas Pekarjaan? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="bekerjasama" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -254,7 +254,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_bekerjasama" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -267,8 +267,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Pernahkah Anda Menginginkan Suatu Barang Atau Hal Lainnya Dengan Usahamu
-                              Sendiri?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Pernahkah Anda Menginginkan Suatu Barang Atau Hal Lainnya Dengan Usahamu
+                              Sendiri? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="kemandirian" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -281,7 +281,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class="text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_kemandirian" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -294,8 +294,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label  class="col-12 form-label text-justify" style="color : #0E8388">Pernahkah Anda Melihat Orang Lain Terjatuh Dang Bersangkutan Terduduk
-                              Merasa Kesakitan. Silahkan Anda Ceritakan<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label  class="col-12 text-justify"  style="color : #0E8388">Pernahkah Anda Melihat Orang Lain Terjatuh Dang Bersangkutan Terduduk
+                              Merasa Kesakitan. Silahkan Anda Ceritakan <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="tolongmenolong" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -309,7 +309,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for=""class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class="text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_menolong" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -322,8 +322,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12" class="col-12 form-label text-justify" style="color : #0E8388">Pernahkah Anda Melihat Warga Sekitar Rumah Kamu Melakukan Kerja Bakti,
-                              Silahkan Anda Ceritakan<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12" class="col-12 text-justify"  style="color : #0E8388">Pernahkah Anda Melihat Warga Sekitar Rumah Kamu Melakukan Kerja Bakti,
+                              Silahkan Anda Ceritakan <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="peduli" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -336,7 +336,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_peduli" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -349,8 +349,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label  class="col-12 form-label text-justify" style="color : #0E8388">Jika Anda Memulai Menyalakan Media Elektronik/Komunikasi, Informasi Apa
-                              Yang Anda Cari?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label  class="col-12 text-justify"  style="color : #0E8388">Jika Anda Memulai Menyalakan Media Elektronik/Komunikasi, Informasi Apa
+                              Yang Anda Cari? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="pembelajar" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -363,7 +363,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_pembelajar" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -376,8 +376,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Pernahkah Anda Melihat Orang Lain (Teman, Saudara, Dsb) Yang Meraih
-                              Prestasi, Coba Ceritakan?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Pernahkah Anda Melihat Orang Lain (Teman, Saudara, Dsb) Yang Meraih
+                              Prestasi, Coba Ceritakan? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="menghargaiprestasi" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -390,7 +390,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_hargaipres" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -403,8 +403,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label  class="col-12 form-label text-justify" style="color : #0E8388">Mengapa Anda Berhasil? Siapa Yang Paling Banyak Berkontribusi Atas
-                              Keberhasilan Anda?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Mengapa Anda Berhasil? Siapa Yang Paling Banyak Berkontribusi Atas
+                              Keberhasilan Anda? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="percayadiri" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -417,7 +417,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_pd" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -430,8 +430,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label  class="col-12 form-label text-justify" style="color : #0E8388">Ketika Ada Teman Anda Yang Sedang Menyampaikan Pendapat/Usulan Yang Tidak
-                              Sepemikiran Dengan Anda, Apa Yang Anda Lakukan?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Ketika Ada Teman Anda Yang Sedang Menyampaikan Pendapat/Usulan Yang Tidak
+                              Sepemikiran Dengan Anda, Apa Yang Anda Lakukan? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="demokratis" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -444,7 +444,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_demokratis" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -457,7 +457,7 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Bila Anda Diundang Rapat Penting, Dalam Surat Tersebut Tertera Pukul
+                          <label class="col-12 text-justify"  style="color : #0E8388">Bila Anda Diundang Rapat Penting, Dalam Surat Tersebut Tertera Pukul
                               08.00. Apa Yang Anda Lakukan? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="disiplinwaktu" class="custom-select" required>
@@ -471,7 +471,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_disiplinwkt" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -484,8 +484,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Menurut Anda, Sikap Dan Perilaku Terbaik Yang Seperti Apa Saat Anda
-                              Menjalin Hubungan Dengan Masyarakat? Uraikan Pendapat Anda?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Menurut Anda, Sikap Dan Perilaku Terbaik Yang Seperti Apa Saat Anda
+                              Menjalin Hubungan Dengan Masyarakat? Uraikan Pendapat Anda? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="menjaganamabaik" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -498,7 +498,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_jaganmbaik" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -511,8 +511,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Calon Mahasantri Mengucapkan Salam Saat Masuk Dan Keluar Ke Dan Dari Ruang
-                              Wawancara?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Calon Mahasantri Mengucapkan Salam Saat Masuk Dan Keluar Ke Dan Dari Ruang
+                              Wawancara? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="salam" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -525,7 +525,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_salam" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -539,8 +539,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label  class="col-12 form-label text-justify" style="color : #0E8388">Apa Yang Melatar Belakangin Anda Mendaftarkan Diri Di Pesantren PeTIK
-                              Jombang? Apakah Dengan Dorongan Keluarga Atau Niat Anda Pribadi?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label  class="col-12 text-justify"  style="color : #0E8388">Apa Yang Melatar Belakangin Anda Mendaftarkan Diri Di Pesantren PeTIK
+                              Jombang? Apakah Dengan Dorongan Keluarga Atau Niat Anda Pribadi? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="motivasi" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -553,7 +553,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_motivasi" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -566,8 +566,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label  class="col-12 form-label text-justify" style="color : #0E8388">Manfaat Rokok Bagi Seseorang? Merek Rokok Terkenal Yang Paling Diminati
-                              Oleh Banyak Kebanyakan Orang? Apa Hukum Syari'at Merokok?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Manfaat Rokok Bagi Seseorang? Merek Rokok Terkenal Yang Paling Diminati
+                              Oleh Banyak Kebanyakan Orang? Apa Hukum Syari'at Merokok? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="brgpolutan" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -580,7 +580,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_brgpolutan" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -594,9 +594,9 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Sebutkan Jenis Narkoba Dan Minuman Keras Yang Banyak Beredar Di Indonesia?
+                          <label class="col-12 text-justify"  style="color : #0E8388">Sebutkan Jenis Narkoba Dan Minuman Keras Yang Banyak Beredar Di Indonesia?
                               Adakah Kerabat Atau Teman Dekat Yang Menggunakan Narkoba Atau Minuman Keras Hingga Saat Ini?
-                              Sejauh Mana Anda Mengenali Cara Peredaran Narkoba Atau Minuman Keras?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              Sejauh Mana Anda Mengenali Cara Peredaran Narkoba Atau Minuman Keras? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="brgharam" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -609,7 +609,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_brgharam" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -622,8 +622,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Apakah Anda Memiliki Riwayat Penyakit? Sudahkah Anda Dirawat Di Rumah
-                              Sakit?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Apakah Anda Memiliki Riwayat Penyakit? Sudahkah Anda Dirawat Di Rumah
+                              Sakit? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="riwayatpenyakit" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -636,7 +636,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_rytpenyakit" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -649,7 +649,7 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Deskripsikan Secara Tulis Aktivitas 3 Bulan Terakhir?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Deskripsikan Secara Tulis Aktivitas 3 Bulan Terakhir? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="ceritasingkat" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -662,7 +662,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class=" form-label text-justify" style="color : #0E8388"">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_crtsingkat" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -675,8 +675,8 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 form-label text-justify" style="color : #0E8388">Apakah Anda Memiliki Media Sosial Seperti Whatsapp, Instagram, Facebook,
-                              Dan Lainnya?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Apakah Anda Memiliki Media Sosial Seperti Whatsapp, Instagram, Facebook,
+                              Dan Lainnya? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="medkom" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -689,7 +689,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_medkom" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div>
@@ -702,7 +702,7 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label  class="col-12 form-label text-justify" style="color : #0E8388">Kenapa kita harus Cinta NKRI?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Kenapa kita harus Cinta NKRI? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="nkri" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -715,7 +715,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_nkri" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -728,7 +728,7 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label  class=" col-12 form-label text-justify" style="color : #0E8388">Apakah di Indonesia bisa menerapkan sistem Khilafah?<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Apakah di Indonesia bisa menerapkan sistem Khilafah? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="khilafah" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -741,7 +741,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class="form-label text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_khilafah" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
@@ -754,7 +754,7 @@
                           </div>
                       </div>
                       <div class="form-group">
-                          <label class="col-12 text-justify" style="color : #0E8388">Apa yang kamu ketahui tentang PeTIK Jombang dan YBM PLN<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                          <label class="col-12 text-justify"  style="color : #0E8388">Apa yang kamu ketahui tentang PeTIK Jombang dan YBM PLN? <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                           <div class="col-12">
                               <select name="tentang" class="custom-select" required>
                                   <option value="">-- Pilihan --</option>
@@ -767,7 +767,7 @@
                       </div>
                       <div class="col-md-12">
                           <div class="form-group">
-                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-)<sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
+                              <label for="" class=" text-justify" style="color : #0E8388">Catatan, Apabila Tidak Ada Tuliskan (-) <sup class="text-danger" font-size="20px">* (Wajib)</sup></label>
                               <textarea name="note_tentang" class="form-control" id="" cols="2" rows="2"></textarea>
                           </div>
                       </div><br>
